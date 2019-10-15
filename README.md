@@ -1,2 +1,2 @@
 # gentoo-binhost
-exports various gentoo binhosts
+exports armv5te-88fr131x-linux-musleabi gentoo binhost
