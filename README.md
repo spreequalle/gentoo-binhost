@@ -2,7 +2,7 @@
 
 Packages optimized for Marvell Feroceon [88FR131](https://www.7-cpu.com/cpu/Kirkwood.html) (Sheeva 88SV131) cores.
 
-<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/88F6282A1C200.png" alt="88F6282" width="160" height="160">
+<a href="#"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/88F6282A1C200.png" alt="88F6282" width="160" height="160" /></a>
 
 These cores can be found on the Marvell Kirkwood or Armada SoCs for example:
 
