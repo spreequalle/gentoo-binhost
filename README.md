@@ -4,7 +4,7 @@ Packages optimized for Marvell Sheeva PJ4B-MP cores.
 
 <img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/MV78460.png" alt="88F6282" width="160" />
 
-These cores can be found on the Marvell Kirkwood or Armada XP SoCs for example:
+These cores can be found on the Marvell Armada XP SoCs for example:
 
 * MV78230
 * MV78260
@@ -55,7 +55,8 @@ USE="${USE} bindist curl elf gmp gold lz4 lzma lzo zstd systemd"
 
 ```python
 CFLAGS_COMMON="-O2 -pipe -mfloat-abi=hard -fno-ident -frename-registers -fexcess-precision=fast -fomit-frame-pointer -fweb"
-CFLAGS_CPU="-march=armv7-a+mp+sec -mcpu=marvell-pj4 -mfpu=vfpv3"
+CFLAGS_CACHE="--param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=2048"
+CFLAGS_CPU="-march=armv7-a+mp+sec -mcpu=marvell-pj4 -mfpu=vfpv3 ${CFLAGS_CACHE}"
 CFLAGS_LTO="-flto -fuse-linker-plugin"
 
 CFLAGS="${CFLAGS_COMMON} ${CFLAGS_CPU} ${CFLAGS_LTO}"
