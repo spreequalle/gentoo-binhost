@@ -77,4 +77,4 @@ gh_token = '<your github access token>'
 
 ## Disclaimer
 
-Although this software is released under [MIT](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
