@@ -13,11 +13,11 @@ GENTOO_MIRRORS: http://distfiles.gentoo.org
 INSTALL_MASK: charset.alias
 IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 262
+PACKAGES: 263
 PROFILE: default/linux/arm/17.0/musl
-TIMESTAMP: 1572179100
+TIMESTAMP: 1572183862
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/armv5te-88fr131x-linux-musleabi
-USE: ada_target_gnat_2018 apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm bindist bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog crypt cxx dri elibc_musl fortran gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv input_devices_keyboard input_devices_libinput input_devices_mouse kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer minimal mpfr ncurses netbeans_modules_apisupport netbeans_modules_cnd netbeans_modules_groovy netbeans_modules_gsf netbeans_modules_harness netbeans_modules_ide netbeans_modules_identity netbeans_modules_j2ee netbeans_modules_java netbeans_modules_mobility netbeans_modules_nb netbeans_modules_php netbeans_modules_profiler netbeans_modules_soa netbeans_modules_visualweb netbeans_modules_webcommon netbeans_modules_websvccommon netbeans_modules_xml nptl office_implementation_libreoffice pcre php_targets_php7-2 postgres_targets_postgres10 postgres_targets_postgres11 python_single_target_python3_6 python_targets_python3_6 readline ruby_targets_ruby24 ruby_targets_ruby25 split-usr ssl tcpd unicode userland_GNU video_cards_dummy video_cards_exynos video_cards_fbdev video_cards_omap video_cards_v4l xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib
+USE: ada_target_gnat_2018 apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm bindist bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog crypt cxx dri elibc_musl fortran gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv input_devices_keyboard input_devices_libinput input_devices_mouse kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer minimal mpfr ncurses netbeans_modules_apisupport netbeans_modules_cnd netbeans_modules_groovy netbeans_modules_gsf netbeans_modules_harness netbeans_modules_ide netbeans_modules_identity netbeans_modules_j2ee netbeans_modules_java netbeans_modules_mobility netbeans_modules_nb netbeans_modules_php netbeans_modules_profiler netbeans_modules_soa netbeans_modules_visualweb netbeans_modules_webcommon netbeans_modules_websvccommon netbeans_modules_xml nptl office_implementation_libreoffice pcre php_targets_php7-2 postgres_targets_postgres10 postgres_targets_postgres11 python_single_target_python3_6 python_targets_python3_6 readline ruby_targets_ruby24 ruby_targets_ruby25 split-usr unicode userland_GNU video_cards_dummy video_cards_exynos video_cards_fbdev video_cards_omap video_cards_v4l xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib
 USERLAND: GNU
 USE_EXPAND: ABI_MIPS ABI_PPC ABI_RISCV ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_SSL ELIBC ENLIGHTENMENT_MODULES FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LIRC_DEVICES LLVM_TARGETS MONKEYD_PLUGINS NETBEANS_MODULES NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFED_DRIVERS OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS ROS_MESSAGES RUBY_TARGETS SANE_BACKENDS USERLAND UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XFCE_PLUGINS XTABLES_ADDONS
 USE_EXPAND_HIDDEN: ABI_MIPS ABI_PPC ABI_RISCV ABI_S390 ABI_X86 CPU_FLAGS_PPC CPU_FLAGS_X86 ELIBC KERNEL USERLAND
@@ -2347,6 +2347,24 @@ USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1571294468
 REPO: gentoo
 
+BUILD_TIME: 1572183837
+CPV: net-mail/mailutils-3.4-r3
+DEFINED_PHASES: configure install prepare setup
+DEPEND: !mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/nail sys-libs/ncurses:0/6= sys-libs/readline:0/7= dev-libs/libltdl:0 virtual/mta virtual/pkgconfig >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
+EAPI: 6
+IUSE: berkdb bidi +clients emacs gdbm sasl guile ipv6 kerberos kyotocabinet ldap mysql nls pam postgres python servers split-usr ssl static-libs +threads tcpd tokyocabinet python_targets_python2_7
+KEYWORDS: amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~s390 ~sparc x86 ~ppc-macos ~x64-macos ~x86-macos
+LICENSE: GPL-2 LGPL-2.1
+MD5: 82e53a8105625e4ac6d3f783cde506b3
+PROVIDES: arm_32: editheader.so libmailutils.so.5 libmu_auth.so.5 libmu_imap.so.5 libmu_maildir.so.5 libmu_mailer.so.5 libmu_mbox.so.5 libmu_mh.so.5 libmu_pop.so.5 libmu_sieve.so.5 libmuaux.so.5 list.so moderator.so numaddr.so pipe.so spamd.so timestamp.so vacation.so
+RDEPEND: !mail-client/nmh !mail-filter/libsieve !mail-client/mailx !mail-client/nail sys-libs/ncurses:0/6= sys-libs/readline:0/7= dev-libs/libltdl:0 virtual/mta
+REQUIRES: arm_32: libc.so libgcc_s.so.1 libltdl.so.7 libncurses.so.6 libreadline.so.7 libtinfo.so.6
+SHA1: 1378172bf51cada81fbd178f826e55aa3eb0a082
+SIZE: 1012634
+USE: arm elibc_musl kernel_linux split-usr userland_GNU
+MTIME: 1572183857
+REPO: gentoo
+
 BDEPEND: >=app-portage/elt-patches-20170815 !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
 BUILD_TIME: 1571587271
 CPV: net-misc/curl-7.65.0
@@ -3551,7 +3569,7 @@ USE: arm elibc_musl kernel_linux readline userland_GNU
 MTIME: 1571215577
 REPO: gentoo
 
-BUILD_TIME: 1571251305
+BUILD_TIME: 1572181587
 CPV: sys-libs/ldb-1.1.29-r1
 DEFINED_PHASES: compile configure install postinst prepare setup test
 DEPEND: dev-libs/libxslt virtual/pkgconfig >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)] dev-libs/libbsd dev-libs/popt >=sys-libs/talloc-2.1.8[python] >=sys-libs/tevent-0.9.31[python(+)] >=sys-libs/tdb-1.3.12[python] !!<net-fs/samba-3.6.0[ldb] !!>=net-fs/samba-4.0.0[ldb] >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)]
@@ -3559,15 +3577,15 @@ EAPI: 6
 IUSE: doc +ldap +python python_targets_python2_7 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_riscv_lp64d abi_riscv_lp64 abi_s390_32 abi_s390_64
 KEYWORDS: alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-fbsd ~x86-fbsd
 LICENSE: LGPL-3
-MD5: 5d24a4c595f17be26c54198258ac0a59
+MD5: c74b37a75a2945ba238fa7623afcda6c
 PROVIDES: arm_32: asq.so ldb.so libldb-cmdline.so libldb.so.1 libpyldb-util.so.1 libreplace-ldb.so paged_results.so paged_searches.so rdn_name.so sample.so server_sort.so skel.so tdb.so
 RDEPEND: dev-libs/libbsd dev-libs/popt >=sys-libs/talloc-2.1.8[python] >=sys-libs/tevent-0.9.31[python(+)] >=sys-libs/tdb-1.3.12[python] !!<net-fs/samba-3.6.0[ldb] !!>=net-fs/samba-4.0.0[ldb] >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)]
 REQUIRES: arm_32: libattr.so.1 libbsd.so.0 libc.so libgcc_s.so.1 libpopt.so.0 libpython2.7.so.1.0 libtalloc.so.2 libtdb.so.1 libtevent.so.0
-SHA1: d519f69f9074f56cbb33c1b7bb8056df806b5cdc
-SIZE: 214593
+SHA1: 8cb6b50a1b4005a344e7869f109559acb4b6ac0d
+SIZE: 214547
 SLOT: 0/1.1.29
 USE: arm elibc_musl kernel_linux python python_targets_python2_7 userland_GNU
-MTIME: 1571251316
+MTIME: 1572181600
 REPO: musl
 
 BUILD_TIME: 1571233730
@@ -3709,7 +3727,7 @@ USE: arm elibc_musl kernel_linux python python_targets_python2_7 userland_GNU
 MTIME: 1571776304
 REPO: gentoo
 
-BUILD_TIME: 1571240185
+BUILD_TIME: 1572180415
 CPV: sys-libs/tdb-1.3.13
 DEFINED_PHASES: compile configure install prepare setup test
 DEPEND: dev-libs/libbsd >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)] >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)] app-text/docbook-xml-dtd:4.2
@@ -3717,17 +3735,17 @@ EAPI: 6
 IUSE: python abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_riscv_lp64d abi_riscv_lp64 abi_s390_32 abi_s390_64 python_targets_python2_7
 KEYWORDS: alpha amd64 arm ~arm64 ~hppa ia64 ~mips ppc ppc64 ~s390 ~sh sparc x86 ~amd64-linux ~x86-linux
 LICENSE: GPL-3
-MD5: dd69c57cfb4509e690875eda47f35f95
+MD5: ae166003368e556e093089e43d90821c
 PROVIDES: arm_32: libtdb.so.1 tdb.so
 RDEPEND: dev-libs/libbsd >=dev-lang/python-2.7.5-r2:2.7[threads] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)]
 REQUIRES: arm_32: libattr.so.1 libbsd.so.0 libc.so libgcc_s.so.1 libpython2.7.so.1.0
-SHA1: c36528017b09f1344b7195e39758c69b73b6e7da
-SIZE: 83449
+SHA1: 948775da0f23a99404e89f2cd8d7955a1156d9c5
+SIZE: 91058
 USE: arm elibc_musl kernel_linux python python_targets_python2_7 userland_GNU
-MTIME: 1571240193
+MTIME: 1572180426
 REPO: gentoo
 
-BUILD_TIME: 1571250808
+BUILD_TIME: 1572180945
 CPV: sys-libs/tevent-0.9.31-r1
 DEFINED_PHASES: compile configure install prepare setup test
 DEPEND: dev-libs/libbsd >=sys-libs/talloc-2.1.8 >=dev-lang/python-2.7.5-r2:2.7[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)] >=virtual/pkgconfig-0-r1 >=dev-lang/python-2.7.5-r2:2.7[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)]
@@ -3735,14 +3753,14 @@ EAPI: 6
 IUSE: python abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_riscv_lp64d abi_riscv_lp64 abi_s390_32 abi_s390_64 python_targets_python2_7
 KEYWORDS: alpha amd64 arm ~arm64 ~hppa ia64 ~m68k ~mips ppc ppc64 s390 ~sh sparc x86 ~x86-linux
 LICENSE: GPL-3
-MD5: b118ea17996a204decf91ddca70109f5
+MD5: 98777decb4b9ef504d4e86ecb6c0c902
 PROVIDES: arm_32: _tevent.so libtevent.so.0
 RDEPEND: dev-libs/libbsd >=sys-libs/talloc-2.1.8 >=dev-lang/python-2.7.5-r2:2.7[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python2_7(-),-python_single_target_jython2_7(-),-python_single_target_pypy(-),-python_single_target_pypy3(-),-python_single_target_python3_5(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),python_single_target_python2_7(+)]
 REQUIRES: arm_32: libattr.so.1 libbsd.so.0 libc.so libgcc_s.so.1 libpython2.7.so.1.0 libtalloc.so.2
-SHA1: eebb0220398d2bd80ce6c62d1df73241db62f25e
-SIZE: 70103
+SHA1: 85bad31f0e3ed0ba3aeb632147d36a59e34d890e
+SIZE: 70110
 USE: arm elibc_musl kernel_linux python python_targets_python2_7 userland_GNU
-MTIME: 1571250816
+MTIME: 1572180959
 REPO: gentoo
 
 BUILD_TIME: 1571168610
