@@ -1,80 +1,83 @@
-# gentoo binhost
+# x86_64-bonnell-linux-gnu
 
-Providing [gentoo](https://gentoo.org/) binary packages using [github](https://github.com/) infrastructure.
+Packages optimized for 64bit Intel [Bonnell](https://en.wikipedia.org/wiki/Bonnell_(microarchitecture)) based cores.
 
-<div style="display: inline"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/gentoo-logo.png" alt="gentoo-logo" width="160" /></div>
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/Atom_N270_diamondville.png" alt="88F6282" width="160" />
 
-This repo provides various gentoo [binary packages](https://wiki.gentoo.org/wiki/Binary_package_guide) for a variety of different architectures (checkout branches for details). This branch contains the script that is used for GitHub upload.
+These cores can be found on the Intel Diamondville Atom CPUs, for example:
 
-## Concept
+* Atom 230
+* Atom 330
 
-The package upload is realized using a small upload script thats executed via portage [hooks](https://wiki.gentoo.org/wiki//etc/portage/bashrc). For every package that is being merged via portage the Gentoo *Packages* manifest file is committed to Git. The binary packages itself are not stored into repository there are uploaded as [GitHub release](https://developer.github.com/v3/repos/releases) artifacts.
-
-To make everything work the following nomenclature has to apply:
-
-Gentoo idiom|GitHub entity
-------------|-------------
-[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|GitHub release
-[PF](https://devmanual.gentoo.org/ebuild-writing/variables/)|GitHub release asset
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)|Git branch name
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)/[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|Git release tag
-
+```
+$ lscpu
+Architecture:        x86_64
+CPU op-mode(s):      32-bit, 64-bit
+Byte Order:          Little Endian
+Address sizes:       32 bits physical, 48 bits virtual
+CPU(s):              4
+On-line CPU(s) list: 0-3
+Thread(s) per core:  2
+Core(s) per socket:  2
+Socket(s):           1
+Vendor ID:           GenuineIntel
+CPU family:          6
+Model:               28
+Model name:          Intel(R) Atom(TM) CPU  330   @ 1.60GHz
+Stepping:            2
+CPU MHz:             1999.922
+BogoMIPS:            3999.84
+L1d cache:           24K
+L1i cache:           32K
+L2 cache:            512K
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl cpuid aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm dtherm
+```
 ## Usage
 
-Setup a gentoo binhost Github and provide the following.
-
-### Dependencies
-
-The upload script uses Python3 and [PyGithub](https://github.com/PyGithub/PyGithub) module.
-
-```shell
-emerge dev-python/PyGithub
-```
-
-### Configuration
-
-github upload can be easily configured.
-
-#### make.conf
-
-Enable gentoo binhost by adding the following lines.
-```python
-# enable binhost
-PORTAGE_BINHOST_HEADER_URI="https://github.com/spreequalle/gentoo-binhost/releases/download/${CHOST}"
-FEATURES="${FEATURES} buildpkg"
-USE="${USE} bindist"
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
-```
-
-Since github releases are used to store the packages *PORTAGE_BINHOST_HEADER_URI* has to be set here.
-
-#### bashrc
-
-Add the [/etc/portage/bashrc ](https://wiki.gentoo.org/wiki//etc/portage/bashrc) file below, if you use your own file make sure to call the **gh-upload.py** script during **postinst** phase.
+Binhost can be enabled by adding these lines to the **make.conf**.
 
 ```bash
-#!/bin/env bash
-
-if [[ ${EBUILD_PHASE} == 'postinst' ]]; then
-  # FIXME come up with a more sophisticated approach to detect if binary package build is actually requested
-  # commandline args like -B or --buildpkg-exclude and other conditionals are not supported right now.
-  grep -q 'buildpkg' <<< {$PORTAGE_FEATURES}
-  if [ $? -eq 0 ]; then
-    /etc/portage/binhost/gh-upload.py
-  fi
-fi
+# enable binhost
+PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+FEATURES="${FEATURES} getbinpkg"
 ```
 
-#### gh-upload.py
+## Details
 
-Add the [/etc/portage/binhost/gh-upload.py](/etc/portage/binhost/gh-upload.py) script and add your github settings accordingly.
-You need to create a [github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) that is able to access repository and create releases.
+### Profile
 
-```python
-gh_repo = 'spreequalle/gentoo-binhost'
-gh_token = '<your github access token>'
+Packages are generated using gentoo 17.1 no-[multilib](https://wiki.gentoo.org/wiki/Multilib) profile.
+
+### USE Flags
+
+```bash
+USE="systemd lzma"
+USE="${USE} -nls -static"
 ```
 
-## Disclaimer
+### C FLAGS
 
-Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+Optimized for bonnel [in-order](https://en.wikipedia.org/wiki/Out-of-order_execution) architecture.
+
+```bash
+CFLAGS_COMMON="-O2 -pipe -fno-ident -fexcess-precision=fast -fomit-frame-pointer"
+CFLAGS_CACHE="--param l1-cache-size=24 --param l1-cache-line-size=64 --param l2-cache-size=512"
+CFLAGS_CPU="-march=bonnell -mtune=bonnell -mmmx -mno-3dnow -msse -msse2 -msse3 -mssse3 -mno-sse4a -mcx16 -msahf -mmovbe -mno-aes -mno-sha -mno-pclmul -mno-popcnt -mno-abm -mno-lwp -mno-fma -mno-fma4 -mno-xop -mno-bmi -mno-sgx -mno-bmi2 -mno-pconfig -mno-wbnoinvd -mno-tbm -mno-avx -mno-avx2 -mno-sse4.2 -mno-sse4.1 -mno-lzcnt -mno-rtm -mno-hle -mno-rdrnd -mno-f16c -mno-fsgsbase -mno-rdseed -mno-prfchw -mno-adx -mfxsr -mno-xsave -mno-xsaveopt -mno-avx512f -mno-avx512er -mno-avx512cd -mno-avx512pf -mno-prefetchwt1 -mno-clflushopt -mno-xsavec -mno-xsaves -mno-avx512dq -mno-avx512bw -mno-avx512vl -mno-avx512ifma -mno-avx512vbmi -mno-avx5124fmaps -mno-avx5124vnniw -mno-clwb -mno-mwaitx -mno-clzero -mno-pku -mno-rdpid -mno-gfni -mno-shstk -mno-avx512vbmi2 -mno-avx512vnni -mno-vaes -mno-vpclmulqdq -mno-avx512bitalg -mno-movdiri -mno-movdir64b  ${CFLAGS_CACHE}"
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+
+CFLAGS="${CFLAGS_COMMON} ${CFLAGS_CPU} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+```
+### LD FLAGS
+
+Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization) and [GOLD](https://en.wikipedia.org/wiki/Gold_(linker)) linker plugin.
+
+```bash
+LDFLAGS_MAIN="-Wl,--hash-style=gnu -Wl,--enable-new-dtags"
+LDFLAGS_LTO="-flto -fuse-linker-plugin"
+
+LDFLAGS_LD_BFD="-Wl,-fuse-ld=bfd"
+LDFLAGS_LD_GOLD="-Wl,-fuse-ld=gold"
+
+LDFLAGS="${LDFLAGS_MAIN} ${LDFLAGS_LTO} ${LDFLAGS_LD_GOLD}"
+```
