@@ -52,7 +52,7 @@ Packages are generated using gentoo 17.1 no-[multilib](https://wiki.gentoo.org/w
 
 ```bash
 USE="X alsa bindist bluetooth cdio cjk dbus drm dvd icu ios jpeg lcms lto lz4 lzma lzo openssl policykit samba sqlite systemd threads truetype upnp upower vdpau xkb zstd"
-USE="${USE} -cups -gtk -introspection -ldap -nls -numa" -spell -static
+USE="${USE} -cups -gtk -introspection -ldap -nls -numa -spell -static"
 ```
 
 ### C FLAGS
