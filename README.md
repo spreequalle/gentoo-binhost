@@ -1,80 +1,60 @@
-# gentoo binhost
+# armv4t-arm920t-linux-musleabi
 
-Providing [gentoo](https://gentoo.org/) binary packages using [github](https://github.com/) infrastructure.
+Packages optimized for ARMs [ARM920T](https://en.wikipedia.org/wiki/ARM9) CPU cores.
 
-<div style="display: inline"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/gentoo-logo.png" alt="gentoo-logo" width="160" /></div>
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/S3C410A.png" alt="88F6282" width="160" />
 
-This repo provides various gentoo [binary packages](https://wiki.gentoo.org/wiki/Binary_package_guide) for a variety of different architectures (checkout branches for details). This branch contains the script that is used for GitHub upload.
+These cores can be found on some of Samsungs [S3C](https://en.wikipedia.org/wiki/List_of_Samsung_system-on-a-chips) SoCs for example:
 
-## Concept
-
-The package upload is realized using a small upload script thats executed via portage [hooks](https://wiki.gentoo.org/wiki//etc/portage/bashrc). For every package that is being merged via portage the Gentoo *Packages* manifest file is committed to Git. The binary packages itself are not stored into repository there are uploaded as [GitHub release](https://developer.github.com/v3/repos/releases) artifacts.
-
-To make everything work the following nomenclature has to apply:
-
-Gentoo idiom|GitHub entity
-------------|-------------
-[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|GitHub release
-[PF](https://devmanual.gentoo.org/ebuild-writing/variables/)|GitHub release asset
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)|Git branch name
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)/[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|Git release tag
+* [S3C2410](https://elinux.org/S3C2410)
+* [S3C2440](https://elinux.org/S3C2440)
 
 ## Usage
 
-Setup a gentoo binhost Github and provide the following.
-
-### Dependencies
-
-The upload script uses Python3 and [PyGithub](https://github.com/PyGithub/PyGithub) module.
-
-```shell
-emerge dev-python/PyGithub
-```
-
-### Configuration
-
-github upload can be easily configured.
-
-#### make.conf
-
-Enable gentoo binhost by adding the following lines.
-```python
-# enable binhost
-PORTAGE_BINHOST_HEADER_URI="https://github.com/spreequalle/gentoo-binhost/releases/download/${CHOST}"
-FEATURES="${FEATURES} buildpkg"
-USE="${USE} bindist"
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
-```
-
-Since github releases are used to store the packages *PORTAGE_BINHOST_HEADER_URI* has to be set here.
-
-#### bashrc
-
-Add the [/etc/portage/bashrc ](https://wiki.gentoo.org/wiki//etc/portage/bashrc) file below, if you use your own file make sure to call the **gh-upload.py** script during **postinst** phase.
+Binhost can be enabled by adding these lines to the **make.conf**.
 
 ```bash
-#!/bin/env bash
-
-if [[ ${EBUILD_PHASE} == 'postinst' ]]; then
-  # FIXME come up with a more sophisticated approach to detect if binary package build is actually requested
-  # commandline args like -B or --buildpkg-exclude and other conditionals are not supported right now.
-  grep -q 'buildpkg' <<< {$PORTAGE_FEATURES}
-  if [ $? -eq 0 ]; then
-    /etc/portage/binhost/gh-upload.py
-  fi
-fi
+# enable binhost
+PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+FEATURES="${FEATURES} getbinpkg"
 ```
 
-#### gh-upload.py
+## Details
 
-Add the [/etc/portage/binhost/gh-upload.py](/etc/portage/binhost/gh-upload.py) script and add your github settings accordingly.
-You need to create a [github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) that is able to access repository and create releases.
+### Profile
 
-```python
-gh_repo = 'spreequalle/gentoo-binhost'
-gh_token = '<your github access token>'
+Packages are generated using gentoo 17.0 [musl](https://www.musl-libc.org/) profile.
+
+### USE Flags
+
+```bash
+USE="bzip2 minimal mpfr"
+USE="${USE} -acl -pam -nls -ipv6 -pax_kernel -threads -pic -hardened -openmp \
+-filecaps -seccomp -xattr"
 ```
 
-## Disclaimer
+### C FLAGS
 
-Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+Aggressively optimizing for size by using *-Os* and  [Thumb](http://infocenter.arm.com/help/topic/com.arm.doc.ddi0344c/Beiiegaf.html) mode.
+
+```bash
+CFLAGS_MAIN="-Os -pipe -fno-ident -frename-registers -msoft-float -fweb -fexcess-precision=fast -fomit-frame-pointer"
+
+CFLAGS_CPU_CACHE="--param l1-cache-size=16 --param l1-cache-line-size=32"
+CFLAGS_CPU="-mcpu=arm920t ${CFLAGS_CPU_CACHE}"
+
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+CFLAGS="${CFLAGS_MAIN} ${CFLAGS_CPU} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+```
+### LD FLAGS
+
+Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization) linker plugin.
+
+```bash
+LDFLAGS_MAIN="-Wl,--hash-style=gnu -Wl,--enable-new-dtags"
+LDFLAGS_LTO="-flto -fuse-linker-plugin"
+LDFLAGS_LD_BFD="-Wl,-fuse-ld=bfd"
+
+LDFLAGS="${LDFLAGS_MAIN} ${LDFLAGS_LTO} ${LDFLAGS_LD_BFD}"
+```
