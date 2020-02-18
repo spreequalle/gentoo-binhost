@@ -5,6 +5,11 @@ https://isshoni.org/pi64pie While they have a sysvinit/openrc profile I've been 
 and added packages ie from [Pentoo|github.com/pentoo] packages ports 
 https://github.com/sakaki-/gentoo-on-rpi-64bit 
 A few other repos are used for Rock64/Pinebook Pro 
+And I'm Planing on Getting an RPI4 , however just Mask Packages on /etc/portage .git by branch. 
+
+other than GLES2 being a need, with Panfrost/MALI Vido Drivers  Wayland can get iffy. 
+most Rock64/RPI packages are close enough or are nearly identicle to run , infact i've used sakaki's Bins to update stage3 get xfce 
+then re-tooling slightly for Sytemd. and libav and minor flags changes for either SBC or [https://www.youtube.com/watch?v=e_DqV1xdf-Y|**POWERUSER**]
 
 <img src="https://raw.githubusercontent.com/sakaki-/resources/master/raspberrypi/pi4/Raspberry_Pi_3_B_and_B_plus_and_4_B.jpg" alt="88F6282" width="160" />
 https://www.youtube.com/watch?v=9CCQicHwfDI some of the Rockpro64 Like PIC-E4x and Sata or M.2 , ASUS has a 4x slot nvme card
