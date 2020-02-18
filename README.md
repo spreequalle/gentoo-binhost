@@ -72,9 +72,10 @@ CXXFLAGS="${COMMON_FLAGS}"
 FCFLAGS="${COMMON_FLAGS}"
 FFLAGS="${COMMON_FLAGS}"
 ```
-```# Graphite-specific CFLAGS
-CFLAGS="${CFLAGS} -fgraphite-identity"
-```` optional graphite flags. 
+```# Graphite-specific CFLAGS #optional graphite flags.
+CFLAGS="${COMMON_FLAGS} ${GRAPHITE}"
+GRAPHITE="-floop-interchange -ftree-loop-distribution -floop-strip-mine -floop-block"
+````  
 ### LD FLAGS
 
 Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization).
