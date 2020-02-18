@@ -1,9 +1,16 @@
-# aarch64-cn8890-linux-gnu
+# aarch64-cortex-linux-gnu
 
-Packages optimized for Cavium ThunderX cores.
+Packages optimized for Pine64's Rock64/pro , Pinebook Pro & RPI3/4
+https://isshoni.org/pi64pie While they have a sysvinit/openrc profile I've been building for Systemd
+and added packages ie from [Pentoo|github.com/pentoo] packages ports 
+https://github.com/sakaki-/gentoo-on-rpi-64bit 
+A few other repos are used for Rock64/Pinebook Pro 
 
-<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/CN8890.png" alt="88F6282" width="160" />
+<img src="https://raw.githubusercontent.com/sakaki-/resources/master/raspberrypi/pi4/Raspberry_Pi_3_B_and_B_plus_and_4_B.jpg" alt="88F6282" width="160" />
+<img src="https://www.youtube.com/watch?v=9CCQicHwfDI" alt="88F6282" width="160" />
 
+##### Still Editing  and Migrating over from fokred template.
+--------------------------
 These cores can be found on the Cavium (later Marvell) [ThunderX](https://web.archive.org/web/20190131010413/https://www.marvell.com/server-processors/thunderx-arm-processors/) SoCs for example:
 
 * CN8890
@@ -11,18 +18,25 @@ These cores can be found on the Cavium (later Marvell) [ThunderX](https://web.ar
 ```
 lscpu
 Architecture:        aarch64
+CPU op-mode(s):      32-bit, 64-bit
 Byte Order:          Little Endian
-CPU(s):              4
-On-line CPU(s) list: 0-3
+CPU(s):              6
+On-line CPU(s) list: 0-5
 Thread(s) per core:  1
-Core(s) per socket:  4
-Socket(s):           1
-Vendor ID:           Cavium
-Model:               1
-Model name:          ThunderX 88XX
-Stepping:            0x1
-BogoMIPS:            200.00
-Flags:               fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+Core(s) per socket:  3
+Socket(s):           2
+Vendor ID:           ARM
+Model:               4
+Model name:          Cortex-A53
+Stepping:            r0p4
+CPU max MHz:         1992.0000
+CPU min MHz:         408.0000
+BogoMIPS:            48.00
+Flags:               fp asimd evtstrm aes pmull sha1 sha2 crc32
+
+cpuid2cpuflags
+CPU_FLAGS_ARM: edsp neon thumb vfp vfpv3 vfpv4 vfp-d32 aes sha1 sha2 crc32 v4 v5 v6 v7 v8 thumb2
+#@rock64pro 
 ```
 ## Usage
 
@@ -48,13 +62,14 @@ USE="${USE} lz4 lzma lzo curl gmp neon threads elf"
 ```
 
 ### C FLAGS
+*cortex-a72.cortex-a53 is common to RPI4 RPI3 backwards compatible , as well as workable with Rock64 Rockpro64 & Pinebook Pro*
 
 ```python
-CFLAGS_COMMON="-O2 -pipe -fomit-frame-pointer -fno-ident"
-CFLAGS_CPU="-mcpu=thunderxt88+aes+sha2"
-CFLAGS_LTO="-flto -fuse-linker-plugin"
-CFLAGS="${CFLAGS_COMMON} ${CFLAGS_CPU} ${CFLAGS_LTO}"
-CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+COMMON_FLAGS="-O2 -pipe -march=armv8-a+crc+crypto -mcpu=cortex-a72.cortex-a53"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
 ```
 ### LD FLAGS
 
