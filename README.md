@@ -1,80 +1,69 @@
-# gentoo binhost
+# aarch64-cortex_a53-linux-gnu
 
-Providing [gentoo](https://gentoo.org/) binary packages using [github](https://github.com/) infrastructure.
+Packages optimized for ARMs [Cortex-A53](https://en.wikipedia.org/wiki/ARM_Cortex-A53) cores.
 
-<div style="display: inline"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/gentoo-logo.png" alt="gentoo-logo" width="160" /></div>
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/BCM2837.png" alt="S5L8900" width="160" />
 
-This repo provides various gentoo [binary packages](https://wiki.gentoo.org/wiki/Binary_package_guide) for a variety of different architectures (checkout branches for details). This branch contains the script that is used for GitHub upload.
+These cores can be found on many SoCs like the  Broadcom [BCM2837](https://www.raspberrypi.org/documentation/hardware/raspberrypi/bcm2837/README.md) or other vendors like Qualcomm, Rockchip.
 
-## Concept
-
-The package upload is realized using a small upload script thats executed via portage [hooks](https://wiki.gentoo.org/wiki//etc/portage/bashrc). For every package that is being merged via portage the Gentoo *Packages* manifest file is committed to Git. The binary packages itself are not stored into repository there are uploaded as [GitHub release](https://developer.github.com/v3/repos/releases) artifacts.
-
-To make everything work the following nomenclature has to apply:
-
-Gentoo idiom|GitHub entity
-------------|-------------
-[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|GitHub release
-[PF](https://devmanual.gentoo.org/ebuild-writing/variables/)|GitHub release asset
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)|Git branch name
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)/[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|Git release tag
-
+```
+$ lscpu
+Architecture:        aarch64
+Byte Order:          Little Endian
+CPU(s):              4
+On-line CPU(s) list: 0-3
+Thread(s) per core:  1
+Core(s) per socket:  4
+Socket(s):           1
+Vendor ID:           ARM
+Model:               4
+Model name:          Cortex-A53
+Stepping:            r0p4
+CPU max MHz:         1400.0000
+CPU min MHz:         600.0000
+BogoMIPS:            38.40
+Flags:               fp asimd evtstrm crc32 cpuid
+```
 ## Usage
 
-Setup a gentoo binhost Github and provide the following.
-
-### Dependencies
-
-The upload script uses Python3 and [PyGithub](https://github.com/PyGithub/PyGithub) module.
-
-```shell
-emerge dev-python/PyGithub
-```
-
-### Configuration
-
-github upload can be easily configured.
-
-#### make.conf
-
-Enable gentoo binhost by adding the following lines.
-```python
-# enable binhost
-PORTAGE_BINHOST_HEADER_URI="https://github.com/spreequalle/gentoo-binhost/releases/download/${CHOST}"
-FEATURES="${FEATURES} buildpkg"
-USE="${USE} bindist"
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
-```
-
-Since github releases are used to store the packages *PORTAGE_BINHOST_HEADER_URI* has to be set here.
-
-#### bashrc
-
-Add the [/etc/portage/bashrc ](https://wiki.gentoo.org/wiki//etc/portage/bashrc) file below, if you use your own file make sure to call the **gh-upload.py** script during **postinst** phase.
+Binhost can be enabled by adding these lines to the **make.conf**.
 
 ```bash
-#!/bin/env bash
-
-if [[ ${EBUILD_PHASE} == 'postinst' ]]; then
-  # FIXME come up with a more sophisticated approach to detect if binary package build is actually requested
-  # commandline args like -B or --buildpkg-exclude and other conditionals are not supported right now.
-  grep -q 'buildpkg' <<< {$PORTAGE_FEATURES}
-  if [ $? -eq 0 ]; then
-    /etc/portage/binhost/gh-upload.py
-  fi
-fi
+# enable binhost
+PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+FEATURES="${FEATURES} getbinpkg"
 ```
 
-#### gh-upload.py
+## Details
 
-Add the [/etc/portage/binhost/gh-upload.py](/etc/portage/binhost/gh-upload.py) script and add your github settings accordingly.
-You need to create a [github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) that is able to access repository and create releases.
+### Profile
 
-```python
-gh_repo = 'spreequalle/gentoo-binhost'
-gh_token = '<your github access token>'
+Packages are generated using gentoo 17.0 systemd [glibc](https://www.gnu.org/software/libc/) profile.
+
+### USE Flags
+
+```bash
+USE="-nls -tcpd -alsa -cups -gtk"
+USE="${USE} lz4 lzma lzo curl gmp neon threads elf"
 ```
 
-## Disclaimer
+### C FLAGS
 
-Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+```bash
+CFLAGS_COMMON="-O2 -pipe -fomit-frame-pointer -fno-ident"
+CFLAGS_CPU="-mcpu=cortex-a53+crc"
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+
+CFLAGS="${CFLAGS_COMMON} ${CFLAGS_CPU} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+```
+### LD FLAGS
+
+Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization).
+
+```bash
+LDFLAGS_COMMON="-Wl,--hash-style=gnu -Wl,--enable-new-dtags -Wl,-fuse-ld=bfd"
+LDFLAGS_LTO="-flto -fuse-linker-plugin"
+LDFLAGS="${LDFLAGS_COMMON} ${LDFLAGS_LTO}"
+```
+
