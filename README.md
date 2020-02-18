@@ -1,4 +1,7 @@
 # aarch64-cortex-linux-gnu
+------------------------------
+https://keybase.io/necrose99 im away. 
+
 
 Packages optimized for Pine64's Rock64/pro , Pinebook Pro & RPI3/4
 https://isshoni.org/pi64pie While they have a sysvinit/openrc profile I've been building for Systemd
