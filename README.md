@@ -7,7 +7,8 @@ https://github.com/sakaki-/gentoo-on-rpi-64bit
 A few other repos are used for Rock64/Pinebook Pro 
 
 <img src="https://raw.githubusercontent.com/sakaki-/resources/master/raspberrypi/pi4/Raspberry_Pi_3_B_and_B_plus_and_4_B.jpg" alt="88F6282" width="160" />
-<img src="https://www.youtube.com/watch?v=9CCQicHwfDI" alt="88F6282" width="160" />
+https://www.youtube.com/watch?v=9CCQicHwfDI some of the Rockpro64 Like PIC-E4x and Sata or M.2 , ASUS has a 4x slot nvme card
+
 
 ##### Still Editing  and Migrating over from fokred template.
 --------------------------
