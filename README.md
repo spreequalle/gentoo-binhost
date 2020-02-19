@@ -18,6 +18,18 @@ then re-tooling slightly for Sytemd. and libav and minor flags changes for eithe
 https://www.youtube.com/watch?v=9CCQicHwfDI some of the Rockpro64 Like PIC-E4x and Sata or M.2 , ASUS has a 4x slot nvme card
 
 
+###### repos 
+---------------------------
+https://github.com/necrose99/arm64-portage/  
+**of note eselect profile list /set git pull/push fucks it .. *
+RPI4/3 Rock64/pinebook pro branches needed to do. 
+has a number of power user features selected , however you can downscope as you will. 
+this repos is useful to edit configs on Linux with a desktop ,and SBC on build mode. 
+https://github.com/BilyakA/gentoo-clang  can be of use. 
+https://github.com/gentoo-mirror/lto-overlay bit bleeding but LTO can add many Linker optimizations (Faster binares) 
+https://github.com/psychedup/gentoo-pine64 need to rework kernel file ebuilds from template to working.. /grumble.. 
+
+
 ##### Still Editing  and Migrating over from fokred template.
 --------------------------
 These cores can be found on the Cavium (later Marvell) [ThunderX](https://web.archive.org/web/20190131010413/https://www.marvell.com/server-processors/thunderx-arm-processors/) SoCs for example:
