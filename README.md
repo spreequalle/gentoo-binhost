@@ -30,7 +30,7 @@ Binhost can be enabled by adding these lines to the **make.conf**.
 
 ```bash
 # enable binhost
-PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+PORTAGE_BINHOST="https://raw.githubusercontent.com/necrose99/gentoo-binhost/${CHOST}"
 FEATURES="${FEATURES} getbinpkg"
 ```
 
