@@ -4,7 +4,7 @@ Packages optimized for ARMs [ARM920T](https://en.wikipedia.org/wiki/ARM9) CPU co
 
 <img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/S3C410A.png" alt="88F6282" width="160" />
 
-These cores can be found on some of Samsungs [S3C](https://en.wikipedia.org/wiki/List_of_Samsung_system-on-a-chips) SoCs for example:
+These cores can be found on some of Samsungs [S3C](https://en.wikipedia.org/wiki/List_of_Samsung_system-on-a-chips) SoCs, for example:
 
 * [S3C2410](https://elinux.org/S3C2410)
 * [S3C2440](https://elinux.org/S3C2440)
