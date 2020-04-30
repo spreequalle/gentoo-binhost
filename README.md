@@ -4,7 +4,7 @@ Packages optimized for Marvell Feroceon [88FR131](https://www.7-cpu.com/cpu/Kirk
 
 <img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/88F6282A1C200.png" alt="88F6282" width="160" />
 
-These cores can be found on the Marvell Kirkwood or Armada SoCs for example:
+These cores can be found on the Marvell Kirkwood or Armada SoCs, for example:
 
 * 88F6281
 * 88F6282
