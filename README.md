@@ -4,7 +4,7 @@ Packages optimized for Cavium ThunderX cores.
 
 <img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/CN8890.png" alt="88F6282" width="160" />
 
-These cores can be found on the Cavium (later Marvell) [ThunderX](https://web.archive.org/web/20190131010413/https://www.marvell.com/server-processors/thunderx-arm-processors/) SoCs for example:
+These cores can be found on the Cavium (later Marvell) [ThunderX](https://web.archive.org/web/20190131010413/https://www.marvell.com/server-processors/thunderx-arm-processors/) SoCs. for example:
 
 * CN8890
 
