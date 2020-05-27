@@ -2,7 +2,7 @@
 
 Packages optimized for 64bit Intel [Bonnell](https://en.wikipedia.org/wiki/Bonnell_(microarchitecture)) based cores.
 
-<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/Atom_N270_diamondville.png" alt="88F6282" width="160" />
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/Atom_A330_bonnel.png" alt="A330" width="160" />
 
 These cores can be found on the Intel Diamondville Atom CPUs, for example:
 
@@ -11,26 +11,34 @@ These cores can be found on the Intel Diamondville Atom CPUs, for example:
 
 ```
 $ lscpu
-Architecture:        x86_64
-CPU op-mode(s):      32-bit, 64-bit
-Byte Order:          Little Endian
-Address sizes:       32 bits physical, 48 bits virtual
-CPU(s):              4
-On-line CPU(s) list: 0-3
-Thread(s) per core:  2
-Core(s) per socket:  2
-Socket(s):           1
-Vendor ID:           GenuineIntel
-CPU family:          6
-Model:               28
-Model name:          Intel(R) Atom(TM) CPU  330   @ 1.60GHz
-Stepping:            2
-CPU MHz:             1999.922
-BogoMIPS:            3999.84
-L1d cache:           24K
-L1i cache:           32K
-L2 cache:            512K
-Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl cpuid aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm dtherm
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   32 bits physical, 48 bits virtual
+CPU(s):                          4
+On-line CPU(s) list:             0-3
+Thread(s) per core:              2
+Core(s) per socket:              2
+Socket(s):                       1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           28
+Model name:                      Intel(R) Atom(TM) CPU  330   @ 1.60GHz
+Stepping:                        2
+CPU MHz:                         1999.905
+BogoMIPS:                        3999.81
+L1d cache:                       48 KiB
+L1i cache:                       64 KiB
+L2 cache:                        1 MiB
+Vulnerability Itlb multihit:     Not affected
+Vulnerability L1tf:              Not affected
+Vulnerability Mds:               Not affected
+Vulnerability Meltdown:          Not affected
+Vulnerability Spec store bypass: Not affected
+Vulnerability Spectre v1:        Not affected
+Vulnerability Spectre v2:        Not affected
+Vulnerability Tsx async abort:   Not affected
+Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx lm constant_tsc arch_perfmon pebs bts nopl cpuid aperfmperf pni dtes64 monitor ds_cpl tm2 ssse3 cx16 xtpr pdcm movbe lahf_lm dtherm
 ```
 ## Usage
 
