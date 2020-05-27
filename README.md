@@ -1,80 +1,76 @@
-# gentoo binhost
+# mipsel-mips32r2el-linux-gnu
 
-Providing [gentoo](https://gentoo.org/) binary packages using [github](https://github.com/) infrastructure.
+Packages optimized for [MIPS32R2](https://en.wikichip.org/wiki/mips/mips32_instruction_set#Release_2) based cores.
 
-<div style="display: inline"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/gentoo-logo.png" alt="gentoo-logo" width="160" /></div>
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/JZ4780.png" alt="A330" width="160" />
 
-This repo provides various gentoo [binary packages](https://wiki.gentoo.org/wiki/Binary_package_guide) for a variety of different architectures (checkout branches for details). This branch contains the script that is used for GitHub upload.
+These cores can be found on various SoCs like the Ingenics [JZ4780](http://www.ingenic.com.cn/en/?product/id/13.html).
 
-## Concept
-
-The package upload is realized using a small upload script thats executed via portage [hooks](https://wiki.gentoo.org/wiki//etc/portage/bashrc). For every package that is being merged via portage the Gentoo *Packages* manifest file is committed to Git. The binary packages itself are not stored into repository there are uploaded as [GitHub release](https://developer.github.com/v3/repos/releases) artifacts.
-
-To make everything work the following nomenclature has to apply:
-
-Gentoo idiom|GitHub entity
-------------|-------------
-[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|GitHub release
-[PF](https://devmanual.gentoo.org/ebuild-writing/variables/)|GitHub release asset
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)|Git branch name
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)/[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|Git release tag
+```
+$ cat /proc/cpuinfo 
+system type             : JZ4780
+machine                 : img,ci20
+processor               : 0
+cpu model               : Ingenic JZRISC V4.15  FPU V0.0
+BogoMIPS                : 1196.85
+wait instruction        : yes
+microsecond timers      : no
+tlb_entries             : 32
+extra interrupt vector  : yes
+hardware watchpoint     : yes, count: 1, address/irw mask: [0x0fff]
+isa                     : mips1 mips2 mips32r1 mips32r2
+ASEs implemented        :
+shadow register sets    : 1
+kscratch registers      : 0
+package                 : 0
+core                    : 0
+VCED exceptions         : not available
+VCEI exceptions         : not available
+```
 
 ## Usage
 
-Setup a gentoo binhost Github and provide the following.
-
-### Dependencies
-
-The upload script uses Python3 and [PyGithub](https://github.com/PyGithub/PyGithub) module.
-
-```shell
-emerge dev-python/PyGithub
-```
-
-### Configuration
-
-github upload can be easily configured.
-
-#### make.conf
-
-Enable gentoo binhost by adding the following lines.
-```python
-# enable binhost
-PORTAGE_BINHOST_HEADER_URI="https://github.com/spreequalle/gentoo-binhost/releases/download/${CHOST}"
-FEATURES="${FEATURES} buildpkg"
-USE="${USE} bindist"
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
-```
-
-Since github releases are used to store the packages *PORTAGE_BINHOST_HEADER_URI* has to be set here.
-
-#### bashrc
-
-Add the [/etc/portage/bashrc ](https://wiki.gentoo.org/wiki//etc/portage/bashrc) file below, if you use your own file make sure to call the **gh-upload.py** script during **postinst** phase.
+Binhost can be enabled by adding these lines to the **make.conf**.
 
 ```bash
-#!/bin/env bash
-
-if [[ ${EBUILD_PHASE} == 'postinst' ]]; then
-  # FIXME come up with a more sophisticated approach to detect if binary package build is actually requested
-  # commandline args like -B or --buildpkg-exclude and other conditionals are not supported right now.
-  grep -q 'buildpkg' <<< {$PORTAGE_FEATURES}
-  if [ $? -eq 0 ]; then
-    /etc/portage/binhost/gh-upload.py
-  fi
-fi
+# enable binhost
+PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+FEATURES="${FEATURES} getbinpkg"
 ```
 
-#### gh-upload.py
+## Details
 
-Add the [/etc/portage/binhost/gh-upload.py](/etc/portage/binhost/gh-upload.py) script and add your github settings accordingly.
-You need to create a [github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) that is able to access repository and create releases.
+### Profile
 
-```python
-gh_repo = 'spreequalle/gentoo-binhost'
-gh_token = '<your github access token>'
+Packages are generated using gentoo 17.0 no-[multilib](https://wiki.gentoo.org/wiki/Multilib) profile.
+
+### USE Flags
+
+```bash
+USE="dbus systemd udev alsa lzma sqlite clang lto"
+USE="${USE} -nls -seccomp -introspection -static -acl -debug -vala"
 ```
 
-## Disclaimer
+### C FLAGS
 
-Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+Optimized for bonnel [in-order](https://en.wikipedia.org/wiki/Out-of-order_execution) architecture.
+
+```bash
+CFLAGS_MAIN="-O2 -pipe -fno-ident -fexcess-precision=fast -fomit-frame-pointer"
+CFLAGS_CACHE="--param l1-cache-size=32 --param l1-cache-line-size=32 --param l2-cache-size=256"
+CFLAGS_CPU="-march=mips32r2 -mabi=32 -mfp32 -mplt -ffp-contract=off ${CFLAGS_CACHE}"
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+CFLAGS="${CFLAGS_MAIN} ${CFLAGS_CPU} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+```
+
+### LD FLAGS
+
+Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization) and [GOLD](https://en.wikipedia.org/wiki/Gold_(linker)) linker plugin.
+
+```bash
+LDFLAGS_MAIN="-Wl,--enable-new-dtags"
+LDFLAGS_LTO="-flto -fuse-linker-plugin"
+LDFLAGS_GOLD="-Wl,-fuse-ld=gold"
+LDFLAGS="${LDFLAGS_MAIN} ${LDFLAGS_GOLD} ${LDFLAGS_LTO}"
+```
