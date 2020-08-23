@@ -49,6 +49,31 @@ def getXpakDesc():
 g = Github(gh_token)
 repo = g.get_repo(gh_repo)
 
+def get_blob_content(branch, path_name):
+    """
+    see:
+    https://github.com/PyGithub/PyGithub/issues/661
+    """
+    ref = repo.get_git_ref(f'heads/{branch}')
+    tree = repo.get_git_tree(ref.object.sha, recursive='/' in path_name).tree
+    sha = [x.sha for x in tree if x.path == path_name]
+    if not sha:
+        return None
+    return repo.get_git_blob(sha[0])
+
+def get_contents(branch, path_name):
+    """
+    First try to use traditional's github API to get package contents,
+    since this API can't fetch file size more than 1MB, use another API when failed.
+    """
+    try:
+        return repo.get_contents(path_name, ref=branch)
+    except GithubException:
+        blob = get_blob_content(branch, path_name)
+        if blob is None:
+            raise UnknownObjectException('unable to locate file: ' + path_name + ' in branch: ' + branch)
+        return blob
+
 # make sure we are working on an existent branch
 try:
     branch = repo.get_branch(gh_branch)
@@ -79,7 +104,7 @@ try:
     commitMsg = g_pkgName + g_xpakStatus
     with open(g_manifestPath, 'r') as file:
         g_manifestFile = file.read()
-    cnt = repo.get_contents(g_manifest, ref=gh_branch)
+    cnt = get_contents(gh_branch, g_manifest)
     cnt = repo.update_file(g_manifest, commitMsg, g_manifestFile, cnt.sha, branch=gh_branch, committer=gh_author)
 except UnknownObjectException:
     # create new file (Package)
