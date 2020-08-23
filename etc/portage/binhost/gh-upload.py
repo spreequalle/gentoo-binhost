@@ -1,8 +1,8 @@
 #!/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright 2019 by generik at spreequalle.de. All rights reserved.
-# This file is released under the "MIT License Agreement". Please see the LICENSE
+# Copyright 2020 by generik at spreequalle.de. All rights reserved.
+# This file is released under the "JSON License Agreement". Please see the LICENSE
 # file that should have been included as part of this package.
 
 import os
