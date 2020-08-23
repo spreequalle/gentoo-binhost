@@ -1,8 +1,8 @@
 #!/bin/env python3
 # -*- coding: utf-8 -*-
 
-# Copyright 2019 by generik at spreequalle.de. All rights reserved.
-# This file is released under the "MIT License Agreement". Please see the LICENSE
+# Copyright 2020 by generik at spreequalle.de. All rights reserved.
+# This file is released under the "JSON License Agreement". Please see the LICENSE
 # file that should have been included as part of this package.
 
 import os
@@ -79,11 +79,17 @@ try:
     commitMsg = g_pkgName + g_xpakStatus
     with open(g_manifestPath, 'r') as file:
         g_manifestFile = file.read()
-    cnt = repo.get_contents(g_manifest, ref=gh_branch)
-    cnt = repo.update_file(g_manifest, commitMsg, g_manifestFile, cnt.sha, branch=gh_branch, committer=gh_author)
-except UnknownObjectException:
-    # create new file (Package)
-    cnt = repo.create_file(g_manifest, commitMsg, g_manifestFile, branch=gh_branch, committer=gh_author)
+
+    # receive git file/blob reference via git tree
+    ref = repo.get_git_ref(f'heads/{gh_branch}') # get branch ref
+    tree = repo.get_git_tree(ref.object.sha).tree # get git tree
+    sha = [x.sha for x in tree if x.path == g_manifest] # get file sha
+
+    if not sha:
+        # create new file (Packages)
+        repo.create_file(g_manifest, commitMsg, g_manifestFile, branch=gh_branch, committer=gh_author)
+    else:       
+        repo.update_file(g_manifest, commitMsg, g_manifestFile, sha[0], branch=gh_branch, committer=gh_author)
 except:
     print('error handling Manifest under: ' + g_manifestPath)
     exit(1)
