@@ -1,7 +1,7 @@
 # x86_64-pc-linux-gnu
 
 
-Packages optimized for Generic 64bit x86 Processes.
+Packages optimized for Generic x86_64 AMD/Intel Processors.
 
 <img src="https://raw.githubusercontent.com/ahnafhabib404/gentoo-binhost/master/images/648625-vermeer-black-chip-render-1260x709_2.png" alt="648625-vermeer-black-chip-render-1260x709_2" width="250" />
 
