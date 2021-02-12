@@ -1,6 +1,5 @@
 # x86_64-pc-linux-gnu
 
-# x86_64-bonnell-linux-gnu
 
 Packages optimized for Generic 64bit x86 Processes.
 
