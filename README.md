@@ -3,7 +3,7 @@
 
 Packages optimized for Generic 64bit x86 Processes.
 
-<img src="https://raw.githubusercontent.com/ahnafhabib404/gentoo-binhost/master/images/648625-vermeer-black-chip-render-1260x709_2.png" alt="648625-vermeer-black-chip-render-1260x709_2" width="160" />
+<img src="https://raw.githubusercontent.com/ahnafhabib404/gentoo-binhost/master/images/648625-vermeer-black-chip-render-1260x709_2.png" alt="648625-vermeer-black-chip-render-1260x709_2" width="250" />
 
 These cores can be found on modern Intel and AMD CPUs such as the Intel Core i9-10900k and the AMD Ryzen 5 5600X.
 
