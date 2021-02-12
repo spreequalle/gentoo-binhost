@@ -5,7 +5,6 @@ Packages optimized for Generic x86_64 AMD/Intel Processors.
 
 <img src="https://raw.githubusercontent.com/ahnafhabib404/gentoo-binhost/master/images/648625-vermeer-black-chip-render-1260x709_2.png" alt="648625-vermeer-black-chip-render-1260x709_2" width="250" />
 
-These cores can be found on modern Intel and AMD CPUs such as the Intel Core i9-10900k and the AMD Ryzen 5 5600X.
 
 
 Example (AMD FX 8350)
