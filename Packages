@@ -13,9 +13,9 @@ GENTOO_MIRRORS: http://distfiles.gentoo.org
 INSTALL_MASK: charset.alias locale.alias
 IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 500
+PACKAGES: 501
 PROFILE: default/linux/arm/17.0/musl
-TIMESTAMP: 1627882359
+TIMESTAMP: 1627886409
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/armv5te-88fr131x-linux-musleabi
 USE: acl ada_target_gnat_2018 apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm brotli bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog crypt curl dri elibc_musl expat fortran gmp gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv icu input_devices_libinput kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer lto lua_single_target_lua5-1 lua_targets_lua5-1 lzma minimal mpfr ncurses nptl office_implementation_libreoffice pcre php_targets_php7-3 php_targets_php7-4 png postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_9 python_targets_python3_9 readline ruby_targets_ruby26 split-usr sqlite ssl syslog truetype unicode userland_GNU video_cards_dummy video_cards_exynos video_cards_fbdev video_cards_omap video_cards_v4l xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib zstd
 USERLAND: GNU
@@ -351,22 +351,22 @@ MTIME: 1621673645
 REPO: gentoo
 
 BDEPEND: dev-util/ninja >=dev-util/cmake-3.9.6
-BUILD_TIME: 1622667422
+BUILD_TIME: 1627885939
 CPV: app-arch/brotli-1.0.9-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: python test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 python_targets_python3_8 python_targets_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: 35bed4146336e3dc3220d4ba1a9b3664
+MD5: caa878e396e8e4a91e7ad218bb8ab4aa
 PROVIDES: arm_32: libbrotlicommon.so.1 libbrotlidec.so.1 libbrotlienc.so.1
 REQUIRES: arm_32: libc.so libgcc_s.so.1
 RESTRICT: test
-SHA1: e645241899e62cbe1d060150718651c352ad16ce
-SIZE: 4224534
+SHA1: 03b8e3b5467312af747a5724011d712924096621
+SIZE: 2826858
 SLOT: 0/1
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622667440
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885940
 REPO: gentoo
 
 BUILD_TIME: 1616161138
@@ -771,20 +771,20 @@ USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
 MTIME: 1622779171
 REPO: gentoo
 
-BUILD_TIME: 1627798882
+BUILD_TIME: 1627885805
 CPV: app-eselect/eselect-repository-11
 DEFINED_PHASES: compile install setup test
 EAPI: 7
 IUSE: test python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-macos
 LICENSE: BSD-2
-MD5: f3a87949f5f2e0fc8508f72ce7516195
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] app-admin/eselect dev-python/lxml[python_targets_python3_8(-)] net-misc/wget
+MD5: b28ea4d4a1f484d759751af83f5d6f3d
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] app-admin/eselect dev-python/lxml[python_targets_python3_9(-)] net-misc/wget
 RESTRICT: test
-SHA1: 7f526e5404cb8ebbaba77231801387355b21ddf3
-SIZE: 31045
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
-MTIME: 1627798882
+SHA1: eb83ee34618c4c151150cf3955d5d161636aaacc
+SIZE: 31042
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 userland_GNU
+MTIME: 1627885806
 REPO: gentoo
 
 BUILD_TIME: 1610968641
@@ -836,7 +836,7 @@ MTIME: 1610988322
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig virtual/pkgconfig
-BUILD_TIME: 1622668668
+BUILD_TIME: 1627886040
 CPV: app-metrics/collectd-5.12.0-r1
 DEFINED_PHASES: configure install postinst preinst prepare setup
 DEPEND: acct-group/collectd acct-user/collectd dev-libs/libgcrypt:0/20= dev-libs/libltdl:0/0= sys-libs/libcap virtual/udev net-libs/libpcap net-misc/curl:0/0= sys-apps/lm-sensors:0/5.0.0= dev-libs/libatasmart:0/4= >=dev-libs/protobuf-c-1.2.1-r1:0/1.0.0= net-libs/libmicrohttpd:0/12=
@@ -844,14 +844,14 @@ EAPI: 7
 IUSE: contrib debug java kernel_Darwin kernel_FreeBSD kernel_linux perl selinux static-libs udev xfs collectd_plugins_aggregation collectd_plugins_amqp collectd_plugins_apache collectd_plugins_apcups collectd_plugins_ascent collectd_plugins_battery collectd_plugins_bind collectd_plugins_buddyinfo collectd_plugins_capabilities collectd_plugins_ceph collectd_plugins_cgroups collectd_plugins_check_uptime collectd_plugins_chrony collectd_plugins_connectivity collectd_plugins_conntrack collectd_plugins_contextswitch collectd_plugins_cpu collectd_plugins_cpufreq collectd_plugins_cpusleep collectd_plugins_csv collectd_plugins_curl collectd_plugins_curl_json collectd_plugins_curl_xml collectd_plugins_dbi collectd_plugins_df collectd_plugins_disk collectd_plugins_dns collectd_plugins_drbd collectd_plugins_email collectd_plugins_entropy collectd_plugins_ethstat collectd_plugins_exec collectd_plugins_fhcount collectd_plugins_filecount collectd_plugins_fscache collectd_plugins_gmond collectd_plugins_gps collectd_plugins_gpu_nvidia collectd_plugins_hddtemp collectd_plugins_hugepages collectd_plugins_interface collectd_plugins_ipc collectd_plugins_ipmi collectd_plugins_iptables collectd_plugins_ipvs collectd_plugins_irq collectd_plugins_java collectd_plugins_lua collectd_plugins_load collectd_plugins_logfile collectd_plugins_logparser collectd_plugins_log_logstash collectd_plugins_madwifi collectd_plugins_match_empty_counter collectd_plugins_match_hashed collectd_plugins_match_regex collectd_plugins_match_timediff collectd_plugins_match_value collectd_plugins_mbmon collectd_plugins_mcelog collectd_plugins_md collectd_plugins_memcachec collectd_plugins_memcached collectd_plugins_memory collectd_plugins_modbus collectd_plugins_mqtt collectd_plugins_multimeter collectd_plugins_mysql collectd_plugins_netlink collectd_plugins_network collectd_plugins_network collectd_plugins_nfs collectd_plugins_nginx collectd_plugins_notify_desktop collectd_plugins_notify_email collectd_plugins_notify_nagios collectd_plugins_ntpd collectd_plugins_numa collectd_plugins_nut collectd_plugins_olsrd collectd_plugins_onewire collectd_plugins_openldap collectd_plugins_openvpn collectd_plugins_oracle collectd_plugins_ovs_events collectd_plugins_ovs_stats collectd_plugins_pcie_errors collectd_plugins_perl collectd_plugins_ping collectd_plugins_postgresql collectd_plugins_powerdns collectd_plugins_procevent collectd_plugins_processes collectd_plugins_protocols collectd_plugins_python collectd_plugins_redis collectd_plugins_routeros collectd_plugins_rrdcached collectd_plugins_rrdtool collectd_plugins_sensors collectd_plugins_serial collectd_plugins_sigrok collectd_plugins_slurm collectd_plugins_smart collectd_plugins_snmp collectd_plugins_snmp_agent collectd_plugins_statsd collectd_plugins_swap collectd_plugins_synproxy collectd_plugins_sysevent collectd_plugins_syslog collectd_plugins_table collectd_plugins_tail collectd_plugins_tail_csv collectd_plugins_target_notification collectd_plugins_target_replace collectd_plugins_target_scale collectd_plugins_target_set collectd_plugins_tcpconns collectd_plugins_teamspeak2 collectd_plugins_ted collectd_plugins_thermal collectd_plugins_threshold collectd_plugins_turbostat collectd_plugins_ubi collectd_plugins_unixsock collectd_plugins_uptime collectd_plugins_users collectd_plugins_uuid collectd_plugins_varnish collectd_plugins_virt collectd_plugins_vmem collectd_plugins_vserver collectd_plugins_wireless collectd_plugins_write_graphite collectd_plugins_write_http collectd_plugins_write_influxdb_udp collectd_plugins_write_kafka collectd_plugins_write_log collectd_plugins_write_mongodb collectd_plugins_write_prometheus collectd_plugins_write_redis collectd_plugins_write_sensu collectd_plugins_write_stackdriver collectd_plugins_write_syslog collectd_plugins_write_tsdb collectd_plugins_xencpu collectd_plugins_zfs_arc collectd_plugins_zookeeper +filecaps elibc_FreeBSD collectd_plugins_java kernel_linux lua_single_target_lua5-1 lua_single_target_lua5-2 lua_single_target_lua5-3 python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm x86
 LICENSE: MIT GPL-2 GPL-2+ GPL-3 GPL-3+
-MD5: 9be7c1982eef4df07e12a4810a82f416
+MD5: 65b9003f7a07ab9cdc479e81bb506d0f
 PROVIDES: arm_32: cgroups.so contextswitch.so cpu.so cpufreq.so df.so disk.so dns.so entropy.so ethstat.so fhcount.so fscache.so infiniband.so interface.so irq.so libcollectdclient.so.1 load.so md.so mdevents.so memory.so nginx.so processes.so protocols.so sensors.so serial.so smart.so swap.so syslog.so tcpconns.so thermal.so unixsock.so uptime.so users.so vmem.so write_prometheus.so
 RDEPEND: acct-group/collectd acct-user/collectd dev-libs/libgcrypt:0/20= dev-libs/libltdl:0/0= sys-libs/libcap virtual/udev net-libs/libpcap net-misc/curl:0/0= sys-apps/lm-sensors:0/5.0.0= dev-libs/libatasmart:0/4= >=dev-libs/protobuf-c-1.2.1-r1:0/1.0.0= net-libs/libmicrohttpd:0/12= virtual/logger virtual/tmpfiles
 REQUIRES: arm_32: libatasmart.so.4 libc.so libcap.so.2 libcurl.so.4 libgcc_s.so.1 libgcrypt.so.20 libmicrohttpd.so.12 libmnl.so.0 libpcap.so.1 libprotobuf-c.so.1 libsensors.so.5 libudev.so.1
-SHA1: 4e5e8d2893c531d87f0d8bf4f21375240243daec
-SIZE: 605303
-USE: arm collectd_plugins_cgroups collectd_plugins_contextswitch collectd_plugins_cpu collectd_plugins_cpufreq collectd_plugins_df collectd_plugins_disk collectd_plugins_dns collectd_plugins_entropy collectd_plugins_ethstat collectd_plugins_fhcount collectd_plugins_fscache collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_md collectd_plugins_memory collectd_plugins_nginx collectd_plugins_processes collectd_plugins_protocols collectd_plugins_sensors collectd_plugins_serial collectd_plugins_smart collectd_plugins_swap collectd_plugins_syslog collectd_plugins_tcpconns collectd_plugins_thermal collectd_plugins_unixsock collectd_plugins_uptime collectd_plugins_users collectd_plugins_vmem collectd_plugins_write_prometheus elibc_musl kernel_linux lua_single_target_lua5-1 python_single_target_python3_8 udev userland_GNU
-MTIME: 1622668685
+SHA1: 64e06756ed64719b7f2bff81d9927a6872c5ddbf
+SIZE: 591068
+USE: arm collectd_plugins_cgroups collectd_plugins_contextswitch collectd_plugins_cpu collectd_plugins_cpufreq collectd_plugins_df collectd_plugins_disk collectd_plugins_dns collectd_plugins_entropy collectd_plugins_ethstat collectd_plugins_fhcount collectd_plugins_fscache collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_md collectd_plugins_memory collectd_plugins_nginx collectd_plugins_processes collectd_plugins_protocols collectd_plugins_sensors collectd_plugins_serial collectd_plugins_smart collectd_plugins_swap collectd_plugins_syslog collectd_plugins_tcpconns collectd_plugins_thermal collectd_plugins_unixsock collectd_plugins_uptime collectd_plugins_users collectd_plugins_vmem collectd_plugins_write_prometheus elibc_musl kernel_linux lua_single_target_lua5-1 python_single_target_python3_9 udev userland_GNU
+MTIME: 1627886042
 REPO: gentoo
 
 BDEPEND: app-misc/c_rehash sys-apps/debianutils || ( dev-lang/python:3.9 dev-lang/python:3.8 dev-lang/python:3.7 )
@@ -1625,6 +1625,27 @@ USE: arm elibc_musl kernel_linux ncurses readline sqlite ssl userland_GNU xml
 MTIME: 1620209731
 REPO: gentoo
 
+BDEPEND: virtual/pkgconfig sys-devel/autoconf-archive !sys-devel/gcc[libffi(-)] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69
+BUILD_TIME: 1627882667
+CPV: dev-lang/python-3.9.6
+DEFINED_PHASES: compile configure install prepare pretend setup test unpack
+DEPEND: app-arch/bzip2:0/1= app-arch/xz-utils:0/0= dev-libs/libffi:0/7= sys-apps/util-linux:0/0= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/1= virtual/libintl >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= >=dev-libs/openssl-1.1.1:0/1.1= >=dev-libs/expat-2.1:0/0=
+EAPI: 7
+IUSE: bluetooth build examples gdbm hardened ipv6 +ncurses +readline +sqlite +ssl test tk wininst +xml verify-sig
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc ~x86
+LICENSE: PSF-2
+MD5: c6c4fae47d21c251e056f3897526176e
+PROVIDES: arm_32: _asyncio.cpython-39-arm-linux-gnueabi.so _bisect.cpython-39-arm-linux-gnueabi.so _blake2.cpython-39-arm-linux-gnueabi.so _bz2.cpython-39-arm-linux-gnueabi.so _codecs_cn.cpython-39-arm-linux-gnueabi.so _codecs_hk.cpython-39-arm-linux-gnueabi.so _codecs_iso2022.cpython-39-arm-linux-gnueabi.so _codecs_jp.cpython-39-arm-linux-gnueabi.so _codecs_kr.cpython-39-arm-linux-gnueabi.so _codecs_tw.cpython-39-arm-linux-gnueabi.so _contextvars.cpython-39-arm-linux-gnueabi.so _crypt.cpython-39-arm-linux-gnueabi.so _csv.cpython-39-arm-linux-gnueabi.so _ctypes.cpython-39-arm-linux-gnueabi.so _ctypes_test.cpython-39-arm-linux-gnueabi.so _curses.cpython-39-arm-linux-gnueabi.so _curses_panel.cpython-39-arm-linux-gnueabi.so _datetime.cpython-39-arm-linux-gnueabi.so _decimal.cpython-39-arm-linux-gnueabi.so _elementtree.cpython-39-arm-linux-gnueabi.so _hashlib.cpython-39-arm-linux-gnueabi.so _heapq.cpython-39-arm-linux-gnueabi.so _json.cpython-39-arm-linux-gnueabi.so _lsprof.cpython-39-arm-linux-gnueabi.so _lzma.cpython-39-arm-linux-gnueabi.so _md5.cpython-39-arm-linux-gnueabi.so _multibytecodec.cpython-39-arm-linux-gnueabi.so _multiprocessing.cpython-39-arm-linux-gnueabi.so _opcode.cpython-39-arm-linux-gnueabi.so _pickle.cpython-39-arm-linux-gnueabi.so _posixshmem.cpython-39-arm-linux-gnueabi.so _posixsubprocess.cpython-39-arm-linux-gnueabi.so _queue.cpython-39-arm-linux-gnueabi.so _random.cpython-39-arm-linux-gnueabi.so _sha1.cpython-39-arm-linux-gnueabi.so _sha256.cpython-39-arm-linux-gnueabi.so _sha3.cpython-39-arm-linux-gnueabi.so _sha512.cpython-39-arm-linux-gnueabi.so _socket.cpython-39-arm-linux-gnueabi.so _sqlite3.cpython-39-arm-linux-gnueabi.so _ssl.cpython-39-arm-linux-gnueabi.so _statistics.cpython-39-arm-linux-gnueabi.so _struct.cpython-39-arm-linux-gnueabi.so _testbuffer.cpython-39-arm-linux-gnueabi.so _testcapi.cpython-39-arm-linux-gnueabi.so _testimportmultiple.cpython-39-arm-linux-gnueabi.so _testinternalcapi.cpython-39-arm-linux-gnueabi.so _testmultiphase.cpython-39-arm-linux-gnueabi.so _uuid.cpython-39-arm-linux-gnueabi.so _xxsubinterpreters.cpython-39-arm-linux-gnueabi.so _xxtestfuzz.cpython-39-arm-linux-gnueabi.so _zoneinfo.cpython-39-arm-linux-gnueabi.so array.cpython-39-arm-linux-gnueabi.so audioop.cpython-39-arm-linux-gnueabi.so binascii.cpython-39-arm-linux-gnueabi.so cmath.cpython-39-arm-linux-gnueabi.so fcntl.cpython-39-arm-linux-gnueabi.so grp.cpython-39-arm-linux-gnueabi.so libpython3.9.so.1.0 math.cpython-39-arm-linux-gnueabi.so mmap.cpython-39-arm-linux-gnueabi.so ossaudiodev.cpython-39-arm-linux-gnueabi.so parser.cpython-39-arm-linux-gnueabi.so pyexpat.cpython-39-arm-linux-gnueabi.so readline.cpython-39-arm-linux-gnueabi.so resource.cpython-39-arm-linux-gnueabi.so select.cpython-39-arm-linux-gnueabi.so spwd.cpython-39-arm-linux-gnueabi.so syslog.cpython-39-arm-linux-gnueabi.so termios.cpython-39-arm-linux-gnueabi.so unicodedata.cpython-39-arm-linux-gnueabi.so xxlimited.cpython-39-arm-linux-gnueabi.so zlib.cpython-39-arm-linux-gnueabi.so
+RDEPEND: app-arch/bzip2:0/1= app-arch/xz-utils:0/0= dev-libs/libffi:0/7= sys-apps/util-linux:0/0= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/1= virtual/libintl >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= >=dev-libs/openssl-1.1.1:0/1.1= >=dev-libs/expat-2.1:0/0= app-misc/mime-types
+REQUIRES: arm_32: libbz2.so.1 libc.so libcrypto.so.1.1 libexpat.so.1 libffi.so.7 libgcc_s.so.1 liblzma.so.5 libncursesw.so.6 libpanelw.so.6 libreadline.so.8 libsqlite3.so.0 libssl.so.1.1 libuuid.so.1 libz.so.1
+RESTRICT: test
+SHA1: 9294a291dda0e08de1a2f44419bb7b0a70e31494
+SIZE: 26653905
+SLOT: 3.9
+USE: arm elibc_musl kernel_linux ncurses readline sqlite ssl userland_GNU xml
+MTIME: 1627882685
+REPO: gentoo
+
 BUILD_TIME: 1612073327
 CPV: dev-lang/python-exec-2.4.6-r2
 DEFINED_PHASES: configure install preinst
@@ -2112,21 +2133,21 @@ MTIME: 1623549309
 REPO: gentoo
 
 BDEPEND: sys-devel/bison sys-devel/flex >=app-portage/elt-patches-20170815
-BUILD_TIME: 1622632223
+BUILD_TIME: 1627883199
 CPV: dev-libs/libnl-3.5.0
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: +debug static-libs python +threads utils python_targets_python3_8 python_targets_python3_9 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: LGPL-2.1
-MD5: 4600302d7dd86d24e7947b0b4d42bae2
+MD5: afde47d6da081e08b017d2dc290d8e0f
 PROVIDES: arm_32: libnl-3.so.200 libnl-genl-3.so.200 libnl-idiag-3.so.200 libnl-nf-3.so.200 libnl-route-3.so.200 libnl-xfrm-3.so.200
 REQUIRES: arm_32: libc.so libgcc_s.so.1
-SHA1: 90259d991a988169e5e1e32f94fb382ffc74149c
-SIZE: 334184
+SHA1: 438bb0c73c65cbef7ace148fa3e30d5e36a18146
+SIZE: 333915
 SLOT: 3
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622632236
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627883200
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig >=app-portage/elt-patches-20170815
@@ -2437,24 +2458,24 @@ MTIME: 1622750685
 REPO: gentoo
 
 BDEPEND: dev-util/gtk-doc-am virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-BUILD_TIME: 1623659104
+BUILD_TIME: 1627882784
 CPV: dev-libs/libxml2-2.9.12-r3
 DEFINED_PHASES: compile configure install postinst prepare test unpack
-DEPEND: >=sys-libs/zlib-1.2.8-r1:0/1= >=dev-libs/icu-51.2-r1:0/69.1= >=app-arch/xz-utils-5.0.5-r1:0/0= dev-lang/python:3.8[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] sys-libs/readline:0/8=
+DEPEND: >=sys-libs/zlib-1.2.8-r1:0/1= >=dev-libs/icu-51.2-r1:0/69.1= >=app-arch/xz-utils-5.0.5-r1:0/0= dev-lang/python:3.9[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] sys-libs/readline:0/8=
 EAPI: 7
 IUSE: debug examples icu ipv6 lzma +python readline static-libs test python_targets_python3_8 python_targets_python3_9 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 verify-sig
-KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: 7b69faa394913a26daf14ef4b5c322fb
+MD5: d7cf8d6296d881df25223c97cd36390a
 PROVIDES: arm_32: libxml2.so.2 libxml2mod.so
-RDEPEND: >=sys-libs/zlib-1.2.8-r1:0/1= >=dev-libs/icu-51.2-r1:0/69.1= >=app-arch/xz-utils-5.0.5-r1:0/0= dev-lang/python:3.8[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] sys-libs/readline:0/8=
+RDEPEND: >=sys-libs/zlib-1.2.8-r1:0/1= >=dev-libs/icu-51.2-r1:0/69.1= >=app-arch/xz-utils-5.0.5-r1:0/0= dev-lang/python:3.9[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] sys-libs/readline:0/8=
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libicudata.so.69 libicui18n.so.69 libicuuc.so.69 liblzma.so.5 libreadline.so.8 libz.so.1
 RESTRICT: test
-SHA1: eb6b84e241f9d37b43f739edf94cf4521a0cc081
-SIZE: 1767513
+SHA1: 3000d01c96e13ae718d3639bf38abf7c159b14ad
+SIZE: 1766722
 SLOT: 2
-USE: arm elibc_musl icu kernel_linux lzma python python_targets_python3_8 readline userland_GNU
-MTIME: 1623659106
+USE: arm elibc_musl icu kernel_linux lzma python python_targets_python3_9 readline userland_GNU
+MTIME: 1627882787
 REPO: gentoo
 
 BDEPEND: >=virtual/pkgconfig-1 >=app-portage/elt-patches-20170815
@@ -3252,38 +3273,38 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622780550
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
-BUILD_TIME: 1623139282
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627886408
 CPV: dev-python/PyGithub-1.55
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_python3_8 python_targets_python3_9
 KEYWORDS: amd64 x86
 LICENSE: LGPL-3+
-MD5: 11ddc6ccfd652fd87bdfb77542e84ec5
-RDEPEND: dev-python/deprecated[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/pyjwt-2.0[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/pynacl-1.4.0[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/requests-2.14.0[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-python/six[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
+MD5: de10230f61637d33cd636f8cf1b5316e
+RDEPEND: dev-python/deprecated[python_targets_python3_9(-)] >=dev-python/pyjwt-2.0[python_targets_python3_9(-)] >=dev-python/pynacl-1.4.0[python_targets_python3_9(-)] >=dev-python/requests-2.14.0[python_targets_python3_9(-)] dev-python/six[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: e847a9016cd0ccdc0fc9d3b724a11fc4ae871605
-SIZE: 383541
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1623139284
+SHA1: 8e3676037b6e5cfb9f849eb9580e67dd2847d6c0
+SIZE: 381505
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627886409
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622775440
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885559
 CPV: dev-python/PySocks-1.7.1-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: BSD
-MD5: 42545687ac815e7b190ac0b0e069d6e0
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 3bb4f824602c4db5bbc69ace91389e6a
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 4ae19f41b6e411640836fb4df3e27b0c053b97c4
-SIZE: 61588
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622775451
+SHA1: 94f3d157512d3b5c23e0c373536a5db8c32bedd9
+SIZE: 61749
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885559
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3305,23 +3326,23 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622779852
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1623139172
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885949
 CPV: dev-python/brotlicffi-1.0.9.2
 DEFINED_PHASES: compile configure install prepare test unpack
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: dd165437b8fc58e68a64e15c98bad8fe
+MD5: 1c3f3876a50d249f3708187de7047221
 PROVIDES: arm_32: _brotlicffi.abi3.so
-RDEPEND: app-arch/brotli:0/1= virtual/python-cffi[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+RDEPEND: app-arch/brotli:0/1= virtual/python-cffi[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libbrotlidec.so.1 libbrotlienc.so.1 libc.so
 RESTRICT: test
-SHA1: 97321ae130d5b289163b51ad05a1ae58480e425c
-SIZE: 55687
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1623139173
+SHA1: 1fd3b0dcdb2aac6a942a36b8206e596895ea8f81
+SIZE: 55504
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885949
 REPO: gentoo
 
 BUILD_TIME: 1610962394
@@ -3343,21 +3364,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1610962407
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622762096
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+BUILD_TIME: 1627885459
 CPV: dev-python/certifi-10001-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: CC0-1.0
-MD5: 906ce965082f8b5c51055d7acbced663
-RDEPEND: app-misc/ca-certificates dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 4b28b3d984f7f64f0adf6bcb337fe9b8
+RDEPEND: app-misc/ca-certificates dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 12bc3e67d3802e4dec965cbd4ff762c083c9c37e
-SIZE: 29265
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622762106
+SHA1: ddef631da1c172a43ce9142d5f008400212458b3
+SIZE: 29388
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885460
 REPO: gentoo
 
 BDEPEND: dev-libs/libffi:0/7= dev-python/pycparser[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] virtual/pkgconfig dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3381,8 +3402,8 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1610961011
 REPO: gentoo
 
-BDEPEND: dev-libs/libffi:0/7= dev-python/pycparser[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] virtual/pkgconfig dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622779054
+BDEPEND: dev-libs/libffi:0/7= dev-python/pycparser[python_targets_python3_9(-)] virtual/pkgconfig dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885798
 CPV: dev-python/cffi-1.14.5
 DEFINED_PHASES: compile configure install prepare test
 DEPEND: dev-libs/libffi:0/7=
@@ -3390,33 +3411,33 @@ EAPI: 7
 IUSE: test doc python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: e85cfa2a2756e9338c16f911880ec522
-PROVIDES: arm_32: _cffi_backend.cpython-38-arm-linux-gnueabi.so
-RDEPEND: dev-libs/libffi:0/7= dev-python/pycparser[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 7a0d59b6092f9d12d25d84f3d059b333
+PROVIDES: arm_32: _cffi_backend.cpython-39-arm-linux-gnueabi.so
+RDEPEND: dev-libs/libffi:0/7= dev-python/pycparser[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libffi.so.7 libgcc_s.so.1
 RESTRICT: test
-SHA1: 43ff3bd914eb290cddeaf9774ee0e9c1af8722c4
-SIZE: 349020
+SHA1: 3823cede387125434fe17b97c0673113f31d98da
+SIZE: 335151
 SLOT: 0/1.14.5
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622779066
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885799
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622775177
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885541
 CPV: dev-python/chardet-4.0.0
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~x64-macos ~x64-solaris
 LICENSE: LGPL-2.1
-MD5: f80517cd2e27dd78fbbe9427f86e9dc7
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 892d5c98f34d382fd129b09e46e368ff
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: a0b5415cb9ba06fc242b6d45b47edc20ddd864c4
-SIZE: 273718
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622775195
+SHA1: 2aff24e57d85adf2e226929c6c1b713cb30b7957
+SIZE: 288742
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885542
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3497,23 +3518,23 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1617784959
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622776595
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885634
 CPV: dev-python/cython-0.29.23
 DEFINED_PHASES: compile configure install postinst postrm prepare test
 EAPI: 7
 IUSE: emacs test doc python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 ~sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris ~x86-solaris
 LICENSE: Apache-2.0
-MD5: 0b5efbf4ba9e756a72ec508724b8693d
-PROVIDES: arm_32: Actions.cpython-38-arm-linux-gnueabi.so FlowControl.cpython-38-arm-linux-gnueabi.so FusedNode.cpython-38-arm-linux-gnueabi.so Scanners.cpython-38-arm-linux-gnueabi.so Scanning.cpython-38-arm-linux-gnueabi.so Visitor.cpython-38-arm-linux-gnueabi.so _tempita.cpython-38-arm-linux-gnueabi.so refnanny.cpython-38-arm-linux-gnueabi.so
-RDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 38423fb889fff49f0038b681fe0d7614
+PROVIDES: arm_32: Actions.cpython-39-arm-linux-gnueabi.so FlowControl.cpython-39-arm-linux-gnueabi.so FusedNode.cpython-39-arm-linux-gnueabi.so Scanners.cpython-39-arm-linux-gnueabi.so Scanning.cpython-39-arm-linux-gnueabi.so Visitor.cpython-39-arm-linux-gnueabi.so _tempita.cpython-39-arm-linux-gnueabi.so refnanny.cpython-39-arm-linux-gnueabi.so
+RDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libgcc_s.so.1
 RESTRICT: test
-SHA1: 15770087675e440eec9bd7a920808fa8cb27de8f
-SIZE: 3120855
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622776620
+SHA1: a27ff30e9dc9420009212cc6f90118116341770f
+SIZE: 3241212
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885636
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3550,21 +3571,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1613736414
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622775044
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885523
 CPV: dev-python/deprecated-1.2.12
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: amd64 x86
+KEYWORDS: amd64 ~arm64 x86
 LICENSE: MIT
-MD5: 8e470b43947e6aca33b4a1989de8ef82
-RDEPEND: dev-python/wrapt[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 2f3d79b67328747d3f785e32373c8d8c
+RDEPEND: dev-python/wrapt[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 45e2d6abd6c530107897723da7d9e920a74709a0
-SIZE: 42094
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622775054
+SHA1: 50e342332700b3ed4e535491bbcf4081c0f03ea2
+SIZE: 41918
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885523
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3634,20 +3655,20 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622775327
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1625315033
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885550
 CPV: dev-python/idna-3.2
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: BSD
-MD5: 1e8595bf0f1ea32b4b95f1857248985c
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
-SHA1: 7fd3795616544d07bf7653b977459f9bb461b779
-SIZE: 158122
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1625315034
+MD5: 12ea3b598d915874e7a5db1c71658bee
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+SHA1: 33200b3639a153eab690ef4da165f368609f1733
+SIZE: 153636
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885551
 REPO: gentoo
 
 BDEPEND: dev-python/pbr[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3707,24 +3728,24 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1617197907
 REPO: gentoo
 
-BDEPEND: virtual/pkgconfig dev-python/cython[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622778429
+BDEPEND: virtual/pkgconfig dev-python/cython[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885784
 CPV: dev-python/lxml-4.6.3-r1
 DEFINED_PHASES: compile configure install postinst prepare test
 DEPEND: >=dev-libs/libxml2-2.9.12-r2 >=dev-libs/libxslt-1.1.28
 EAPI: 7
 IUSE: doc examples +threads test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x64-solaris ~x86-solaris
 LICENSE: BSD ElementTree GPL-2 PSF-2
-MD5: ae344b653acf017af0110cfffa551ebb
-PROVIDES: arm_32: _elementpath.cpython-38-arm-linux-gnueabi.so builder.cpython-38-arm-linux-gnueabi.so clean.cpython-38-arm-linux-gnueabi.so diff.cpython-38-arm-linux-gnueabi.so etree.cpython-38-arm-linux-gnueabi.so objectify.cpython-38-arm-linux-gnueabi.so sax.cpython-38-arm-linux-gnueabi.so
-RDEPEND: >=dev-libs/libxml2-2.9.12-r2 >=dev-libs/libxslt-1.1.28 dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: aec042e353947856d9fc1e9eeb513a04
+PROVIDES: arm_32: _elementpath.cpython-39-arm-linux-gnueabi.so builder.cpython-39-arm-linux-gnueabi.so clean.cpython-39-arm-linux-gnueabi.so diff.cpython-39-arm-linux-gnueabi.so etree.cpython-39-arm-linux-gnueabi.so objectify.cpython-39-arm-linux-gnueabi.so sax.cpython-39-arm-linux-gnueabi.so
+RDEPEND: >=dev-libs/libxml2-2.9.12-r2 >=dev-libs/libxslt-1.1.28 dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libexslt.so.0 libgcc_s.so.1 libxml2.so.2 libxslt.so.1
 RESTRICT: test
-SHA1: ed300941b85fc07882f70af1ac92fb4f5d12cfdc
-SIZE: 1293939
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622778444
+SHA1: 9562e3a94e98cde9a9465e76f646688154c6fff1
+SIZE: 1279329
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885785
 REPO: gentoo
 
 BDEPEND: >=dev-lang/swig-2.0.9 dev-python/setuptools[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3766,24 +3787,24 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622776891
 REPO: gentoo
 
-BDEPEND: >=dev-lang/swig-2.0.9 dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1627280768
+BDEPEND: >=dev-lang/swig-2.0.9 dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885680
 CPV: dev-python/m2crypto-0.38.0
 DEFINED_PHASES: compile configure install prepare test
 DEPEND: dev-libs/openssl:0/1.1=
 EAPI: 7
 IUSE: test test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos
+KEYWORDS: ~alpha amd64 arm ~arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos
 LICENSE: MIT
-MD5: 9cf9d5ce0d04b14baacd83934f1bae71
-PROVIDES: arm_32: _m2crypto.cpython-38-arm-linux-gnueabi.so
-RDEPEND: dev-libs/openssl:0/1.1= dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+MD5: a9ef6b7bf3203dd8123a9e6c007263b5
+PROVIDES: arm_32: _m2crypto.cpython-39-arm-linux-gnueabi.so
+RDEPEND: dev-libs/openssl:0/1.1= dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libcrypto.so.1.1 libgcc_s.so.1 libssl.so.1.1
 RESTRICT: test test
-SHA1: 54b8a9572705e2c0a479475c96ec0c39ffb349f9
-SIZE: 379708
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1627280769
+SHA1: 6acd57d9e13527a08e0742aae18ba8eb46101086
+SIZE: 379440
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885681
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3820,57 +3841,57 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1623139121
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622775566
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885568
 CPV: dev-python/ply-3.11-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: examples python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: BSD
-MD5: 56d8636da194303703c96af65c9ae883
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-SHA1: e86d5879ef15d6602cd49dcb994c3eee71a48cd9
-SIZE: 170306
+MD5: fbd90ae568dfab6f5d2ee39ea91e94ec
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+SHA1: b1e170f236eed734f76929d76194b56b53658c95
+SIZE: 172887
 SLOT: 0/3.11
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622775577
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885568
 REPO: gentoo
 
-BDEPEND: dev-python/ply:0/3.11=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-python/setuptools[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622778606
+BDEPEND: dev-python/ply:0/3.11=[python_targets_python3_9(-)] dev-python/setuptools[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885693
 CPV: dev-python/pycparser-2.20-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: BSD
-MD5: 96fe7f143f142e599a037c0d3dc22447
-RDEPEND: dev-python/ply:0/3.11=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-SHA1: a5040dd879ebe91912779e900ded554a33c7fa38
-SIZE: 278714
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622778618
+MD5: 9a19ff92562c23827140366e95cfac20
+RDEPEND: dev-python/ply:0/3.11=[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+SHA1: ba219fcec7d0df702d768b155d7c93b59897093c
+SIZE: 276021
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885694
 REPO: gentoo
 
-BDEPEND: virtual/python-cffi[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622779671
+BDEPEND: virtual/python-cffi[python_targets_python3_9(-)] dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885849
 CPV: dev-python/pycryptodome-3.10.1
 DEFINED_PHASES: compile configure install prepare test
 DEPEND: dev-libs/gmp:0/10.4= >=dev-libs/libtomcrypt-1.18.2-r1:0/1=
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86 ~x64-macos
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos
 LICENSE: BSD-2 Unlicense
-MD5: 1e81acd4cf7a653b1b9b52c3681549d6
+MD5: 422fae5816632af5b0813f7a5df92c81
 PROVIDES: arm_32: _ARC4.abi3.so _BLAKE2b.abi3.so _BLAKE2s.abi3.so _MD2.abi3.so _MD4.abi3.so _MD5.abi3.so _RIPEMD160.abi3.so _SHA1.abi3.so _SHA224.abi3.so _SHA256.abi3.so _SHA384.abi3.so _SHA512.abi3.so _Salsa20.abi3.so _chacha20.abi3.so _cpuid_c.abi3.so _ec_ws.abi3.so _ghash_portable.abi3.so _keccak.abi3.so _modexp.abi3.so _poly1305.abi3.so _raw_aes.abi3.so _raw_arc2.abi3.so _raw_blowfish.abi3.so _raw_cast.abi3.so _raw_cbc.abi3.so _raw_cfb.abi3.so _raw_ctr.abi3.so _raw_des.abi3.so _raw_des3.abi3.so _raw_ecb.abi3.so _raw_eksblowfish.abi3.so _raw_ocb.abi3.so _raw_ofb.abi3.so _scrypt.abi3.so _strxor.abi3.so
-RDEPEND: dev-libs/gmp:0/10.4= >=dev-libs/libtomcrypt-1.18.2-r1:0/1= virtual/python-cffi[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] !dev-python/pycrypto dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+RDEPEND: dev-libs/gmp:0/10.4= >=dev-libs/libtomcrypt-1.18.2-r1:0/1= virtual/python-cffi[python_targets_python3_9(-)] !dev-python/pycrypto dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libtomcrypt.so.1
 RESTRICT: test
-SHA1: 00b2fc1f556f31ab5c108ea06620be1f60999a51
-SIZE: 1770060
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622779701
+SHA1: fce8ed658cf0dc7719930ac64d34455b5e331829
+SIZE: 1797363
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885851
 REPO: gentoo
 
 BDEPEND: virtual/python-cffi[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -3947,41 +3968,41 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1608970378
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1623139141
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885531
 CPV: dev-python/pyjwt-2.1.0
 DEFINED_PHASES: compile configure install postinst prepare test
 EAPI: 7
 IUSE: test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: amd64 ~arm arm64 ppc ~ppc64 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: MIT
-MD5: 04a4a9c58feecad68b68d47c36fff4ae
-RDEPEND: !dev-python/python-jwt dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 08f85f8de89f0be06e7f1ca8935e6be1
+RDEPEND: !dev-python/python-jwt dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 43f3a68d8a2b3287880c2c1b2fdbb550c7f168d0
-SIZE: 60138
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1623139142
+SHA1: 052913d86432b695800bc6c6afc8dcb7a2b51175
+SIZE: 60232
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885531
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1623139262
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885825
 CPV: dev-python/pynacl-1.4.0
 DEFINED_PHASES: compile configure install prepare test
-DEPEND: dev-python/six[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/cffi-1.4.1[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-libs/libsodium:0/23 dev-python/setuptools[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+DEPEND: dev-python/six[python_targets_python3_9(-)] >=dev-python/cffi-1.4.1[python_targets_python3_9(-)] dev-libs/libsodium:0/23 dev-python/setuptools[python_targets_python3_9(-)]
 EAPI: 7
 IUSE: test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: Apache-2.0
-MD5: 37e59d9e33a0cae762e71aefa8c06074
+MD5: 12d7d9d0ec23d3cb1cf202ecc03f911b
 PROVIDES: arm_32: _sodium.abi3.so
-RDEPEND: dev-python/six[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/cffi-1.4.1[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-libs/libsodium:0/23 dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+RDEPEND: dev-python/six[python_targets_python3_9(-)] >=dev-python/cffi-1.4.1[python_targets_python3_9(-)] dev-libs/libsodium:0/23 dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so libsodium.so.23
 RESTRICT: test
-SHA1: ade0372642a095f5ff915ae567e3832a7b0467bc
-SIZE: 139758
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1623139263
+SHA1: 095d799a13aad3f23aa040781e688a1fa93cca15
+SIZE: 138479
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885826
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -4071,21 +4092,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1612932924
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622780395
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627886354
 CPV: dev-python/requests-2.25.1-r2
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: socks5 test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos
 LICENSE: Apache-2.0
-MD5: 4c1fc03a067dc343c18f4ecfccafbe35
-RDEPEND: >=dev-python/certifi-2017.4.17[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/chardet-3.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] <dev-python/chardet-5[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/idna-2.5[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] <dev-python/idna-4[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] <dev-python/urllib3-1.27[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 95c563d88ecc2919e49f8bf8695dbe44
+RDEPEND: >=dev-python/certifi-2017.4.17[python_targets_python3_9(-)] >=dev-python/chardet-3.0.2[python_targets_python3_9(-)] <dev-python/chardet-5[python_targets_python3_9(-)] >=dev-python/idna-2.5[python_targets_python3_9(-)] <dev-python/idna-4[python_targets_python3_9(-)] <dev-python/urllib3-1.27[python_targets_python3_9(-)] dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 4bd5cc27766b1d16ce8f9c3bb66f34ed03ad3bd0
-SIZE: 130426
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622780407
+SHA1: e1e55a3272c4504dc03422f9cb9f1f29112f291e
+SIZE: 129147
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627886354
 REPO: gentoo
 
 BDEPEND: app-arch/unzip dev-lang/python:3.8[xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -4214,22 +4235,22 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622774148
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
-BUILD_TIME: 1624786327
+BDEPEND: dev-lang/python:3.9[xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+BUILD_TIME: 1627885471
 CPV: dev-python/setuptools-57.0.0
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos
 LICENSE: MIT
-MD5: 23dad910eb730e75234fc8114ad9d182
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_8(-)] dev-python/setuptools_scm[python_targets_python3_8(-)]
-RDEPEND: dev-lang/python:3.8[xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+MD5: 13cd4e0f210ae20dcabaa125841b7d2f
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_9(-)] dev-python/setuptools_scm[python_targets_python3_9(-)]
+RDEPEND: dev-lang/python:3.9[xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 15a0164fc250fa2be12878f14bb61666e8b24518
-SIZE: 1580240
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1624786329
+SHA1: cac1a4928a223698a6379c99efe526777678344c
+SIZE: 1578587
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885473
 REPO: gentoo
 
 BDEPEND: !!<dev-python/setuptools_scm-2 dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -4283,21 +4304,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1617783781
 REPO: gentoo
 
-BDEPEND: !!<dev-python/setuptools_scm-2 dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622778734
+BDEPEND: !!<dev-python/setuptools_scm-2 dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885490
 CPV: dev-python/setuptools_scm-6.0.1-r1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: e34602533220f7a891d0df767c7d1b58
-RDEPEND: dev-python/toml[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 113ff13e52ea158bcd95b4fbbb3e1bf3
+RDEPEND: dev-python/toml[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: b0ba8b3a2283ebb4b0b3ef5858eb8dae48bb5e3c
-SIZE: 79515
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622778745
+SHA1: 61c58ab8abe517e50b179bdd494a265e8dc22c20
+SIZE: 79353
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885490
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
@@ -4317,21 +4338,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622774284
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1623139100
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885514
 CPV: dev-python/six-1.16.0
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: doc test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: 4d37c4a5a5968b4ec32a23a8cf17d1e7
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 129814c917ad92b987154c4af4fff209
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 2a5badf68b2c1a0dade4f8c18aed2fb037e5178d
+SHA1: f1d07c227348546eb03f330f86396c18b22f32a3
 SIZE: 57965
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1623139101
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885515
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
@@ -4390,21 +4411,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1625552129
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622774662
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885481
 CPV: dev-python/toml-0.10.2
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos
 LICENSE: BSD
-MD5: 9f3b3d524612390b6e36fc3e30060477
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: b5297869af7b2ba9e974c346d79b05d3
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 23f4754adac5500e87e9a08d11dbd9fb434a7117
-SIZE: 64876
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622774672
+SHA1: 9b8f84621f3a19460e405de4e45aaedee5c0f6dc
+SIZE: 64615
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885482
 REPO: gentoo
 
 BDEPEND: dev-python/pbr[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -4526,40 +4547,40 @@ USE: arm brotli elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1625204731
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[ssl(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1627799026
+BDEPEND: dev-lang/python:3.9[ssl(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627886345
 CPV: dev-python/urllib3-1.26.6
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: brotli test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: MIT
-MD5: 547e18e7e0cec00315063e9fa6da313b
-RDEPEND: >=dev-python/PySocks-1.5.8[python_targets_python3_8(-)] <dev-python/PySocks-2.0[python_targets_python3_8(-)] dev-python/brotlicffi[python_targets_python3_8(-)] dev-lang/python:3.8[ssl(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+MD5: 5404220cf987347fc3c54cabb285fa71
+RDEPEND: >=dev-python/PySocks-1.5.8[python_targets_python3_9(-)] <dev-python/PySocks-2.0[python_targets_python3_9(-)] dev-python/brotlicffi[python_targets_python3_9(-)] dev-lang/python:3.9[ssl(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 576017972873e1741347afd51cfa0bb42d7a7779
-SIZE: 261866
-USE: arm brotli elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1627799027
+SHA1: 59889f57e1cfca664c4f2be8d0268ea7362d7185
+SIZE: 262358
+USE: arm brotli elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627886346
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-BUILD_TIME: 1622757615
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+BUILD_TIME: 1627882803
 CPV: dev-python/wrapt-1.12.1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test doc python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos
 LICENSE: BSD
-MD5: 6ffd24c604d7fe5a117328d79c04e7a7
-PROVIDES: arm_32: _wrappers.cpython-38-arm-linux-gnueabi.so
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
+MD5: 66a6fef7ba3a47722fc3fbbd372e6831
+PROVIDES: arm_32: _wrappers.cpython-39-arm-linux-gnueabi.so
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so
 RESTRICT: test
-SHA1: 67196bf0d365ade501f3871eb133030c68514073
-SIZE: 71573
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622757628
+SHA1: 348fca141426c9a4febb5e67d15175f8df6e841b
+SIZE: 71971
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627882803
 REPO: gentoo
 
 BDEPEND: sys-devel/make
@@ -4651,20 +4672,20 @@ USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1622277208
 REPO: gentoo
 
-BUILD_TIME: 1622761394
+BUILD_TIME: 1627882811
 CPV: dev-util/itstool-2.0.6-r1
 DEFINED_PHASES: setup test
-DEPEND: dev-lang/python:3.8[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] dev-libs/libxml2[python,python_targets_python3_8(-)]
+DEPEND: dev-lang/python:3.9[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] dev-libs/libxml2[python,python_targets_python3_9(-)]
 EAPI: 7
 IUSE: python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-3+
-MD5: 3242c23e05d14282bc6691f86c00edf8
-RDEPEND: dev-lang/python:3.8[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] dev-libs/libxml2[python,python_targets_python3_8(-)]
-SHA1: e3e32059a06ed81e75cd0ee17a07dd7d2d085eff
-SIZE: 58970
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
-MTIME: 1622761403
+MD5: 8fdf16921de82023edf86b2f9c854213
+RDEPEND: dev-lang/python:3.9[xml] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] dev-libs/libxml2[python,python_targets_python3_9(-)]
+SHA1: d47dc2ec4ed7c5e58b570aee28fd3d7008aa8926
+SIZE: 60123
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 userland_GNU
+MTIME: 1627882811
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
@@ -4718,36 +4739,36 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1622777086
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1626850828
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885503
 CPV: dev-util/meson-0.58.1
 DEFINED_PHASES: compile configure install prepare test
 EAPI: 7
 IUSE: test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
-KEYWORDS: ~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: Apache-2.0
-MD5: 299f8cc228791c04f7962251a06f96ae
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+MD5: ffc90b0e54900b012772adad80921646
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: de1382e0196441c2462b1b393c8248b3d39cd5bc
-SIZE: 1882292
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1626850830
+SHA1: b61b7af9834c80b23e688acf42d2b2a63cb6227c
+SIZE: 1874956
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885505
 REPO: gentoo
 
-BUILD_TIME: 1622760998
+BUILD_TIME: 1627882794
 CPV: dev-util/meson-format-array-0
 DEFINED_PHASES: install
 EAPI: 7
 IUSE: python_targets_python3_8 python_targets_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-2
-MD5: af35c2363dd6c81122ec9ef636ae77db
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
-SHA1: 4c0184ab48edcd8973e853108cb5c00c497f3966
-SIZE: 23771
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622761007
+MD5: 8927d6539d9eea191b30813c5868b9a2
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
+SHA1: 97b119a5ea98b7185926caca7aad56c7773c5296
+SIZE: 24081
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627882794
 REPO: gentoo
 
 BUILD_TIME: 1627798126
@@ -4840,7 +4861,7 @@ MTIME: 1620148532
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig
-BUILD_TIME: 1622672463
+BUILD_TIME: 1627886328
 CPV: dev-vcs/git-2.31.1
 DEFINED_PHASES: compile configure install postinst postrm prepare setup test unpack
 DEPEND: dev-libs/openssl:0/1.1= sys-libs/zlib dev-libs/libpcre2 net-misc/curl virtual/libiconv
@@ -4848,14 +4869,14 @@ EAPI: 7
 IUSE: +blksha1 +curl cgi doc emacs gnome-keyring +gpg highlight +iconv mediawiki mediawiki-experimental +nls +pcre perforce +perl +ppcsha1 subversion tk +threads +webdav xinetd cvs test python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-2
-MD5: 69b34233a981a7debae1b853ed85c0a8
+MD5: 3f442eecd85bd934a610ccaabe1693c2
 RDEPEND: dev-libs/openssl:0/1.1= sys-libs/zlib dev-libs/libpcre2 net-misc/curl virtual/libiconv
 REQUIRES: arm_32: libc.so libcrypto.so.1.1 libcurl.so.4 libgcc_s.so.1 libpcre2-8.so.0 libssl.so.1.1 libz.so.1
 RESTRICT: test
-SHA1: e5ca560870efc154bd8df0fad032dede401cdec7
-SIZE: 4450273
-USE: arm blksha1 curl elibc_musl iconv kernel_linux pcre python_single_target_python3_8 userland_GNU
-MTIME: 1622672513
+SHA1: c645fda426c785dee66a174182c404469b9999a4
+SIZE: 4500118
+USE: arm blksha1 curl elibc_musl iconv kernel_linux pcre python_single_target_python3_9 userland_GNU
+MTIME: 1627886335
 REPO: gentoo
 
 BDEPEND: sys-devel/gnuconfig >=app-portage/elt-patches-20170815 sys-devel/automake >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
@@ -5035,8 +5056,8 @@ USE: acl arm elibc_musl kernel_linux python_single_target_python3_8 regedit sysl
 MTIME: 1625723610
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+),xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] app-text/docbook-xsl-stylesheets dev-libs/libxslt virtual/pkgconfig virtual/pkgconfig
-BUILD_TIME: 1626850797
+BDEPEND: dev-lang/python:3.9[threads(+),xml(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] app-text/docbook-xsl-stylesheets dev-libs/libxslt virtual/pkgconfig virtual/pkgconfig
+BUILD_TIME: 1627885442
 CPV: net-fs/samba-4.13.9-r2
 DEFINED_PHASES: compile configure install postinst prepare setup test
 DEPEND: >=app-arch/libarchive-3.1.2 dev-lang/perl:0/5.34= dev-libs/icu:0/69.1= dev-libs/libbsd dev-libs/libtasn1 dev-libs/popt dev-perl/Parse-Yapp >=net-libs/gnutls-3.4.7 net-libs/libnsl:0/2= sys-libs/e2fsprogs-libs >=sys-libs/ldb-2.2.1 <sys-libs/ldb-2.3.0 sys-libs/libcap sys-libs/liburing:0/1.0.7= sys-libs/ncurses:0/6= sys-libs/readline:0/8= >=sys-libs/talloc-2.3.1 >=sys-libs/tdb-1.4.3 >=sys-libs/tevent-0.10.2 sys-libs/zlib virtual/libcrypt:0/1= virtual/libiconv sys-libs/libunwind:0/8= virtual/acl >=app-crypt/mit-krb5-1.15.1 >=dev-util/cmocka-1.1.3 net-libs/libtirpc || ( net-libs/rpcsvc-proto <sys-libs/glibc-2.26[rpc(+)] )
@@ -5044,15 +5065,15 @@ EAPI: 7
 IUSE: acl addc addns ads ceph client cluster cups debug dmapi fam glusterfs gpg iprint json ldap ntvfs pam profiling-data python quota +regedit selinux snapper spotlight syslog system-heimdal +system-mitkrb5 systemd test winbind zeroconf python_single_target_python3_8 python_single_target_python3_9 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 kernel_linux
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 sparc x86
 LICENSE: GPL-3
-MD5: f327b63c54687a26a998e06019d28f12
+MD5: 9065f1733459a19715eec98420865b8b
 PROVIDES: arm_32: acl_tdb.so acl_xattr.so aio_fork.so aio_pthread.so audit.so autorid.so btrfs.so cap.so catia.so commit.so crossrename.so default_quota.so dirsort.so expand_msdfs.so extd_audit.so fake_perms.so fileid.so fruit.so full_audit.so glusterfs_fuse.so gpfs.so hash.so ildap.so io_uring.so ldbsamba_extensions.so libCHARSET3-samba4.so libLIBWBCLIENT-OLD-samba4.so libMESSAGING-SEND-samba4.so libMESSAGING-samba4.so libaddns-samba4.so libads-samba4.so libasn1util-samba4.so libauth-samba4.so libauth-unix-token-samba4.so libauth4-samba4.so libauthkrb5-samba4.so libcli-cldap-samba4.so libcli-ldap-common-samba4.so libcli-ldap-samba4.so libcli-nbt-samba4.so libcli-smb-common-samba4.so libcli-spoolss-samba4.so libcliauth-samba4.so libclidns-samba4.so libcluster-samba4.so libcmdline-contexts-samba4.so libcmdline-credentials-samba4.so libcommon-auth-samba4.so libdbwrap-samba4.so libdcerpc-binding.so.0 libdcerpc-samba-samba4.so libdcerpc-samba4.so libdcerpc-samr.so.0 libdcerpc-server-core.so.0 libdcerpc.so.0 libdsdb-module-samba4.so libevents-samba4.so libflag-mapping-samba4.so libgenrand-samba4.so libgensec-samba4.so libgpext-samba4.so libgpo-samba4.so libgse-samba4.so libhttp-samba4.so libidmap-samba4.so libinterfaces-samba4.so libiov-buf-samba4.so libkrb5samba-samba4.so libldbsamba-samba4.so liblibcli-lsa3-samba4.so liblibcli-netlogon3-samba4.so liblibsmb-samba4.so libmessages-dgm-samba4.so libmessages-util-samba4.so libmscat-samba4.so libmsghdr-samba4.so libmsrpc3-samba4.so libndr-krb5pac.so.0 libndr-nbt.so.0 libndr-samba-samba4.so libndr-samba4.so libndr-standard.so.0 libndr.so.1 libnet-keytab-samba4.so libnetapi.so.0 libnetif-samba4.so libnpa-tstream-samba4.so libnss-info-samba4.so libnss_winbind.so.2 libnss_wins.so.2 libpopt-samba3-cmdline-samba4.so libpopt-samba3-samba4.so libposix-eadb-samba4.so libprinter-driver-samba4.so libprinting-migrate-samba4.so libregistry-samba4.so libreplace-samba4.so libsamba-cluster-support-samba4.so libsamba-credentials.so.0 libsamba-debug-samba4.so libsamba-errors.so.1 libsamba-hostconfig.so.0 libsamba-modules-samba4.so libsamba-passdb.so.0 libsamba-security-samba4.so libsamba-sockets-samba4.so libsamba-util.so.0 libsamba3-util-samba4.so libsamdb-common-samba4.so libsamdb.so.0 libsecrets3-samba4.so libserver-id-db-samba4.so libserver-role-samba4.so libshares-samba4.so libsmb-transport-samba4.so libsmbclient-raw-samba4.so libsmbclient.so.0 libsmbconf.so.0 libsmbd-base-samba4.so libsmbd-shim-samba4.so libsmbpasswdparser-samba4.so libsocket-blocking-samba4.so libsys-rw-samba4.so libtalloc-report-printf-samba4.so libtalloc-report-samba4.so libtdb-wrap-samba4.so libtevent-util.so.0 libtime-basic-samba4.so libtorture-samba4.so libtrusts-util-samba4.so libutil-cmdline-samba4.so libutil-reg-samba4.so libutil-setid-samba4.so libutil-tdb-samba4.so libwbclient.so.0 libwinbind-client-samba4.so libxattr-tdb-samba4.so linux_xfs_sgid.so media_harmony.so offline.so preopen.so readahead.so readonly.so recycle.so rid.so script.so shadow_copy.so shadow_copy2.so shell_snap.so streams_depot.so streams_xattr.so syncops.so tdb2.so time_audit.so unityed_media.so virusfilter.so widelinks.so winbind_krb5_localauth.so winbind_krb5_locator.so worm.so xattr_tdb.so
 RDEPEND: >=app-arch/libarchive-3.1.2 dev-lang/perl:0/5.34= dev-libs/icu:0/69.1= dev-libs/libbsd dev-libs/libtasn1 dev-libs/popt dev-perl/Parse-Yapp >=net-libs/gnutls-3.4.7 net-libs/libnsl:0/2= sys-libs/e2fsprogs-libs >=sys-libs/ldb-2.2.1 <sys-libs/ldb-2.3.0 sys-libs/libcap sys-libs/liburing:0/1.0.7= sys-libs/ncurses:0/6= sys-libs/readline:0/8= >=sys-libs/talloc-2.3.1 >=sys-libs/tdb-1.4.3 >=sys-libs/tevent-0.10.2 sys-libs/zlib virtual/libcrypt:0/1= virtual/libiconv sys-libs/libunwind:0/8= virtual/acl >=app-crypt/mit-krb5-1.15.1 virtual/tmpfiles
 REQUIRES: arm_32: libacl.so.1 libarchive.so.13 libbsd.so.0 libc.so libcap.so.2 libcom_err.so.2 libform.so.6 libgcc_s.so.1 libgnutls.so.30 libgssapi_krb5.so.2 libicui18n.so.69 libicuuc.so.69 libk5crypto.so.3 libkrb5.so.3 libldb.so.2 libncurses.so.6 libnsl.so.2 libpanel.so.6 libpopt.so.0 libreadline.so.8 libtalloc.so.2 libtasn1.so.6 libtdb.so.1 libtevent.so.0 libtinfo.so.6 libunwind-arm.so.8 liburing.so.1 libz.so.1
 RESTRICT: test
-SHA1: b1b85ff6e71ab1fde917f6a21533861bd6f454bd
-SIZE: 8339149
-USE: acl arm elibc_musl kernel_linux python_single_target_python3_8 regedit syslog system-mitkrb5 userland_GNU
-MTIME: 1626850805
+SHA1: 33acfb1f14c8a3417fb6799c86b929aceb0817a9
+SIZE: 8342007
+USE: acl arm elibc_musl kernel_linux python_single_target_python3_9 regedit syslog system-mitkrb5 userland_GNU
+MTIME: 1627885451
 REPO: gentoo
 
 BDEPEND: >=virtual/pkgconfig-0-r1 >=app-portage/elt-patches-20170815
@@ -5372,22 +5393,22 @@ MTIME: 1624430908
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-BUILD_TIME: 1627798833
+BUILD_TIME: 1627883036
 CPV: net-mail/mailutils-3.12-r3
 DEFINED_PHASES: configure install prepare setup
 DEPEND: !mail-filter/libsieve !mail-client/mailx sys-libs/ncurses:0/6= sys-libs/readline:0/8= dev-libs/libltdl:0 virtual/libcrypt:0/1= virtual/mta
 EAPI: 7
 IUSE: berkdb bidi +clients emacs gdbm sasl guile ipv6 kerberos kyotocabinet ldap mysql nls pam postgres python servers split-usr ssl static-libs +threads tcpd tokyocabinet python_single_target_python3_8 python_single_target_python3_9 python_single_target_python3_10
-KEYWORDS: ~alpha amd64 arm ~arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc ~x86 ~ppc-macos ~x64-macos
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ppc ppc64 ~riscv ~s390 sparc x86 ~ppc-macos ~x64-macos
 LICENSE: GPL-2 LGPL-2.1
-MD5: 489585fdaa5878f0884f28f5026db8a0
+MD5: 9c8e34babbcd2c45233df6a2ec24bcbf
 PROVIDES: arm_32: editheader.so libmailutils.so.8 libmu_auth.so.8 libmu_dotmail.so.8 libmu_imap.so.8 libmu_maildir.so.8 libmu_mailer.so.8 libmu_mbox.so.8 libmu_mh.so.8 libmu_pop.so.8 libmu_sieve.so.8 libmuaux.so.8 list.so moderator.so numaddr.so pipe.so spamd.so timestamp.so vacation.so
 RDEPEND: !mail-filter/libsieve !mail-client/mailx sys-libs/ncurses:0/6= sys-libs/readline:0/8= dev-libs/libltdl:0 virtual/libcrypt:0/1= virtual/mta
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libltdl.so.7 libreadline.so.8
-SHA1: e50061c71a06d247891e7be883adb65a79945507
-SIZE: 1146177
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 split-usr userland_GNU
-MTIME: 1627798835
+SHA1: 353df379379d08e22d0971d97528fbc16222e269
+SIZE: 1145881
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 split-usr userland_GNU
+MTIME: 1627883039
 REPO: gentoo
 
 BDEPEND: >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
@@ -5986,21 +6007,21 @@ USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
 MTIME: 1623139232
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1626594042
+BDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885870
 CPV: net-misc/youtube-dl-2021.06.06
 DEFINED_PHASES: compile configure install postinst prepare test
 EAPI: 7
 IUSE: test python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: amd64 arm ~arm64 ~hppa ppc ppc64 x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x86-solaris
 LICENSE: public-domain
-MD5: 37267fd52274f816ab014cbb4b1b737b
-RDEPEND: dev-python/pycryptodome[python_targets_python3_8(-)] dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+MD5: b5bd989fe847ae617a8806ab0bef5ab1
+RDEPEND: dev-python/pycryptodome[python_targets_python3_9(-)] dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 RESTRICT: test
-SHA1: 3e11dd6664a1d5600dfea56411637ab1ed9da336
-SIZE: 5072783
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1626594047
+SHA1: 572034d7098502380b595c2ea9ad42e6ef590611
+SIZE: 5054265
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885875
 REPO: gentoo
 
 BDEPEND: || ( dev-lang/python:3.9 dev-lang/python:3.8 dev-lang/python:3.7 ) || ( ( dev-lang/python:3.9 dev-python/m2crypto[python_targets_python3_9(-),-python_single_target_python3_9(-)] ) ( dev-lang/python:3.8 dev-python/m2crypto[python_targets_python3_8(-),-python_single_target_python3_8(-)] ) ( dev-lang/python:3.7 dev-python/m2crypto[python_targets_python3_7(-),-python_single_target_python3_7(-)] ) ) virtual/pkgconfig virtual/pkgconfig
@@ -6824,25 +6845,25 @@ USE: arm elibc_musl ipc kernel_linux native-extensions python_targets_python3_8 
 MTIME: 1622761220
 REPO: gentoo
 
-BDEPEND: app-arch/xz-utils dev-lang/python:3.8[bzip2(+),threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_8(-)]
-BUILD_TIME: 1625463437
+BDEPEND: app-arch/xz-utils dev-lang/python:3.9[bzip2(+),threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1627885653
 CPV: sys-apps/portage-3.0.20-r6
 DEFINED_PHASES: compile configure install preinst prepare pretend setup test
-DEPEND: dev-lang/python:3.8[ssl(+)] >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/sed-4.0.5 sys-devel/patch
+DEPEND: dev-lang/python:3.9[ssl(+)] >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/sed-4.0.5 sys-devel/patch
 EAPI: 7
 IUSE: apidoc build doc gentoo-dev +ipc +native-extensions +rsync-verify selinux test xattr python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 kernel_linux
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE: GPL-2
-MD5: e6b890e48b982a6dce7d28866fec02c7
+MD5: 0f4a5b3d4a9a7d279795ba1a80874b47
 PDEPEND: >=net-misc/rsync-2.6.4 >=sys-apps/coreutils-6.4
-PROVIDES: arm_32: libc.cpython-38-arm-linux-gnueabi.so reflink_linux.cpython-38-arm-linux-gnueabi.so
-RDEPEND: acct-user/portage app-arch/zstd >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/findutils-4.4 >=sys-apps/sed-4.0.5 app-shells/bash:0[readline] >=app-admin/eselect-1.2 >=sys-apps/sandbox-2.2 sys-apps/util-linux >=app-misc/pax-utils-0.1.17 !<app-admin/logrotate-3.8.0 !<app-portage/gentoolkit-0.4.6 !<app-portage/repoman-2.3.10 !~app-portage/repoman-3.0.0 dev-lang/python:3.8[bzip2(+),threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)]
+PROVIDES: arm_32: libc.cpython-39-arm-linux-gnueabi.so reflink_linux.cpython-39-arm-linux-gnueabi.so
+RDEPEND: acct-user/portage app-arch/zstd >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/findutils-4.4 >=sys-apps/sed-4.0.5 app-shells/bash:0[readline] >=app-admin/eselect-1.2 >=sys-apps/sandbox-2.2 sys-apps/util-linux >=app-misc/pax-utils-0.1.17 !<app-admin/logrotate-3.8.0 !<app-portage/gentoolkit-0.4.6 !<app-portage/repoman-2.3.10 !~app-portage/repoman-3.0.0 dev-lang/python:3.9[bzip2(+),threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)]
 REQUIRES: arm_32: libc.so
 RESTRICT: test
-SHA1: 75f6ae4125c8d7ea72efef20bee47dd389be6499
-SIZE: 3004237
-USE: arm elibc_musl ipc kernel_linux native-extensions python_targets_python3_8 userland_GNU
-MTIME: 1625463441
+SHA1: 348dee2081d0d627cadb7e927788438363907665
+SIZE: 3004713
+USE: arm elibc_musl ipc kernel_linux native-extensions python_targets_python3_9 userland_GNU
+MTIME: 1627885657
 REPO: gentoo
 
 BUILD_TIME: 1619425706
@@ -7093,7 +7114,7 @@ MTIME: 1610987082
 REPO: gentoo
 
 BDEPEND: app-arch/xz-utils virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
-BUILD_TIME: 1622666847
+BUILD_TIME: 1627885898
 CPV: sys-apps/usbutils-013-r1
 DEFINED_PHASES: configure install prepare setup
 DEPEND: virtual/libusb:1/1= virtual/libudev:0/1=
@@ -7101,13 +7122,13 @@ EAPI: 7
 IUSE: python python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: GPL-2
-MD5: 844274b909b37db6bee45e3c893abaac
+MD5: dcf7885143e42849371b82f25d51a343
 RDEPEND: virtual/libusb:1/1= virtual/libudev:0/1= sys-apps/hwids
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libudev.so.1 libusb-1.0.so.0
-SHA1: d9fb49b328e9c81c325aa144ac846bbc5cf8785d
-SIZE: 118157
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
-MTIME: 1622666857
+SHA1: 1000b3271aadabc961d84077e3e55086c1c2db5e
+SIZE: 118935
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 userland_GNU
+MTIME: 1627885899
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig >=app-portage/elt-patches-20170815 virtual/pkgconfig
@@ -7394,22 +7415,22 @@ MTIME: 1621155568
 REPO: gentoo
 
 BDEPEND: app-arch/xz-utils sys-apps/texinfo virtual/yacc
-BUILD_TIME: 1622772538
+BUILD_TIME: 1627884047
 CPV: sys-devel/gdb-10.1
 DEFINED_PHASES: configure install postinst prepare setup
-DEPEND: dev-libs/mpfr:0/6= >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-7:0/8= sys-libs/zlib app-arch/xz-utils dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8]
+DEPEND: dev-libs/mpfr:0/6= >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-7:0/8= sys-libs/zlib app-arch/xz-utils dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9]
 EAPI: 7
 IUSE: cet lzma multitarget nls +python +server source-highlight test vanilla xml xxhash python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: amd64 arm arm64 ~mips ppc ppc64 x86
 LICENSE: GPL-2 LGPL-2
-MD5: ddc7ba5ab997ea7fb582f1687607407c
-RDEPEND: dev-libs/mpfr:0/6= >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-7:0/8= sys-libs/zlib app-arch/xz-utils dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8]
-REQUIRES: arm_32: libc.so libgcc_s.so.1 liblzma.so.5 libmpfr.so.6 libncursesw.so.6 libpython3.8.so.1.0 libreadline.so.8 libstdc++.so.6 libtinfow.so.6 libz.so.1
+MD5: 139f195cbebdc260d2aa45b3ebbbe3a2
+RDEPEND: dev-libs/mpfr:0/6= >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-7:0/8= sys-libs/zlib app-arch/xz-utils dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9]
+REQUIRES: arm_32: libc.so libgcc_s.so.1 liblzma.so.5 libmpfr.so.6 libncursesw.so.6 libpython3.9.so.1.0 libreadline.so.8 libstdc++.so.6 libtinfow.so.6 libz.so.1
 RESTRICT: test
-SHA1: 48b23898c9660e37ff19e82b0307220c35393876
-SIZE: 6968330
-USE: arm elibc_musl kernel_linux lzma python python_single_target_python3_8 server userland_GNU
-MTIME: 1622772568
+SHA1: 54b3a989f153d183ebe07cdd69652e2bd56507ba
+SIZE: 6625191
+USE: arm elibc_musl kernel_linux lzma python python_single_target_python3_9 server userland_GNU
+MTIME: 1627884054
 REPO: musl
 
 BDEPEND: >=app-portage/elt-patches-20170815
@@ -7788,8 +7809,8 @@ USE: arm elibc_musl kernel_linux lmdb python_single_target_python3_8 userland_GN
 MTIME: 1622773991
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] dev-libs/libxslt virtual/pkgconfig
-BUILD_TIME: 1626929927
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] dev-libs/libxslt virtual/pkgconfig
+BUILD_TIME: 1627884129
 CPV: sys-libs/ldb-2.2.1-r1
 DEFINED_PHASES: compile configure install postinst prepare setup test
 DEPEND: dev-libs/libbsd dev-libs/popt >=dev-util/cmocka-1.1.3 >=sys-libs/talloc-2.3.1 >=sys-libs/tdb-1.4.3 >=sys-libs/tevent-0.10.2 >=dev-db/lmdb-0.9.16
@@ -7797,16 +7818,16 @@ EAPI: 7
 IUSE: doc ldap +lmdb python test python_single_target_python3_8 python_single_target_python3_9 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86
 LICENSE: LGPL-3
-MD5: ed03241d26c466a1f8b44bd90333e688
+MD5: 1f5809f1db27baf13bbada9e179a2073
 PROVIDES: arm_32: asq.so ldb.so libldb-cmdline.so libldb-key-value.so libldb-tdb-err-map.so libldb-tdb-int.so libldb.so.2 libreplace-ldb.so paged_searches.so rdn_name.so sample.so server_sort.so skel.so tdb.so
 RDEPEND: dev-libs/libbsd dev-libs/popt >=dev-util/cmocka-1.1.3 >=sys-libs/talloc-2.3.1 >=sys-libs/tdb-1.4.3 >=sys-libs/tevent-0.10.2 >=dev-db/lmdb-0.9.16
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libpopt.so.0 libtalloc.so.2 libtdb.so.1 libtevent.so.0
 RESTRICT: test
-SHA1: 5e94359b7ba7eb02e2d95ae89b9775a685a67acd
-SIZE: 205571
+SHA1: a6e35e8eeeddbdd6be0eb614d522eb7602a3a4d9
+SIZE: 205609
 SLOT: 0/2.2.1
-USE: arm elibc_musl kernel_linux lmdb python_single_target_python3_8 userland_GNU
-MTIME: 1626929927
+USE: arm elibc_musl kernel_linux lmdb python_single_target_python3_9 userland_GNU
+MTIME: 1627884129
 REPO: gentoo
 
 BUILD_TIME: 1621862155
@@ -7997,28 +8018,28 @@ USE: arm elibc_musl kernel_linux python python_single_target_python3_8 userland_
 MTIME: 1610967048
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] dev-libs/libxslt sys-devel/gettext
-BUILD_TIME: 1622761985
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] dev-libs/libxslt sys-devel/gettext
+BUILD_TIME: 1627883088
 CPV: sys-libs/talloc-2.3.2
 DEFINED_PHASES: compile configure install prepare setup test
-DEPEND: dev-libs/libbsd dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] !!<sys-libs/talloc-2.0.5
+DEPEND: dev-libs/libbsd dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] !!<sys-libs/talloc-2.0.5
 EAPI: 7
 IUSE: compat +python python_single_target_python3_8 python_single_target_python3_9 abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-macos ~sparc-solaris ~x64-solaris
 LICENSE: GPL-3 LGPL-3+ LGPL-2
-MD5: c00955f469ae7b1a4521e973b014b109
-PROVIDES: arm_32: libpytalloc-util.cpython-38-arm-linux-gnueabi.so.2 libtalloc.so.2 talloc.cpython-38-arm-linux-gnueabi.so
-RDEPEND: dev-libs/libbsd dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] !!<sys-libs/talloc-2.0.5
-REQUIRES: arm_32: libc.so libgcc_s.so.1 libpython3.8.so.1.0
+MD5: ded808f33e06eaef382ffaa3cfcd7391
+PROVIDES: arm_32: libpytalloc-util.cpython-39-arm-linux-gnueabi.so.2 libtalloc.so.2 talloc.cpython-39-arm-linux-gnueabi.so
+RDEPEND: dev-libs/libbsd dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] !!<sys-libs/talloc-2.0.5
+REQUIRES: arm_32: libc.so libgcc_s.so.1 libpython3.9.so.1.0
 RESTRICT: test
-SHA1: ee5412e066c9a8d9a6340c4d0051661e685ddc77
-SIZE: 69894
-USE: arm elibc_musl kernel_linux python python_single_target_python3_8 userland_GNU
-MTIME: 1622761995
+SHA1: 9e347fadccb872a98dfa1a0d96f6a7a7750aa322
+SIZE: 70491
+USE: arm elibc_musl kernel_linux python python_single_target_python3_9 userland_GNU
+MTIME: 1627883088
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] app-text/docbook-xml-dtd:4.2
-BUILD_TIME: 1622633486
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] app-text/docbook-xml-dtd:4.2
+BUILD_TIME: 1627883308
 CPV: sys-libs/tdb-1.4.3
 DEFINED_PHASES: compile configure install prepare setup test
 DEPEND: dev-libs/libbsd
@@ -8026,19 +8047,19 @@ EAPI: 7
 IUSE: python abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~mips ppc ppc64 ~s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: GPL-3
-MD5: 0d2eb08f75f62753ffd708ad6b0b3b69
+MD5: 05d57f263825acf881fbdc118ef832be
 PROVIDES: arm_32: libtdb.so.1
 RDEPEND: dev-libs/libbsd
 REQUIRES: arm_32: libc.so libgcc_s.so.1
 RESTRICT: test
-SHA1: d14d58d36d46abc72c36940754e875d1a1eed88c
-SIZE: 89110
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
-MTIME: 1622633496
+SHA1: 4120db4a85f49cffb687883639041db9ee499612
+SIZE: 89498
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 userland_GNU
+MTIME: 1627883308
 REPO: gentoo
 
-BDEPEND: dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8] virtual/pkgconfig
-BUILD_TIME: 1623139081
+BDEPEND: dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9] virtual/pkgconfig
+BUILD_TIME: 1627883133
 CPV: sys-libs/tevent-0.10.2
 DEFINED_PHASES: compile configure install prepare setup test
 DEPEND: dev-libs/libbsd >=sys-libs/talloc-2.3.1
@@ -8046,15 +8067,15 @@ EAPI: 7
 IUSE: elibc_glibc python abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 python_single_target_python3_8 python_single_target_python3_9
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x86-linux
 LICENSE: GPL-3
-MD5: ba2959d5db54424b2c583ecb5e04db12
+MD5: 50fe33d1962a1b288ee54dc864167b06
 PROVIDES: arm_32: libreplace-tevent.so libtevent.so.0
 RDEPEND: dev-libs/libbsd >=sys-libs/talloc-2.3.1
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libtalloc.so.2
 RESTRICT: test
-SHA1: a6d37853a41e957aa215b0da1da494550aa6c75d
-SIZE: 76410
-USE: arm elibc_musl kernel_linux python_single_target_python3_8 userland_GNU
-MTIME: 1623139082
+SHA1: bd6dce00f3c11c4866e4ffb204414b64cc8adc34
+SIZE: 76889
+USE: arm elibc_musl kernel_linux python_single_target_python3_9 userland_GNU
+MTIME: 1627883134
 REPO: musl
 
 BDEPEND: >=app-portage/elt-patches-20170815
@@ -8689,18 +8710,18 @@ USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1627798311
 REPO: gentoo
 
-BUILD_TIME: 1622779258
+BUILD_TIME: 1627885812
 CPV: virtual/python-cffi-1
 DEFINED_PHASES: -
 EAPI: 7
 IUSE: python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
-MD5: a208c4fad565a005124e5b401fe1c19f
-RDEPEND: dev-lang/python:3.8 >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-),-python_single_target_pypy3(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)] dev-python/cffi[python_targets_python3_8(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-),-python_single_target_python3_10(-)]
-SHA1: 244e6779081cb438393d354eafa7a56adf958cc0
-SIZE: 23342
-USE: arm elibc_musl kernel_linux python_targets_python3_8 userland_GNU
-MTIME: 1622779267
+MD5: 14bf43b21d328bf97b2b73a39b43f120
+RDEPEND: dev-lang/python:3.9 >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] dev-python/cffi[python_targets_python3_9(-)]
+SHA1: 3b16abfd939ea32c4c5d864ea18db99695eb52ed
+SIZE: 23457
+USE: arm elibc_musl kernel_linux python_targets_python3_9 userland_GNU
+MTIME: 1627885812
 REPO: gentoo
 
 BUILD_TIME: 1621239305
@@ -8831,21 +8852,21 @@ MTIME: 1624786308
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 sys-devel/m4 sys-devel/libtool dev-lang/php:7.4
-BUILD_TIME: 1627881532
+BUILD_TIME: 1627886398
 CPV: www-servers/uwsgi-2.0.19.1-r103
 DEFINED_PHASES: compile configure install postinst prepare setup test unpack
-DEPEND: sys-libs/zlib virtual/libcrypt:0/1= sys-libs/libcap dev-libs/libpcre:3 dev-libs/openssl:0/1.1= dev-libs/expat net-libs/libnsl dev-lang/php:7.4[embed] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] dev-lang/php:7.4
+DEPEND: sys-libs/zlib virtual/libcrypt:0/1= sys-libs/libcap dev-libs/libpcre:3 dev-libs/openssl:0/1.1= dev-libs/expat net-libs/libnsl dev-lang/php:7.4[embed] dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] dev-lang/php:7.4
 EAPI: 7
 IUSE: apache2 +caps debug +embedded expat jemalloc json +pcre +routing selinux +ssl +xml yajl yaml zeromq +uwsgi_plugins_ping +uwsgi_plugins_cache +uwsgi_plugins_carbon +uwsgi_plugins_nagios +uwsgi_plugins_rpc +uwsgi_plugins_rrdtool +uwsgi_plugins_http +uwsgi_plugins_ugreen +uwsgi_plugins_signal +uwsgi_plugins_syslog +uwsgi_plugins_rsyslog +uwsgi_plugins_router_uwsgi +uwsgi_plugins_router_redirect +uwsgi_plugins_router_basicauth +uwsgi_plugins_router_rewrite +uwsgi_plugins_router_http +uwsgi_plugins_router_cache +uwsgi_plugins_router_static +uwsgi_plugins_router_memcached +uwsgi_plugins_router_redis +uwsgi_plugins_router_hash +uwsgi_plugins_router_expires +uwsgi_plugins_router_metrics +uwsgi_plugins_corerouter +uwsgi_plugins_fastrouter +uwsgi_plugins_rawrouter +uwsgi_plugins_sslrouter +uwsgi_plugins_redislog +uwsgi_plugins_mongodblog +uwsgi_plugins_logfile +uwsgi_plugins_logsocket +uwsgi_plugins_spooler +uwsgi_plugins_cheaper_busyness +uwsgi_plugins_symcall +uwsgi_plugins_transformation_chunked +uwsgi_plugins_transformation_gzip +uwsgi_plugins_transformation_offload +uwsgi_plugins_transformation_tofile +uwsgi_plugins_zergpool uwsgi_plugins_alarm_curl uwsgi_plugins_alarm_xmpp uwsgi_plugins_clock_monotonic uwsgi_plugins_clock_realtime uwsgi_plugins_curl_cron uwsgi_plugins_dumbloop uwsgi_plugins_echo uwsgi_plugins_emperor_amqp uwsgi_plugins_emperor_pg uwsgi_plugins_emperor_zeromq uwsgi_plugins_forkptyrouter uwsgi_plugins_geoip uwsgi_plugins_graylog2 uwsgi_plugins_legion_cache_fetch uwsgi_plugins_ldap uwsgi_plugins_logcrypto uwsgi_plugins_logpipe uwsgi_plugins_notfound uwsgi_plugins_pam uwsgi_plugins_rados uwsgi_plugins_router_access uwsgi_plugins_router_radius uwsgi_plugins_router_spnego uwsgi_plugins_router_xmldir uwsgi_plugins_sqlite uwsgi_plugins_ssi uwsgi_plugins_stats_pusher_statsd uwsgi_plugins_systemd_logger uwsgi_plugins_transformation_toupper uwsgi_plugins_tuntap uwsgi_plugins_webdav uwsgi_plugins_xattr uwsgi_plugins_xslt uwsgi_plugins_zabbix cgi mono perl go lua php python python-asyncio python-gevent ruby +lua_single_target_lua5-1 php_targets_php7-3 php_targets_php7-4 python_targets_python3_8 python_targets_python3_9 ruby_targets_ruby25 ruby_targets_ruby26 ruby_targets_ruby27 ruby_targets_ruby30
 KEYWORDS: amd64 arm x86 ~amd64-linux
 LICENSE: GPL-2
-MD5: 6d5c36e543234442cadc21ae19d166ca
-PROVIDES: arm_32: php74_plugin.so python38_plugin.so
-RDEPEND: sys-libs/zlib virtual/libcrypt:0/1= sys-libs/libcap dev-libs/libpcre:3 dev-libs/openssl:0/1.1= dev-libs/expat net-libs/libnsl dev-lang/php:7.4[embed] dev-lang/python:3.8[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_8(-)] dev-lang/php:7.4
-REQUIRES: arm_32: libc.so libcap.so.2 libcrypto.so.1.1 libexpat.so.1 libgcc_s.so.1 libpcre.so.1 libphp7.so libpython3.8.so.1.0 libssl.so.1.1 libz.so.1
-SHA1: ee506b9f07542c047a3ee2ddd6ca58d626696b06
-SIZE: 487164
-USE: arm caps elibc_musl embedded expat kernel_linux lua_single_target_lua5-1 pcre php php_targets_php7-4 python python_targets_python3_8 routing ruby_targets_ruby26 ssl userland_GNU xml
-MTIME: 1627881532
+MD5: a3e8ab29a6cc52ab2efec30717537edb
+PROVIDES: arm_32: php74_plugin.so python39_plugin.so
+RDEPEND: sys-libs/zlib virtual/libcrypt:0/1= sys-libs/libcap dev-libs/libpcre:3 dev-libs/openssl:0/1.1= dev-libs/expat net-libs/libnsl dev-lang/php:7.4[embed] dev-lang/python:3.9[threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_9(-)] dev-lang/php:7.4
+REQUIRES: arm_32: libc.so libcap.so.2 libcrypto.so.1.1 libexpat.so.1 libgcc_s.so.1 libpcre.so.1 libphp7.so libpython3.9.so.1.0 libssl.so.1.1 libz.so.1
+SHA1: d407e7aec340478d2223b36fcafd800886e1e277
+SIZE: 487133
+USE: arm caps elibc_musl embedded expat kernel_linux lua_single_target_lua5-1 pcre php php_targets_php7-4 python python_targets_python3_9 routing ruby_targets_ruby26 ssl userland_GNU xml
+MTIME: 1627886399
 REPO: gentoo
 
