@@ -14,7 +14,7 @@ IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
 PACKAGES: 1457
 PROFILE: default/linux/arm64/17.0/systemd
-TIMESTAMP: 1641249572
+TIMESTAMP: 1641249873
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/aarch64-cortex_a53-linux-gnu
 USE: X acl ada_target_gnat_2020 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm64 bluetooth bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_arm_aes cpu_flags_arm_crc32 cpu_flags_arm_edsp cpu_flags_arm_neon cpu_flags_arm_sha1 cpu_flags_arm_sha2 cpu_flags_arm_thumb cpu_flags_arm_thumb2 cpu_flags_arm_v4 cpu_flags_arm_v5 cpu_flags_arm_v6 cpu_flags_arm_v7 cpu_flags_arm_v8 cpu_flags_arm_vfp cpu_flags_arm_vfp-d32 cpu_flags_arm_vfpv3 cpu_flags_arm_vfpv4 crypt curl dbus dri elf elibc_glibc exif ffmpeg fortran gdbm gmp gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx gtk harfbuzz iconv input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libnotify libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer libtirpc lto lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma lzo ncurses nptl office_implementation_libreoffice opengl openmp pam pcre pdf php_targets_php7-3 php_targets_php7-4 png policykit postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_9 python_targets_python3_9 readline ruby_targets_ruby26 ruby_targets_ruby27 seccomp split-usr sqlite ssl startup-notification systemd threads tiff truetype udev udisks unicode upower userland_GNU video_cards_vc4 wifi xattr xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib zstd
 USERLAND: GNU
@@ -19469,22 +19469,22 @@ MTIME: 1610260327
 REPO: gentoo
 
 BDEPEND: >=app-portage/elt-patches-20170815
-BUILD_TIME: 1622619265
+BUILD_TIME: 1641249871
 CPV: sys-devel/gettext-0.21-r1
 DEFINED_PHASES: compile configure install preinst prepare setup test
 DEPEND: >=virtual/libiconv-0-r1 >=virtual/libintl-0-r2 >=dev-libs/libxml2-2.9.3:2/2= dev-libs/expat virtual/acl sys-libs/ncurses:0/6=
 EAPI: 7
-IUSE: acl cvs +cxx doc emacs git java ncurses nls openmp static-libs elibc_FreeBSD java abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
-KEYWORDS: ~alpha amd64 arm ~arm64 ~hppa ~ia64 ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
+IUSE: acl cvs +cxx doc emacs git java ncurses nls openmp static-libs java abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
 LICENSE: GPL-3+ LGPL-2.1+
-MD5: ec6393a318819ca16ab78e11e00de95c
+MD5: e96d2b955c717466e7b49826755d8712
 PROVIDES: arm_64: libasprintf.so.0 libgettextlib-0.21.so libgettextpo.so.0 libgettextsrc-0.21.so libgnuintl.so.8 libtextstyle.so.0
 RDEPEND: >=virtual/libiconv-0-r1 >=virtual/libintl-0-r2 >=dev-libs/libxml2-2.9.3:2/2= dev-libs/expat virtual/acl sys-libs/ncurses:0/6=
 REQUIRES: arm_64: ld-linux-aarch64.so.1 libacl.so.1 libc.so.6 libgomp.so.1 libm.so.6 libstdc++.so.6 libxml2.so.2
-SHA1: 5ba529121a8be98a8fde71635d951fa65a4f10a8
-SIZE: 2394753
+SHA1: ed930708248f8397fe2454fbc962350b8fbfc009
+SIZE: 2431647
 USE: acl arm64 cxx elibc_glibc kernel_linux ncurses openmp userland_GNU
-MTIME: 1622619267
+MTIME: 1641249873
 REPO: gentoo
 
 BUILD_TIME: 1610175317
