@@ -12,9 +12,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs buildpkg c
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_mips_o32 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 1284
+PACKAGES: 1285
 PROFILE: default/linux/mips/17.0/mipsel/o32
-TIMESTAMP: 1643878251
+TIMESTAMP: 1643878524
 USE: X abi_mips_o32 ada_target_gnat_2020 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias bluetooth bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words clang cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog crypt dbus elibc_glibc gdbm gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv input_devices_libinput ipv6 kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer llvm_targets_BPF llvm_targets_Mips lto lua_single_target_lua5-1 lua_targets_lua5-1 lzma mips ncurses nptl office_implementation_libreoffice pam pcre php_targets_php7-4 php_targets_php8-0 postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_9 python_targets_python3_9 readline ruby_targets_ruby26 ruby_targets_ruby27 split-usr sqlite ssl systemd udev unicode userland_GNU video_cards_dummy video_cards_fbdev video_cards_impact video_cards_v4l xattr xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib zstd
 USERLAND: GNU
 USE_EXPAND: ABI_MIPS ABI_PPC ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_SSL ELIBC FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LLVM_TARGETS LUA_SINGLE_TARGET LUA_TARGETS MONKEYD_PLUGINS NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFED_DRIVERS OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS ROS_MESSAGES RUBY_TARGETS SANE_BACKENDS USERLAND UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XTABLES_ADDONS
@@ -14016,6 +14016,27 @@ SHA1: edbb40522280df9202b7d677d230e04f6a6b3fda
 SIZE: 3100116
 USE: abi_mips_o32 elibc_glibc ipc kernel_linux mips native-extensions python_targets_python3_9 userland_GNU xattr
 MTIME: 1641850613
+REPO: gentoo
+
+BDEPEND: app-arch/xz-utils >=dev-lang/python-3.9.9-r1:3.9[bzip2(+),threads(+)] >=dev-python/setuptools-42.0.2[python_targets_python3_9(-)]
+BUILD_TIME: 1643878474
+CPV: sys-apps/portage-3.0.30-r1
+DEFINED_PHASES: compile configure install preinst prepare pretend setup test
+DEPEND: >=dev-lang/python-3.9.9-r1:3.9[ssl(+)] >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/sed-4.0.5 sys-devel/patch
+EAPI: 7
+IUSE: apidoc build doc gentoo-dev +ipc +native-extensions +rsync-verify selinux test xattr python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
+LICENSE: GPL-2
+MD5: 11daa67f0dd72f03ca7f83c2fe0c2053
+PDEPEND: >=net-misc/rsync-2.6.4 >=sys-apps/file-5.41 >=sys-apps/coreutils-6.4
+PROVIDES: mips_o32: libc.cpython-39-mipsel-linux-gnu.so reflink_linux.cpython-39-mipsel-linux-gnu.so
+RDEPEND: acct-user/portage app-arch/zstd >=app-arch/tar-1.27 dev-lang/python-exec:2 >=sys-apps/findutils-4.4 >=sys-apps/sed-4.0.5 >=app-shells/bash-5.0:0[readline] >=app-admin/eselect-1.2 >=sys-apps/sandbox-2.2 sys-apps/util-linux >=app-misc/pax-utils-0.1.17 >=sys-apps/install-xattr-0.3 !<app-admin/logrotate-3.8.0 !<app-portage/gentoolkit-0.4.6 !<app-portage/repoman-2.3.10 !~app-portage/repoman-3.0.0 >=dev-lang/python-3.9.9-r1:3.9[bzip2(+),threads(+)]
+REQUIRES: mips_o32: ld.so.1 libc.so.6
+RESTRICT: test
+SHA1: f09fdda6f1aca5d7bbce00254388e6c25be67f83
+SIZE: 3127494
+USE: abi_mips_o32 elibc_glibc ipc kernel_linux mips native-extensions python_targets_python3_9 userland_GNU xattr
+MTIME: 1643878520
 REPO: gentoo
 
 BDEPEND: dev-lang/python:3.7[bzip2(+),threads(+)] >=dev-lang/python-exec-2:2/2=[python_targets_python3_7(-),-python_single_target_pypy3(-),-python_single_target_python3_6(-),-python_single_target_python3_7(-),-python_single_target_python3_8(-),-python_single_target_python3_9(-)]
