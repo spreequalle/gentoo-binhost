@@ -14,7 +14,7 @@ IUSE_IMPLICIT: abi_ppc_32 prefix prefix-guest prefix-stack
 KERNEL: linux
 PACKAGES: 1637
 PROFILE: default/linux/ppc/17.0/desktop/gnome/systemd
-TIMESTAMP: 1643874988
+TIMESTAMP: 1643875310
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/powerpc-74xx-linux-gnu
 USE: X a52 aac abi_ppc_32 ada_target_gnat_2020 alsa altivec apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdio cdr cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog colord cpu_flags_ppc_altivec crypt dbus dri dts dvd dvdr eds elibc_glibc encode evo exif flac fortran gdbm gif gnome-keyring gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx gtk gui iconv icu input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text lcms libglvnd libnotify libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer libsecret llvm_targets_AMDGPU llvm_targets_BPF lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma mad mng mp3 mp4 mpeg nautilus ncurses networkmanager nptl office_implementation_libreoffice ogg opengl pam pango pcre pdf php_targets_php7-4 php_targets_php8-0 png policykit postgres_targets_postgres12 postgres_targets_postgres13 ppc ppds python_single_target_python3_9 python_targets_python3_9 readline samba sdl seccomp slang spell split-usr ssl startup-notification svg sysprof systemd tiff tracker truetype udev udisks unicode upower usb userland_GNU video_cards_nouveau video_cards_r100 video_cards_r200 video_cards_r300 video_cards_radeon vorbis wayland wxwidgets x264 xattr xcb xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee xv xvid zlib zstd
 USERLAND: GNU
@@ -25956,22 +25956,22 @@ USE: abi_ppc_32 elibc_glibc kernel_linux ppc userland_GNU
 MTIME: 1607767333
 REPO: gentoo
 
-BDEPEND: sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 virtual/pkgconfig
-BUILD_TIME: 1642652861
+BDEPEND: sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.4:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig
+BUILD_TIME: 1643875295
 CPV: x11-drivers/xf86-video-nouveau-1.0.17
 DEFINED_PHASES: compile configure install postinst postrm prepare unpack
 DEPEND: >=x11-libs/libdrm-2.4.60[video_cards_nouveau] >=x11-libs/libpciaccess-0.10 virtual/libudev:0/1= x11-base/xorg-proto x11-base/xorg-server[-minimal] x11-libs/libdrm >=x11-base/xorg-server-1.20[xorg] >=x11-libs/libpciaccess-0.14
 EAPI: 7
 KEYWORDS: amd64 ~arm64 ppc ppc64 ~riscv x86
 LICENSE: MIT
-MD5: bd4f66efc934745862651344aab2838b
+MD5: 60353a1a7996bbab902ab8a84180dd0e
 PROVIDES: ppc_32: nouveau_drv.so
-RDEPEND: >=x11-libs/libdrm-2.4.60[video_cards_nouveau] >=x11-libs/libpciaccess-0.10 virtual/libudev:0/1= x11-base/xorg-server:0/1.20.14= x11-base/xorg-server[-minimal] x11-libs/libdrm >=x11-base/xorg-server-1.20[xorg] >=x11-libs/libpciaccess-0.14
+RDEPEND: >=x11-libs/libdrm-2.4.60[video_cards_nouveau] >=x11-libs/libpciaccess-0.10 virtual/libudev:0/1= x11-base/xorg-server:0/21.1.3= x11-base/xorg-server[-minimal] x11-libs/libdrm >=x11-base/xorg-server-1.20[xorg] >=x11-libs/libpciaccess-0.14
 REQUIRES: ppc_32: libc.so.6 libdrm.so.2 libdrm_nouveau.so.2 libgcc_s.so.1 libudev.so.1
-SHA1: a43dcb48a09639c96e056242bdc0efc4006b8485
-SIZE: 326802
+SHA1: 581e9a25ed0c33a36ad2f21b3e82ff15ba4bacce
+SIZE: 327216
 USE: abi_ppc_32 elibc_glibc kernel_linux ppc userland_GNU
-MTIME: 1642652870
+MTIME: 1643875307
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig >=sys-devel/libtool-2 >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4
