@@ -12,9 +12,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs buildpkg b
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_ppc_32 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 1728
+PACKAGES: 1729
 PROFILE: default/linux/ppc/17.0/desktop/gnome/systemd
-TIMESTAMP: 1646995102
+TIMESTAMP: 1646996945
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/powerpc-74xx-linux-gnu
 USE: X a52 aac abi_ppc_32 ada_target_gnat_2020 alsa altivec apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdio cdr cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog colord cpu_flags_ppc_altivec crypt dbus dri dts dvd dvdr eds elibc_glibc encode evo exif flac fortran gdbm gif gnome-keyring gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx gtk gui iconv icu input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text lcms libglvnd libnotify libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer libsecret llvm_targets_AMDGPU llvm_targets_BPF lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma mad mng mp3 mp4 mpeg nautilus ncurses networkmanager nptl office_implementation_libreoffice ogg opengl pam pango pcre pdf php_targets_php7-4 php_targets_php8-0 png policykit postgres_targets_postgres12 postgres_targets_postgres13 ppc ppds python_single_target_python3_9 python_targets_python3_9 readline samba sdl seccomp slang spell split-usr ssl startup-notification svg sysprof systemd tiff tracker truetype udev udisks unicode upower usb userland_GNU video_cards_nouveau video_cards_r100 video_cards_r200 video_cards_r300 video_cards_radeon vorbis wayland wxwidgets x264 xattr xcb xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee xv xvid zlib zstd
 USERLAND: GNU
@@ -4283,6 +4283,26 @@ SIZE: 22794639
 SLOT: 2.7
 USE: abi_ppc_32 bluetooth elibc_glibc gdbm kernel_linux ncurses ppc readline sqlite ssl userland_GNU xml
 MTIME: 1642572626
+REPO: gentoo
+
+BDEPEND: virtual/awk virtual/pkgconfig !sys-devel/gcc[libffi(-)] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.4:1.16 >=sys-devel/autoconf-2.71
+BUILD_TIME: 1646996889
+CPV: dev-lang/python-2.7.18_p14
+DEFINED_PHASES: compile configure install prepare setup test unpack
+DEPEND: app-arch/bzip2:0/1= dev-libs/libffi:0/7= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/2= virtual/libintl sys-libs/gdbm:0/6=[berkdb] >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= dev-libs/openssl:0/1.1= >=dev-libs/expat-2.1:0/0= net-wireless/bluez
+EAPI: 7
+IUSE: berkdb bluetooth build examples gdbm hardened +ncurses +readline +sqlite +ssl tk wininst +xml verify-sig
+KEYWORDS: ~alpha amd64 ~arm ~arm64 ~hppa ~ia64 ~m68k ~mips ppc ppc64 ~riscv ~s390 ~sparc x86
+LICENSE: PSF-2
+MD5: c7192fe188349c9be5c94037ec6fe7b0
+PROVIDES: ppc_32: _bisect.so _codecs_cn.so _codecs_hk.so _codecs_iso2022.so _codecs_jp.so _codecs_kr.so _codecs_tw.so _collections.so _csv.so _ctypes.so _ctypes_test.so _curses.so _curses_panel.so _elementtree.so _functools.so _hashlib.so _heapq.so _hotshot.so _io.so _json.so _locale.so _lsprof.so _md5.so _multibytecodec.so _multiprocessing.so _random.so _sha.so _sha256.so _sha512.so _socket.so _sqlite3.so _ssl.so _struct.so _testcapi.so array.so audioop.so binascii.so bz2.so cPickle.so cStringIO.so cmath.so crypt.so datetime.so dbm.so dl.so fcntl.so future_builtins.so gdbm.so grp.so imageop.so itertools.so libpython2.7.so.1.0 linuxaudiodev.so math.so mmap.so operator.so ossaudiodev.so parser.so pyexpat.so readline.so resource.so select.so spwd.so strop.so syslog.so termios.so time.so unicodedata.so zlib.so
+RDEPEND: app-arch/bzip2:0/1= dev-libs/libffi:0/7= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/2= virtual/libintl sys-libs/gdbm:0/6=[berkdb] >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= dev-libs/openssl:0/1.1= >=dev-libs/expat-2.1:0/0= app-misc/mime-types !<=dev-lang/python-exec-2.4.6-r1
+REQUIRES: ppc_32: libbz2.so.1 libc.so.6 libcrypt.so.2 libcrypto.so.1.1 libdl.so.2 libexpat.so.1 libffi.so.7 libgcc_s.so.1 libgdbm.so.6 libgdbm_compat.so.4 libm.so.6 libncursesw.so.6 libpanelw.so.6 libpthread.so.0 libreadline.so.8 libsqlite3.so.0 libssl.so.1.1 libutil.so.1 libz.so.1
+SHA1: 3d30bcde3c8aed7bfa0d7a0ede6ebcb4fbf12ea8
+SIZE: 22909886
+SLOT: 2.7
+USE: abi_ppc_32 bluetooth elibc_glibc gdbm kernel_linux ncurses ppc readline sqlite ssl userland_GNU xml
+MTIME: 1646996942
 REPO: gentoo
 
 BDEPEND: >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
