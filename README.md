@@ -1,80 +1,96 @@
-# gentoo binhost
+# armv5tel-softfloat-linux-musleabi
 
-Providing [gentoo](https://gentoo.org/) binary packages using [github](https://github.com/) infrastructure.
+Packages optimized for Marvell Feroceon [88FR131](https://www.7-cpu.com/cpu/Kirkwood.html) (Sheeva 88SV131) cores.
 
-<div style="display: inline"><img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/gentoo-logo.png" alt="gentoo-logo" width="160" /></div>
+<img src="https://raw.githubusercontent.com/wiki/spreequalle/gentoo-binhost/images/88F6282A1C200.png" alt="88F6282" width="160" />
 
-This repo provides various gentoo [binary packages](https://wiki.gentoo.org/wiki/Binary_package_guide) for a variety of different architectures (checkout branches for details). This branch contains the script that is used for GitHub upload.
+These cores can be found on the Marvell Kirkwood or Armada SoCs, for example:
 
-## Concept
+* 88F6281
+* 88F6282
+* 88F6283
 
-The package upload is realized using a small upload script thats executed via portage [hooks](https://wiki.gentoo.org/wiki//etc/portage/bashrc). For every package that is being merged via portage the Gentoo *Packages* manifest file is committed to Git. The binary packages itself are not stored into repository there are uploaded as [GitHub release](https://developer.github.com/v3/repos/releases) artifacts.
-
-To make everything work the following nomenclature has to apply:
-
-Gentoo idiom|GitHub entity
-------------|-------------
-[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|GitHub release
-[PF](https://devmanual.gentoo.org/ebuild-writing/variables/)|GitHub release asset
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)|Git branch name
-[CHOST](https://wiki.gentoo.org/wiki/CHOST)/[CATEGORY](https://wiki.gentoo.org/wiki//etc/portage/categories)|Git release tag
-
+```
+$ lscpu
+Architecture:           armv5tel
+  Byte Order:           Little Endian
+CPU(s):                 1
+  On-line CPU(s) list:  0
+Vendor ID:              Marvell
+  Model name:           Feroceon 88FR131
+    Model:              1
+    Thread(s) per core: 1
+    Core(s) per socket: 1
+    Socket(s):          1
+    Stepping:           0x2
+    CPU max MHz:        1800.0000
+    CPU min MHz:        450.0000
+    BogoMIPS:           400.00
+    Flags:              swp half thumb fastmult edsp
+```
 ## Usage
 
-Setup a gentoo binhost Github and provide the following.
+Binhost can be enabled by adding these lines to the **make.conf**.
 
-### Dependencies
-
-The upload script uses Python3 and [PyGithub](https://github.com/PyGithub/PyGithub) module.
-
-```shell
-emerge dev-python/PyGithub
-```
-
-### Configuration
-
-github upload can be easily configured.
-
-#### make.conf
-
-Enable gentoo binhost by adding the following lines.
 ```python
 # enable binhost
-PORTAGE_BINHOST_HEADER_URI="https://github.com/spreequalle/gentoo-binhost/releases/download/${CHOST}"
-FEATURES="${FEATURES} buildpkg"
-USE="${USE} bindist"
-ACCEPT_LICENSE="-* @BINARY-REDISTRIBUTABLE"
+PORTAGE_BINHOST="https://raw.githubusercontent.com/spreequalle/gentoo-binhost/${CHOST}"
+FEATURES="${FEATURES} getbinpkg"
 ```
 
-Since github releases are used to store the packages *PORTAGE_BINHOST_HEADER_URI* has to be set here.
+## Details
 
-#### bashrc
+### Profile
 
-Add the [/etc/portage/bashrc ](https://wiki.gentoo.org/wiki//etc/portage/bashrc) file below, if you use your own file make sure to call the **gh-upload.py** script during **postinst** phase.
+Packages are generated using gentoo 17.0 [musl](https://www.musl-libc.org/) profile.
 
-```bash
-#!/bin/env bash
-
-if [[ ${EBUILD_PHASE} == 'postinst' ]]; then
-  # FIXME come up with a more sophisticated approach to detect if binary package build is actually requested
-  # commandline args like -B or --buildpkg-exclude and other conditionals are not supported right now.
-  grep -q 'buildpkg' <<< {$PORTAGE_FEATURES}
-  if [ $? -eq 0 ]; then
-    /etc/portage/binhost/gh-upload.py
-  fi
-fi
-```
-
-#### gh-upload.py
-
-Add the [/etc/portage/binhost/gh-upload.py](/etc/portage/binhost/gh-upload.py) script and add your github settings accordingly.
-You need to create a [github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) that is able to access repository and create releases.
+### USE Flags
 
 ```python
-gh_repo = 'spreequalle/gentoo-binhost'
-gh_token = '<your github access token>'
+USE="brotli bzip2 lzma minimal lto mpfr png syslog expat gmp sqlite curl truetype icu zstd verify-sig"
+USE="${USE} -debug -pam -nls -ipv6 -pax_kernel -threads -pic -hardened -openmp -filecaps -seccomp -xattr -tcpd -spell -openmp -berkdb -ldap"
 ```
 
-## Disclaimer
+### C Flags
 
-Although this software is released under [JSON](/LICENSE) license, the binary packages come with their respective license according to *Packages* Manifest file. Refer to [gentoo license](https://devmanual.gentoo.org/general-concepts/licenses/index.html) for details.
+Default optimizing using *-O2* with 32-bit [ARM](https://developer.arm.com/documentation/dui0473/m/overview-of-the-arm-architecture/arm--thumb--and-thumbee-instruction-sets) mode.
+
+```python
+CC="${CHOST}-gcc"
+CXX="${CHOST}-g++"
+AR=${CHOST}-gcc-ar
+NM=${CHOST}-gcc-nm
+RANLIB=${CHOST}-gcc-ranlib
+
+CFLAGS_MAIN="-O2 -pipe -fno-ident -frename-registers -mfloat-abi=soft -fweb -fexcess-precision=fast -fomit-frame-pointer"
+
+# 88fr131 cache configuration
+CFLAGS_CPU_CACHE="--param l1-cache-size=16 --param l1-cache-line-size=32 --param l2-cache-size=256"
+CFLAGS_CPU="-march=armv5te -mcpu=xscale ${CFLAGS_CPU_CACHE}"
+
+CFLAGS_MODE_ARM="-marm"
+CFLAGS_MODE_THUMB="-mthumb"
+CFLAGS_MODE="${CFLAGS_MODE_ARM}"
+
+CFLAGS_LTO="-flto -fuse-linker-plugin"
+
+CFLAGS="${CFLAGS_MAIN} ${CFLAGS_CPU} ${CFLAGS_MODE} ${CFLAGS_LTO}"
+CXXFLAGS="${CFLAGS} -fvisibility-inlines-hidden"
+```
+
+### LD Flags
+
+Enable system-wide [LTO](https://gcc.gnu.org/wiki/LinkTimeOptimization) and [GOLD](https://en.wikipedia.org/wiki/Gold_(linker)) linker plugin.
+
+```python
+LDFLAGS_GENTOO="-Wl,-O1 -Wl,--as-needed"
+LDFLAGS_MAIN="-Wl,--hash-style=gnu -Wl,--enable-new-dtags"
+
+LDFLAGS_LTO="-flto -fuse-linker-plugin"
+
+LDFLAGS_LD_BFD="-Wl,-fuse-ld=bfd"
+LDFLAGS_LD_GOLD="-Wl,-fuse-ld=gold"
+
+LDFLAGS_CPU="-march=armv5te -mcpu=xscale"
+LDFLAGS="${LDFLAGS_GENTOO} ${LDFLAGS_MAIN} ${LDFLAGS_LTO} ${LDFLAGS_LD_GOLD} ${LDFLAGS_CPU}"
+```
