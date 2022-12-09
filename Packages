@@ -13,9 +13,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs buildpkg b
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 2381
+PACKAGES: 2382
 PROFILE: default/linux/arm/17.0/armv6j/systemd
-TIMESTAMP: 1669099372
+TIMESTAMP: 1670583510
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/armv6kz-arm1176jzf-linux-gnueabihf
 USE: X ada_target_gnat_2021 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_arm_edsp cpu_flags_arm_thumb cpu_flags_arm_v4 cpu_flags_arm_v5 cpu_flags_arm_v6 cpu_flags_arm_vfp crypt curl dri elibc_glibc fortran gdbm gmp gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv input_devices_libinput ipv6 kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma lzo ncurses nptl office_implementation_libreoffice opengl pam pcre php_targets_php7-4 php_targets_php8-0 png postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_10 python_targets_python3_10 readline ruby_targets_ruby27 seccomp split-usr ssl systemd test-rust udev unicode userland_GNU vdpau video_cards_vc4 vulkan xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib
 USERLAND: GNU
@@ -3994,7 +3994,7 @@ USE: arm elibc_glibc kernel_linux net readline userland_GNU
 MTIME: 1659808790
 REPO: gentoo
 
-BDEPEND: virtual/yacc
+BDEPEND: app-alternatives/yacc
 BUILD_TIME: 1667052114
 CPV: app-shells/bash-5.1_p16-r2
 DEFINED_PHASES: compile configure install postinst preinst prepare setup unpack
@@ -4003,13 +4003,13 @@ EAPI: 7
 IUSE: afs bashlogger examples mem-scramble +net nls plugins +readline verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-3
-MD5: 4a249c32bbd172f56358706bf3d39f0c
+MD5: 007e6479d2437898fe5f058f3fefd396
 RDEPEND: >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-8.1:0/8=
 REQUIRES: arm_32: ld-linux-armhf.so.3 libc.so.6 libgcc_s.so.1 libhistory.so.8 libreadline.so.8 libtinfo.so.6
-SHA1: ae06c23e4e039524c154b6bca615e0178428f905
-SIZE: 1110389
+SHA1: 338188c1ca685b8266920c411d843334abf95e79
+SIZE: 1110397
 USE: arm elibc_glibc kernel_linux net readline userland_GNU
-MTIME: 1667052133
+MTIME: 1670583450
 REPO: gentoo
 
 BUILD_TIME: 1620992458
@@ -5151,7 +5151,7 @@ USE: arm elibc_glibc ensurepip gdbm kernel_linux ncurses readline sqlite ssl use
 MTIME: 1667642408
 REPO: gentoo
 
-BDEPEND: sys-devel/autoconf-archive virtual/awk virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71
+BDEPEND: sys-devel/autoconf-archive app-alternatives/awk virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71
 BUILD_TIME: 1668359724
 CPV: dev-lang/python-3.10.8_p3
 DEFINED_PHASES: compile configure install prepare pretend setup test unpack
@@ -5160,16 +5160,16 @@ EAPI: 7
 IUSE: bluetooth build +ensurepip examples gdbm hardened libedit lto +ncurses pgo +readline +sqlite +ssl test tk +xml verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE: PSF-2
-MD5: e702abe92e5476201f58b1a9f5f581b3
+MD5: 636857382393d614c06c8a23495c5694
 PROVIDES: arm_32: _asyncio.cpython-310-arm-linux-gnueabihf.so _bisect.cpython-310-arm-linux-gnueabihf.so _blake2.cpython-310-arm-linux-gnueabihf.so _bz2.cpython-310-arm-linux-gnueabihf.so _codecs_cn.cpython-310-arm-linux-gnueabihf.so _codecs_hk.cpython-310-arm-linux-gnueabihf.so _codecs_iso2022.cpython-310-arm-linux-gnueabihf.so _codecs_jp.cpython-310-arm-linux-gnueabihf.so _codecs_kr.cpython-310-arm-linux-gnueabihf.so _codecs_tw.cpython-310-arm-linux-gnueabihf.so _contextvars.cpython-310-arm-linux-gnueabihf.so _crypt.cpython-310-arm-linux-gnueabihf.so _csv.cpython-310-arm-linux-gnueabihf.so _ctypes.cpython-310-arm-linux-gnueabihf.so _ctypes_test.cpython-310-arm-linux-gnueabihf.so _curses.cpython-310-arm-linux-gnueabihf.so _curses_panel.cpython-310-arm-linux-gnueabihf.so _datetime.cpython-310-arm-linux-gnueabihf.so _dbm.cpython-310-arm-linux-gnueabihf.so _decimal.cpython-310-arm-linux-gnueabihf.so _elementtree.cpython-310-arm-linux-gnueabihf.so _gdbm.cpython-310-arm-linux-gnueabihf.so _hashlib.cpython-310-arm-linux-gnueabihf.so _heapq.cpython-310-arm-linux-gnueabihf.so _json.cpython-310-arm-linux-gnueabihf.so _lsprof.cpython-310-arm-linux-gnueabihf.so _lzma.cpython-310-arm-linux-gnueabihf.so _md5.cpython-310-arm-linux-gnueabihf.so _multibytecodec.cpython-310-arm-linux-gnueabihf.so _multiprocessing.cpython-310-arm-linux-gnueabihf.so _opcode.cpython-310-arm-linux-gnueabihf.so _pickle.cpython-310-arm-linux-gnueabihf.so _posixshmem.cpython-310-arm-linux-gnueabihf.so _posixsubprocess.cpython-310-arm-linux-gnueabihf.so _queue.cpython-310-arm-linux-gnueabihf.so _random.cpython-310-arm-linux-gnueabihf.so _sha1.cpython-310-arm-linux-gnueabihf.so _sha256.cpython-310-arm-linux-gnueabihf.so _sha3.cpython-310-arm-linux-gnueabihf.so _sha512.cpython-310-arm-linux-gnueabihf.so _socket.cpython-310-arm-linux-gnueabihf.so _sqlite3.cpython-310-arm-linux-gnueabihf.so _ssl.cpython-310-arm-linux-gnueabihf.so _statistics.cpython-310-arm-linux-gnueabihf.so _struct.cpython-310-arm-linux-gnueabihf.so _testbuffer.cpython-310-arm-linux-gnueabihf.so _testcapi.cpython-310-arm-linux-gnueabihf.so _testimportmultiple.cpython-310-arm-linux-gnueabihf.so _testinternalcapi.cpython-310-arm-linux-gnueabihf.so _testmultiphase.cpython-310-arm-linux-gnueabihf.so _uuid.cpython-310-arm-linux-gnueabihf.so _xxsubinterpreters.cpython-310-arm-linux-gnueabihf.so _xxtestfuzz.cpython-310-arm-linux-gnueabihf.so _zoneinfo.cpython-310-arm-linux-gnueabihf.so array.cpython-310-arm-linux-gnueabihf.so audioop.cpython-310-arm-linux-gnueabihf.so binascii.cpython-310-arm-linux-gnueabihf.so cmath.cpython-310-arm-linux-gnueabihf.so fcntl.cpython-310-arm-linux-gnueabihf.so grp.cpython-310-arm-linux-gnueabihf.so libpython3.10.so.1.0 math.cpython-310-arm-linux-gnueabihf.so mmap.cpython-310-arm-linux-gnueabihf.so ossaudiodev.cpython-310-arm-linux-gnueabihf.so pyexpat.cpython-310-arm-linux-gnueabihf.so readline.cpython-310-arm-linux-gnueabihf.so resource.cpython-310-arm-linux-gnueabihf.so select.cpython-310-arm-linux-gnueabihf.so spwd.cpython-310-arm-linux-gnueabihf.so syslog.cpython-310-arm-linux-gnueabihf.so termios.cpython-310-arm-linux-gnueabihf.so unicodedata.cpython-310-arm-linux-gnueabihf.so xxlimited.cpython-310-arm-linux-gnueabihf.so xxlimited_35.cpython-310-arm-linux-gnueabihf.so zlib.cpython-310-arm-linux-gnueabihf.so
 RDEPEND: app-arch/bzip2:0/1= app-arch/xz-utils:0/0= dev-lang/python-exec[python_targets_python3_10(-)] dev-libs/libffi:0/8= sys-apps/util-linux:0/0= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/2= virtual/libintl dev-python/ensurepip-wheels sys-libs/gdbm:0/6=[berkdb] >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= >=dev-libs/openssl-1.1.1:0/1.1= >=dev-libs/expat-2.1:0/0= !!<sys-apps/sandbox-2.21 app-misc/mime-types
 REQUIRES: arm_32: ld-linux-armhf.so.3 libbz2.so.1 libc.so.6 libcrypt.so.2 libcrypto.so.1.1 libexpat.so.1 libffi.so.8 libgcc_s.so.1 libgdbm.so.6 libgdbm_compat.so.4 liblzma.so.5 libm.so.6 libncursesw.so.6 libpanelw.so.6 libreadline.so.8 libsqlite3.so.0 libssl.so.1.1 libuuid.so.1 libz.so.1
 RESTRICT: test
-SHA1: 8306b3d33b34306a88cac30f30803336cfcc6231
-SIZE: 26096737
+SHA1: c48877d1240eb6abccaea76926923dc9b9ae505d
+SIZE: 26096745
 SLOT: 3.10
 USE: arm elibc_glibc ensurepip gdbm kernel_linux ncurses readline sqlite ssl userland_GNU xml
-MTIME: 1668359817
+MTIME: 1670583451
 REPO: gentoo
 
 BDEPEND: >=app-portage/elt-patches-20170815 || ( >=sys-devel/automake-1.16.1:1.16 >=sys-devel/automake-1.15.1:1.15 ) >=sys-devel/autoconf-2.69
@@ -8616,7 +8616,7 @@ USE: arm elibc_glibc kernel_linux userland_GNU
 MTIME: 1653289272
 REPO: gentoo
 
-BDEPEND: sys-apps/help2man virtual/yacc >=app-portage/elt-patches-20170815
+BDEPEND: sys-apps/help2man app-alternatives/yacc >=app-portage/elt-patches-20170815
 BUILD_TIME: 1662194239
 CPV: dev-libs/libtasn1-4.19.0
 DEFINED_PHASES: compile configure install prepare test unpack
@@ -8624,15 +8624,15 @@ EAPI: 8
 IUSE: static-libs test valgrind abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: LGPL-2.1+
-MD5: 55d8f0de3ad55940879ba67c20c9b27e
+MD5: a013e6a37863370edf4380244254c624
 PROVIDES: arm_32: libtasn1.so.6
 REQUIRES: arm_32: ld-linux-armhf.so.3 libc.so.6
 RESTRICT: test
-SHA1: 0698890f4d43a6286e5da32c1335c75931609558
-SIZE: 180847
+SHA1: b3015799fd447e5a2c493856a35bdd69004c91b6
+SIZE: 180855
 SLOT: 0/6
 USE: arm elibc_glibc kernel_linux userland_GNU
-MTIME: 1662194263
+MTIME: 1670583452
 REPO: gentoo
 
 BUILD_TIME: 1575154058
@@ -31121,7 +31121,7 @@ USE: arm elibc_glibc kernel_linux readline userland_GNU
 MTIME: 1656058282
 REPO: gentoo
 
-BDEPEND: sys-devel/flex virtual/yacc
+BDEPEND: sys-devel/flex app-alternatives/yacc
 BUILD_TIME: 1667563374
 CPV: sys-devel/bc-1.07.1-r5
 DEFINED_PHASES: compile configure prepare
@@ -31130,13 +31130,13 @@ EAPI: 7
 IUSE: libedit readline static
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-3+
-MD5: 6e8d3e9ead9b68b116cd9050ce8f9506
+MD5: 20fb6dae88f3fcea1d5f9ed09ebc9fec
 RDEPEND: sys-libs/readline:0/8= sys-libs/ncurses:0/6=
 REQUIRES: arm_32: ld-linux-armhf.so.3 libc.so.6 libgcc_s.so.1 libreadline.so.8
-SHA1: 8d76137bb06c44190309cad9180c7628e42e8d14
-SIZE: 140885
+SHA1: f7a66491fb1bd23cc1a7d4533d5fcfc6612a6980
+SIZE: 140893
 USE: arm elibc_glibc kernel_linux readline userland_GNU
-MTIME: 1667563389
+MTIME: 1670583454
 REPO: gentoo
 
 BUILD_TIME: 1575162741
@@ -31285,7 +31285,7 @@ USE: arm elibc_glibc gold kernel_linux plugins userland_GNU
 MTIME: 1644917955
 REPO: gentoo
 
-BDEPEND: sys-devel/flex virtual/yacc >=app-portage/elt-patches-20170815 sys-devel/gnuconfig
+BDEPEND: sys-devel/flex app-alternatives/yacc >=app-portage/elt-patches-20170815 sys-devel/gnuconfig
 BUILD_TIME: 1662657996
 CPV: sys-devel/binutils-2.38-r2
 DEFINED_PHASES: compile configure install postinst postrm prepare test unpack
@@ -31294,16 +31294,16 @@ EAPI: 7
 IUSE: cet default-gold doc +gold multitarget +nls pgo +plugins static-libs test vanilla
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE: GPL-3+
-MD5: 8976b26af2c4b7de1a9bda6cd899b9d6
+MD5: 1f024023c8aceff34a104ece8c6efe62
 PROVIDES: arm_32: libbfd-2.38.gentoo-sys-devel-binutils-st.so libctf-2.38.gentoo-sys-devel-binutils-st.so libctf-nobfd-2.38.gentoo-sys-devel-binutils-st.so libdep.so libopcodes-2.38.gentoo-sys-devel-binutils-st.so
 RDEPEND: >=sys-devel/binutils-config-3 sys-libs/zlib
 REQUIRES: arm_32: ld-linux-armhf.so.3 libc.so.6 libgcc_s.so.1 libm.so.6 libstdc++.so.6 libz.so.1
 RESTRICT: test
-SHA1: eab1bb92968722296a9de2b6cbcf582bd945f6c0
-SIZE: 7886260
+SHA1: 8f9c3f78128e24c0cf7b97c63bee67087afdb007
+SIZE: 7886268
 SLOT: 2.38
 USE: arm elibc_glibc gold kernel_linux plugins userland_GNU
-MTIME: 1662658056
+MTIME: 1670583455
 REPO: gentoo
 
 BUILD_TIME: 1575144029
@@ -32751,6 +32751,19 @@ SHA1: b04ce66dface92ead8dfab75393882ad25b93e90
 SIZE: 81971
 USE: arm elibc_glibc kernel_linux userland_GNU
 MTIME: 1655581392
+REPO: gentoo
+
+BUILD_TIME: 1670583508
+CPV: sys-devel/gnuconfig-20221007
+DEFINED_PHASES: install unpack
+EAPI: 7
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
+LICENSE: GPL-3+-with-autoconf-exception
+MD5: 9328372d66f0e7d6f5244138bc7d1615
+SHA1: 2d17ef03b52f11d069e11d48fe54c77cf659b41c
+SIZE: 43195
+USE: arm elibc_glibc kernel_linux userland_GNU
+MTIME: 1670583509
 REPO: gentoo
 
 BUILD_TIME: 1575191893
@@ -34499,7 +34512,7 @@ USE: arm clone3 elibc_glibc kernel_linux multiarch ssp static-libs systemd userl
 MTIME: 1659801656
 REPO: gentoo
 
-BDEPEND: || ( >=dev-lang/python-3.11.0_beta4:3.11 >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lang/python-3.8.13:3.8 ) >=app-misc/pax-utils-1.3.3 sys-devel/bison app-arch/gzip sys-apps/grep virtual/awk >=sys-devel/binutils-2.27 >=sys-devel/gcc-6.2 sys-devel/gnuconfig virtual/pkgconfig
+BDEPEND: || ( >=dev-lang/python-3.11.0_beta4:3.11 >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lang/python-3.8.13:3.8 ) >=app-misc/pax-utils-1.3.3 sys-devel/bison app-arch/gzip sys-apps/grep app-alternatives/awk >=sys-devel/binutils-2.27 >=sys-devel/gcc-6.2 sys-devel/gnuconfig virtual/pkgconfig
 BUILD_TIME: 1669066814
 CPV: sys-libs/glibc-2.36-r5
 DEFINED_PHASES: compile configure install postinst preinst prepare pretend setup test unpack
@@ -34508,16 +34521,16 @@ EAPI: 7
 IUSE: audit caps cet compile-locales +crypt custom-cflags doc gd hash-sysv-compat headers-only +multiarch multilib multilib-bootstrap nscd profile selinux +ssp stack-realign +static-libs suid systemd systemtap test vanilla
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 sparc ~x86
 LICENSE: LGPL-2.1+ BSD HPND ISC inner-net rc PCRE
-MD5: 3f680fe59dec2a63139f73d507ab4397
+MD5: db409851e82b7ac8a7559b87501274cb
 PDEPEND: sys-libs/timezone-data
 PROVIDES: arm_32: ANSI_X3.110.so ARMSCII-8.so ASMO_449.so BIG5.so BIG5HKSCS.so BRF.so CP10007.so CP1125.so CP1250.so CP1251.so CP1252.so CP1253.so CP1254.so CP1255.so CP1256.so CP1257.so CP1258.so CP737.so CP770.so CP771.so CP772.so CP773.so CP774.so CP775.so CP932.so CSN_369103.so CWI.so DEC-MCS.so EBCDIC-AT-DE-A.so EBCDIC-AT-DE.so EBCDIC-CA-FR.so EBCDIC-DK-NO-A.so EBCDIC-DK-NO.so EBCDIC-ES-A.so EBCDIC-ES-S.so EBCDIC-ES.so EBCDIC-FI-SE-A.so EBCDIC-FI-SE.so EBCDIC-FR.so EBCDIC-IS-FRISS.so EBCDIC-IT.so EBCDIC-PT.so EBCDIC-UK.so EBCDIC-US.so ECMA-CYRILLIC.so EUC-CN.so EUC-JISX0213.so EUC-JP-MS.so EUC-JP.so EUC-KR.so EUC-TW.so GB18030.so GBBIG5.so GBGBK.so GBK.so GEORGIAN-ACADEMY.so GEORGIAN-PS.so GOST_19768-74.so GREEK-CCITT.so GREEK7-OLD.so GREEK7.so HP-GREEK8.so HP-ROMAN8.so HP-ROMAN9.so HP-THAI8.so HP-TURKISH8.so IBM037.so IBM038.so IBM1004.so IBM1008.so IBM1008_420.so IBM1025.so IBM1026.so IBM1046.so IBM1047.so IBM1097.so IBM1112.so IBM1122.so IBM1123.so IBM1124.so IBM1129.so IBM1130.so IBM1132.so IBM1133.so IBM1137.so IBM1140.so IBM1141.so IBM1142.so IBM1143.so IBM1144.so IBM1145.so IBM1146.so IBM1147.so IBM1148.so IBM1149.so IBM1153.so IBM1154.so IBM1155.so IBM1156.so IBM1157.so IBM1158.so IBM1160.so IBM1161.so IBM1162.so IBM1163.so IBM1164.so IBM1166.so IBM1167.so IBM12712.so IBM1364.so IBM1371.so IBM1388.so IBM1390.so IBM1399.so IBM16804.so IBM256.so IBM273.so IBM274.so IBM275.so IBM277.so IBM278.so IBM280.so IBM281.so IBM284.so IBM285.so IBM290.so IBM297.so IBM420.so IBM423.so IBM424.so IBM437.so IBM4517.so IBM4899.so IBM4909.so IBM4971.so IBM500.so IBM5347.so IBM803.so IBM850.so IBM851.so IBM852.so IBM855.so IBM856.so IBM857.so IBM858.so IBM860.so IBM861.so IBM862.so IBM863.so IBM864.so IBM865.so IBM866.so IBM866NAV.so IBM868.so IBM869.so IBM870.so IBM871.so IBM874.so IBM875.so IBM880.so IBM891.so IBM901.so IBM902.so IBM903.so IBM9030.so IBM904.so IBM905.so IBM9066.so IBM918.so IBM921.so IBM922.so IBM930.so IBM932.so IBM933.so IBM935.so IBM937.so IBM939.so IBM943.so IBM9448.so IEC_P27-1.so INIS-8.so INIS-CYRILLIC.so INIS.so ISIRI-3342.so ISO-2022-CN-EXT.so ISO-2022-CN.so ISO-2022-JP-3.so ISO-2022-JP.so ISO-2022-KR.so ISO-IR-197.so ISO-IR-209.so ISO646.so ISO8859-1.so ISO8859-10.so ISO8859-11.so ISO8859-13.so ISO8859-14.so ISO8859-15.so ISO8859-16.so ISO8859-2.so ISO8859-3.so ISO8859-4.so ISO8859-5.so ISO8859-6.so ISO8859-7.so ISO8859-8.so ISO8859-9.so ISO8859-9E.so ISO_10367-BOX.so ISO_11548-1.so ISO_2033.so ISO_5427-EXT.so ISO_5427.so ISO_5428.so ISO_6937-2.so ISO_6937.so JOHAB.so KOI-8.so KOI8-R.so KOI8-RU.so KOI8-T.so KOI8-U.so LATIN-GREEK-1.so LATIN-GREEK.so MAC-CENTRALEUROPE.so MAC-IS.so MAC-SAMI.so MAC-UK.so MACINTOSH.so MIK.so NATS-DANO.so NATS-SEFI.so PT154.so RK1048.so SAMI-WS2.so SHIFT_JISX0213.so SJIS.so T.61.so TCVN5712-1.so TIS-620.so TSCII.so UHC.so UNICODE.so UTF-16.so UTF-32.so UTF-7.so VISCII.so ld-linux-armhf.so.3 libBrokenLocale.so.1 libCNS.so libGB.so libISOIR165.so libJIS.so libJISX0213.so libKSC.so libanl.so.1 libc.so.6 libc_malloc_debug.so.0 libdl.so.2 libm.so.6 libmemusage.so libnsl.so.1 libnss_compat.so.2 libnss_db.so.2 libnss_dns.so.2 libnss_files.so.2 libnss_hesiod.so.2 libpcprofile.so libpthread.so.0 libresolv.so.2 librt.so.1 libthread_db.so.1 libutil.so.1 sotruss-lib.so
-RDEPEND: app-arch/gzip sys-apps/grep virtual/awk sys-apps/gentoo-functions !<app-misc/pax-utils-1.3.3 !<net-misc/openssh-8.1_p1-r2 >=net-dns/libidn2-2.3.0
+RDEPEND: app-arch/gzip sys-apps/grep app-alternatives/awk sys-apps/gentoo-functions !<app-misc/pax-utils-1.3.3 !<net-misc/openssh-8.1_p1-r2 >=net-dns/libidn2-2.3.0
 RESTRICT: test
-SHA1: f8cced205df6e1145dcbb4ba7e27ec48b0e9b356
-SIZE: 13864434
+SHA1: 847525acdc1cb4950c77a6215810a4ff538cfb85
+SIZE: 13864450
 SLOT: 2.2
 USE: arm elibc_glibc kernel_linux multiarch ssp static-libs systemd userland_GNU
-MTIME: 1669066930
+MTIME: 1670583456
 REPO: gentoo
 
 BUILD_TIME: 1575182530
@@ -35240,7 +35253,7 @@ USE: arm elibc_glibc filecaps kernel_linux userland_GNU
 MTIME: 1662041521
 REPO: gentoo
 
-BDEPEND: dev-libs/libxslt sys-devel/flex sys-devel/gettext virtual/pkgconfig virtual/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 sys-libs/libcap
+BDEPEND: dev-libs/libxslt sys-devel/flex sys-devel/gettext virtual/pkgconfig app-alternatives/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 sys-libs/libcap
 BUILD_TIME: 1662286429
 CPV: sys-libs/pam-1.5.2-r2
 DEFINED_PHASES: compile configure install postinst prepare test
@@ -35249,15 +35262,15 @@ EAPI: 7
 IUSE: audit berkdb debug nis selinux +filecaps split-usr abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux
 LICENSE: || ( BSD GPL-2 )
-MD5: b3e9614ca1c9137c6e3f019e35c81d62
+MD5: 40b072f68fa80fecdf4feeeb9639edcd
 PDEPEND: >=sys-auth/pambase-20200616
 PROVIDES: arm_32: libpam.so.0 libpam_misc.so.0 libpamc.so.0 pam_access.so pam_debug.so pam_deny.so pam_echo.so pam_env.so pam_exec.so pam_faildelay.so pam_faillock.so pam_filter.so pam_ftp.so pam_group.so pam_issue.so pam_keyinit.so pam_lastlog.so pam_limits.so pam_listfile.so pam_localuser.so pam_loginuid.so pam_mail.so pam_mkhomedir.so pam_motd.so pam_namespace.so pam_nologin.so pam_permit.so pam_pwhistory.so pam_rhosts.so pam_rootok.so pam_securetty.so pam_setquota.so pam_shells.so pam_stress.so pam_succeed_if.so pam_time.so pam_timestamp.so pam_umask.so pam_unix.so pam_usertype.so pam_warn.so pam_wheel.so pam_xauth.so
 RDEPEND: virtual/libcrypt:0/2= >=virtual/libintl-0-r1 sys-libs/libcap
 REQUIRES: arm_32: ld-linux-armhf.so.3 libc.so.6 libcrypt.so.2 libgcc_s.so.1
-SHA1: 52d7a9a41a4243b91e58cf4da249bb297f220970
-SIZE: 511386
+SHA1: ff85465fa8b6f881732e43e5d6938e8fb1843ab9
+SIZE: 511394
 USE: arm elibc_glibc filecaps kernel_linux split-usr userland_GNU
-MTIME: 1662286518
+MTIME: 1670583458
 REPO: gentoo
 
 BUILD_TIME: 1575146075
