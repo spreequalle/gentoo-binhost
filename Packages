@@ -14,9 +14,9 @@ GENTOO_MIRRORS: http://distfiles.gentoo.org
 INSTALL_MASK: charset.alias /usr/share/locale/locale.alias
 IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 1302
+PACKAGES: 1303
 PROFILE: default/linux/arm/17.0/musl
-TIMESTAMP: 1668862841
+TIMESTAMP: 1670724082
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/armv5te-88fr131x-linux-musleabi
 USE: acl ada_target_gnat_2021 apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm brotli bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog crypt curl dri elibc_musl expat fortran gmp gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv icu input_devices_libinput kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer lto lua_single_target_lua5-1 lua_targets_lua5-1 lzma minimal mpfr ncurses nptl office_implementation_libreoffice pcre php_targets_php7-4 php_targets_php8-0 png postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_10 python_targets_python3_10 readline ruby_targets_ruby27 split-usr sqlite ssl syslog test-rust truetype unicode userland_GNU video_cards_dummy video_cards_exynos video_cards_fbdev video_cards_omap video_cards_v4l xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib zstd
 USERLAND: GNU
@@ -1553,7 +1553,7 @@ USE: arm elibc_musl kernel_linux threads userland_GNU
 MTIME: 1667548563
 REPO: gentoo
 
-BDEPEND: || ( >=dev-lang/python-3.11.0_beta4:3.11 >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lang/python-3.8.13:3.8 ) virtual/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig
+BDEPEND: || ( >=dev-lang/python-3.11.0_beta4:3.11 >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lang/python-3.8.13:3.8 ) app-alternatives/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4 virtual/pkgconfig
 BUILD_TIME: 1668669812
 CPV: app-crypt/mit-krb5-1.20.1
 DEFINED_PHASES: compile configure install prepare setup test
@@ -1562,15 +1562,15 @@ EAPI: 8
 IUSE: cpu_flags_x86_aes doc +keyutils lmdb nls openldap +pkinit selinux +threads test xinetd abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
 KEYWORDS: ~alpha ~amd64 arm arm64 hppa ~ia64 ~loong ~mips ~ppc ppc64 ~riscv ~s390 sparc ~x86
 LICENSE: openafs-krb5-a BSD MIT OPENLDAP BSD-2 HPND BSD-4 ISC RSA CC-BY-SA-3.0 || ( BSD-2 GPL-2+ )
-MD5: 19d9d209cefdcb10c17d83d29369daf0
+MD5: 21856a5b76ec916cc34e030cfae75480
 PROVIDES: arm_32: db2.so.0 k5tls.so.0 libgssapi_krb5.so.2 libgssrpc.so.4 libk5crypto.so.3 libkadm5clnt_mit.so.12 libkadm5srv_mit.so.12 libkdb5.so.10 libkrad.so.0 libkrb5.so.3 libkrb5support.so.0 otp.so.0 spake.so.0 test.so.0
 RDEPEND: !!app-crypt/heimdal >=sys-fs/e2fsprogs-1.46.4-r51 || ( >=dev-libs/libverto-0.2.5[libev] >=dev-libs/libverto-0.2.5[libevent] )
 REQUIRES: arm_32: libc.so libcom_err.so.2 libcrypto.so.1.1 libgcc_s.so.1 libss.so.2 libssl.so.1.1 libverto.so.1
 RESTRICT: test
-SHA1: 4e59bf355382db17b9e13966e619180510e1966a
-SIZE: 1178631
+SHA1: 2fac18c188ce4a5dd8ac58bb10d9bab1477bd30c
+SIZE: 1178639
 USE: arm elibc_musl kernel_linux threads userland_GNU
-MTIME: 1668669814
+MTIME: 1670709596
 REPO: gentoo
 
 BUILD_TIME: 1620132426
@@ -2581,7 +2581,7 @@ USE: arm elibc_musl kernel_linux net readline userland_GNU
 MTIME: 1659445647
 REPO: gentoo
 
-BDEPEND: virtual/yacc
+BDEPEND: app-alternatives/yacc
 BUILD_TIME: 1667029742
 CPV: app-shells/bash-5.1_p16-r2
 DEFINED_PHASES: compile configure install postinst preinst prepare setup unpack
@@ -2590,13 +2590,13 @@ EAPI: 7
 IUSE: afs bashlogger examples mem-scramble +net nls plugins +readline verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-3
-MD5: 6f1921e40635e5e0efa265e48966d555
+MD5: 52980e3dba98b922ebfc44b0a6335216
 RDEPEND: >=sys-libs/ncurses-5.2-r2:0/6= >=sys-libs/readline-8.1:0/8=
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libreadline.so.8
-SHA1: a431380406238be05798e3db2157f71d9cfbd37a
-SIZE: 1055226
+SHA1: 6dbaa4231fc2a9081f1bef26b09c6ac0d8ebfe52
+SIZE: 1055234
 USE: arm elibc_musl kernel_linux net readline userland_GNU
-MTIME: 1667029743
+MTIME: 1670709597
 REPO: gentoo
 
 BUILD_TIME: 1620986256
@@ -3913,7 +3913,7 @@ USE: arm elibc_musl ensurepip kernel_linux lto ncurses pgo readline sqlite ssl u
 MTIME: 1667722055
 REPO: gentoo
 
-BDEPEND: sys-devel/autoconf-archive virtual/awk virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71
+BDEPEND: sys-devel/autoconf-archive app-alternatives/awk virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71
 BUILD_TIME: 1668328102
 CPV: dev-lang/python-3.10.8_p3
 DEFINED_PHASES: compile configure install prepare pretend setup test unpack
@@ -3922,16 +3922,16 @@ EAPI: 7
 IUSE: bluetooth build +ensurepip examples gdbm hardened libedit lto +ncurses pgo +readline +sqlite +ssl test tk +xml verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE: PSF-2
-MD5: c01d34ce00becef7b0253f80da0792e3
+MD5: 40a1a1ea5c7ade082a21e37344a11ead
 PROVIDES: arm_32: _asyncio.cpython-310-arm-linux-gnueabi.so _bisect.cpython-310-arm-linux-gnueabi.so _blake2.cpython-310-arm-linux-gnueabi.so _bz2.cpython-310-arm-linux-gnueabi.so _codecs_cn.cpython-310-arm-linux-gnueabi.so _codecs_hk.cpython-310-arm-linux-gnueabi.so _codecs_iso2022.cpython-310-arm-linux-gnueabi.so _codecs_jp.cpython-310-arm-linux-gnueabi.so _codecs_kr.cpython-310-arm-linux-gnueabi.so _codecs_tw.cpython-310-arm-linux-gnueabi.so _contextvars.cpython-310-arm-linux-gnueabi.so _crypt.cpython-310-arm-linux-gnueabi.so _csv.cpython-310-arm-linux-gnueabi.so _ctypes.cpython-310-arm-linux-gnueabi.so _ctypes_test.cpython-310-arm-linux-gnueabi.so _curses.cpython-310-arm-linux-gnueabi.so _curses_panel.cpython-310-arm-linux-gnueabi.so _datetime.cpython-310-arm-linux-gnueabi.so _decimal.cpython-310-arm-linux-gnueabi.so _elementtree.cpython-310-arm-linux-gnueabi.so _hashlib.cpython-310-arm-linux-gnueabi.so _heapq.cpython-310-arm-linux-gnueabi.so _json.cpython-310-arm-linux-gnueabi.so _lsprof.cpython-310-arm-linux-gnueabi.so _lzma.cpython-310-arm-linux-gnueabi.so _md5.cpython-310-arm-linux-gnueabi.so _multibytecodec.cpython-310-arm-linux-gnueabi.so _multiprocessing.cpython-310-arm-linux-gnueabi.so _opcode.cpython-310-arm-linux-gnueabi.so _pickle.cpython-310-arm-linux-gnueabi.so _posixshmem.cpython-310-arm-linux-gnueabi.so _posixsubprocess.cpython-310-arm-linux-gnueabi.so _queue.cpython-310-arm-linux-gnueabi.so _random.cpython-310-arm-linux-gnueabi.so _sha1.cpython-310-arm-linux-gnueabi.so _sha256.cpython-310-arm-linux-gnueabi.so _sha3.cpython-310-arm-linux-gnueabi.so _sha512.cpython-310-arm-linux-gnueabi.so _socket.cpython-310-arm-linux-gnueabi.so _sqlite3.cpython-310-arm-linux-gnueabi.so _ssl.cpython-310-arm-linux-gnueabi.so _statistics.cpython-310-arm-linux-gnueabi.so _struct.cpython-310-arm-linux-gnueabi.so _testbuffer.cpython-310-arm-linux-gnueabi.so _testcapi.cpython-310-arm-linux-gnueabi.so _testimportmultiple.cpython-310-arm-linux-gnueabi.so _testinternalcapi.cpython-310-arm-linux-gnueabi.so _testmultiphase.cpython-310-arm-linux-gnueabi.so _uuid.cpython-310-arm-linux-gnueabi.so _xxsubinterpreters.cpython-310-arm-linux-gnueabi.so _xxtestfuzz.cpython-310-arm-linux-gnueabi.so _zoneinfo.cpython-310-arm-linux-gnueabi.so array.cpython-310-arm-linux-gnueabi.so audioop.cpython-310-arm-linux-gnueabi.so binascii.cpython-310-arm-linux-gnueabi.so cmath.cpython-310-arm-linux-gnueabi.so fcntl.cpython-310-arm-linux-gnueabi.so grp.cpython-310-arm-linux-gnueabi.so libpython3.10.so.1.0 math.cpython-310-arm-linux-gnueabi.so mmap.cpython-310-arm-linux-gnueabi.so ossaudiodev.cpython-310-arm-linux-gnueabi.so pyexpat.cpython-310-arm-linux-gnueabi.so readline.cpython-310-arm-linux-gnueabi.so resource.cpython-310-arm-linux-gnueabi.so select.cpython-310-arm-linux-gnueabi.so spwd.cpython-310-arm-linux-gnueabi.so syslog.cpython-310-arm-linux-gnueabi.so termios.cpython-310-arm-linux-gnueabi.so unicodedata.cpython-310-arm-linux-gnueabi.so xxlimited.cpython-310-arm-linux-gnueabi.so xxlimited_35.cpython-310-arm-linux-gnueabi.so zlib.cpython-310-arm-linux-gnueabi.so
 RDEPEND: app-arch/bzip2:0/1= app-arch/xz-utils:0/0= dev-lang/python-exec[python_targets_python3_10(-)] dev-libs/libffi:0/8= sys-apps/util-linux:0/0= >=sys-libs/zlib-1.1.3:0/1= virtual/libcrypt:0/1= virtual/libintl dev-python/ensurepip-wheels >=sys-libs/ncurses-5.2:0/6= >=sys-libs/readline-4.1:0/8= >=dev-db/sqlite-3.3.8:3/3= >=dev-libs/openssl-1.1.1:0/1.1= >=dev-libs/expat-2.1:0/0= !!<sys-apps/sandbox-2.21 app-misc/mime-types
 REQUIRES: arm_32: libbz2.so.1 libc.so libcrypto.so.1.1 libexpat.so.1 libffi.so.8 libgcc_s.so.1 liblzma.so.5 libncursesw.so.6 libpanelw.so.6 libreadline.so.8 libsqlite3.so.0 libssl.so.1.1 libuuid.so.1 libz.so.1
 RESTRICT: test
-SHA1: 694baff52982f8d876d19b6ce2738938126150a9
-SIZE: 25745776
+SHA1: 104a4a7e14e200a597a69e81aba38431ad7c2373
+SIZE: 25745784
 SLOT: 3.10
 USE: arm elibc_musl ensurepip kernel_linux lto ncurses pgo readline sqlite ssl userland_GNU xml
-MTIME: 1668328118
+MTIME: 1670709597
 REPO: gentoo
 
 BDEPEND: virtual/pkgconfig sys-devel/autoconf-archive !sys-devel/gcc[libffi(-)] sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69
@@ -6098,7 +6098,7 @@ USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1654081082
 REPO: gentoo
 
-BDEPEND: sys-apps/help2man virtual/yacc >=app-portage/elt-patches-20170815
+BDEPEND: sys-apps/help2man app-alternatives/yacc >=app-portage/elt-patches-20170815
 BUILD_TIME: 1662189237
 CPV: dev-libs/libtasn1-4.19.0
 DEFINED_PHASES: compile configure install prepare test unpack
@@ -6106,15 +6106,15 @@ EAPI: 8
 IUSE: static-libs test valgrind abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: LGPL-2.1+
-MD5: d9be756115e83fe5cbe975136ce146f7
+MD5: dd9e00608127f18b2ec2596767bc5c46
 PROVIDES: arm_32: libtasn1.so.6
 REQUIRES: arm_32: libc.so libgcc_s.so.1
 RESTRICT: test
-SHA1: 07ce5db92dab41ae1a05a79cb236de3f7bf4e175
-SIZE: 177544
+SHA1: e97c89a8223484f6891df7bf9627660e79dbc3d6
+SIZE: 177552
 SLOT: 0/6
 USE: arm elibc_musl kernel_linux userland_GNU
-MTIME: 1662189238
+MTIME: 1670709598
 REPO: gentoo
 
 BDEPEND: sys-devel/libtool virtual/pkgconfig
@@ -13883,7 +13883,7 @@ USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1627798868
 REPO: gentoo
 
-BDEPEND: sys-devel/flex virtual/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
+BDEPEND: sys-devel/flex app-alternatives/yacc sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
 BUILD_TIME: 1665295904
 CPV: net-libs/libpcap-1.10.1-r2
 DEFINED_PHASES: compile configure install prepare test unpack
@@ -13891,14 +13891,14 @@ EAPI: 7
 IUSE: bluetooth dbus netlink rdma remote static-libs test usb yydebug abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 verify-sig
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~x86-solaris
 LICENSE: BSD
-MD5: f2f58f6194adf265a63dbed21fa3032e
+MD5: 40c27f7076c8478d575fd9e4dc81e869
 PROVIDES: arm_32: libpcap.so.1
 REQUIRES: arm_32: libc.so libgcc_s.so.1
 RESTRICT: test
-SHA1: feef59423fe731bc3be94f120c5fc0b666fa1a1e
-SIZE: 299192
+SHA1: 8064ea87db1a9ce3184c6674de4091a7a26eedb9
+SIZE: 299200
 USE: arm elibc_musl kernel_linux userland_GNU
-MTIME: 1665295906
+MTIME: 1670709599
 REPO: gentoo
 
 BDEPEND: app-arch/xz-utils virtual/pkgconfig
@@ -19243,7 +19243,7 @@ USE: arm elibc_musl kernel_linux readline userland_GNU
 MTIME: 1655700971
 REPO: gentoo
 
-BDEPEND: sys-devel/flex virtual/yacc
+BDEPEND: sys-devel/flex app-alternatives/yacc
 BUILD_TIME: 1667548410
 CPV: sys-devel/bc-1.07.1-r5
 DEFINED_PHASES: compile configure prepare
@@ -19252,13 +19252,13 @@ EAPI: 7
 IUSE: libedit readline static
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc ~x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
 LICENSE: GPL-3+
-MD5: 8187b02e97df9b9d1fe621d0fc819345
+MD5: 61fda4ab79ba3f192c105959a9b492ff
 RDEPEND: sys-libs/readline:0/8= sys-libs/ncurses:0/6=
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libreadline.so.8
-SHA1: 74f7e83f1749082525352fb242e794ed0ca3b89c
-SIZE: 137719
+SHA1: d3ce385c472d02988f8b8887f04eae265d1de9aa
+SIZE: 137727
 USE: arm elibc_musl kernel_linux readline userland_GNU
-MTIME: 1667548411
+MTIME: 1670709599
 REPO: gentoo
 
 BDEPEND: sys-devel/flex virtual/yacc >=app-portage/elt-patches-20170815
@@ -19366,7 +19366,7 @@ USE: arm elibc_musl gold kernel_linux plugins userland_GNU
 MTIME: 1645006944
 REPO: gentoo
 
-BDEPEND: sys-devel/flex virtual/yacc >=app-portage/elt-patches-20170815 sys-devel/gnuconfig
+BDEPEND: sys-devel/flex app-alternatives/yacc >=app-portage/elt-patches-20170815 sys-devel/gnuconfig
 BUILD_TIME: 1662531246
 CPV: sys-devel/binutils-2.38-r2
 DEFINED_PHASES: compile configure install postinst postrm prepare test unpack
@@ -19375,16 +19375,16 @@ EAPI: 7
 IUSE: cet default-gold doc +gold multitarget +nls pgo +plugins static-libs test vanilla
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86
 LICENSE: GPL-3+
-MD5: 3a222b2c67058c13c0feec6927f1c580
+MD5: 93bb6910edacc848094ef3e6436045fb
 PROVIDES: arm_32: libbfd-2.38.gentoo-sys-devel-binutils-st.so libctf-2.38.gentoo-sys-devel-binutils-st.so libctf-nobfd-2.38.gentoo-sys-devel-binutils-st.so libdep.so libopcodes-2.38.gentoo-sys-devel-binutils-st.so
 RDEPEND: >=sys-devel/binutils-config-3 sys-libs/zlib
 REQUIRES: arm_32: libc.so libgcc_s.so.1 libstdc++.so.6 libz.so.1
 RESTRICT: test
-SHA1: 0879ac634a966af6b31e47c76cf402dd9cc9a17b
-SIZE: 7153145
+SHA1: 908a55a226a46200013291c7fc41a56d645cfce6
+SIZE: 7153153
 SLOT: 2.38
 USE: arm elibc_musl gold kernel_linux plugins userland_GNU
-MTIME: 1662531256
+MTIME: 1670709600
 REPO: gentoo
 
 BUILD_TIME: 1620627581
@@ -19827,6 +19827,19 @@ SHA1: 4cd79acdfe23f386ba8338eef32edacbfe7c3d61
 SIZE: 84069
 USE: arm elibc_musl kernel_linux userland_GNU
 MTIME: 1655186957
+REPO: gentoo
+
+BUILD_TIME: 1670724081
+CPV: sys-devel/gnuconfig-20221007
+DEFINED_PHASES: install unpack
+EAPI: 7
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
+LICENSE: GPL-3+-with-autoconf-exception
+MD5: a20b0410e2e679aa2540f1e0de713c83
+SHA1: 8dbdfb8ded194b4a76ef5402c97afc9555a11798
+SIZE: 42943
+USE: arm elibc_musl kernel_linux userland_GNU
+MTIME: 1670724082
 REPO: gentoo
 
 BDEPEND: sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.2-r1:1.16 >=sys-devel/autoconf-2.69
