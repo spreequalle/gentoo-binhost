@@ -13,9 +13,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs buildpkg b
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 634
+PACKAGES: 635
 PROFILE: default/linux/arm/17.0/armv6j/systemd/merged-usr
-TIMESTAMP: 1675970772
+TIMESTAMP: 1675970847
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/armv6kz-arm1176jzf-linux-gnueabihf
 USE: X ada_target_gnat_2021 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias arm bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_arm_edsp cpu_flags_arm_thumb cpu_flags_arm_v4 cpu_flags_arm_v5 cpu_flags_arm_v6 cpu_flags_arm_vfp crypt curl dri elibc_glibc fortran gdbm gmp gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx iconv input_devices_libinput ipv6 kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text libglvnd libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma lzo ncurses nptl office_implementation_libreoffice opengl pam pcre php_targets_php7-4 php_targets_php8-0 png postgres_targets_postgres12 postgres_targets_postgres13 python_single_target_python3_10 python_targets_python3_10 readline ruby_targets_ruby27 ruby_targets_ruby30 seccomp ssl systemd test-rust udev unicode userland_GNU vdpau video_cards_vc4 vulkan xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee zlib
 USERLAND: GNU
@@ -6427,6 +6427,29 @@ SIZE: 2133447
 SLOT: 0/2
 USE: X alsa arm cli drm egl elibc_glibc iconv kernel_linux libmpv lua_single_target_lua5-1 opengl python_single_target_python3_10 uchardet userland_GNU vdpau xv zlib
 MTIME: 1674796765
+REPO: gentoo
+
+BDEPEND: >=dev-lang/python-3.10.9-r1:3.10 virtual/pkgconfig dev-python/docutils >=dev-util/meson-0.62.2 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+BUILD_TIME: 1675970845
+CPV: media-video/mpv-0.35.1
+DEFINED_PHASES: compile configure install postinst postrm preinst setup test
+DEPEND: media-libs/libass:0/9=[fontconfig] media-video/ffmpeg:0/56.58.58=[encode,threads,vdpau] x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXinerama x11-libs/libXpresent x11-libs/libXrandr x11-libs/libXv media-libs/alsa-lib media-libs/mesa[gbm(+)] x11-libs/libdrm media-libs/libglvnd virtual/libiconv app-i18n/uchardet media-libs/libglvnd[X] x11-libs/libvdpau sys-libs/zlib:0/1= x11-base/xorg-proto
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: +X +alsa aqua archive bluray cdda +cli coreaudio debug +drm dvb dvd +egl gamepad +iconv jack javascript jpeg lcms libcaca +libmpv +libplacebo +lua mmal nvenc openal opengl pipewire pulseaudio raspberry-pi rubberband sdl selinux sixel sndio test tools +uchardet vaapi vdpau vulkan wayland +xv zimg zlib lua_single_target_luajit lua_single_target_lua5-1 python_single_target_python3_9 python_single_target_python3_10 python_single_target_python3_11
+KEYWORDS: amd64 ~arm ~arm64 ~loong ppc ppc64 ~riscv ~x86 ~amd64-linux
+LICENSE: LGPL-2.1+ GPL-2+ BSD ISC MIT
+MD5: 041231bf3c537c9166c88482c87cee03
+PATH: media-video/mpv-0.35.1.tbz2
+PROVIDES: arm_32: libmpv.so.2
+RDEPEND: media-libs/libass:0/9=[fontconfig] media-video/ffmpeg:0/56.58.58=[encode,threads,vdpau] x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXext x11-libs/libXinerama x11-libs/libXpresent x11-libs/libXrandr x11-libs/libXv media-libs/alsa-lib media-libs/mesa[gbm(+)] x11-libs/libdrm media-libs/libglvnd virtual/libiconv app-i18n/uchardet media-libs/libglvnd[X] x11-libs/libvdpau sys-libs/zlib:0/1=
+REQUIRES: arm_32: ld-linux-armhf.so.3 libEGL.so.1 libGL.so.1 libX11.so.6 libXext.so.6 libXinerama.so.1 libXpresent.so.1 libXrandr.so.2 libXss.so.1 libXv.so.1 libasound.so.2 libass.so.9 libavcodec.so.58 libavdevice.so.58 libavfilter.so.7 libavformat.so.58 libavutil.so.56 libc.so.6 libdrm.so.2 libgbm.so.1 libm.so.6 libswresample.so.3 libswscale.so.5 libuchardet.so.0 libvdpau.so.1 libz.so.1
+RESTRICT: test
+SHA1: 5ecdb4c07e245862a6f76920590b1b049830e9f2
+SIZE: 2134547
+SLOT: 0/2
+USE: X alsa arm cli drm egl elibc_glibc iconv kernel_linux libmpv lua_single_target_lua5-1 opengl python_single_target_python3_10 uchardet userland_GNU vdpau xv zlib
+MTIME: 1675970847
 REPO: gentoo
 
 BDEPEND: >=sys-devel/gettext-0.19.8 virtual/pkgconfig sys-devel/gnuconfig >=app-portage/elt-patches-20170815 >=sys-devel/automake-1.16.5:1.16 >=sys-devel/autoconf-2.71 >=sys-devel/libtool-2.4
