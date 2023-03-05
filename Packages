@@ -13,9 +13,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs buildpkg b
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_ppc_32 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 766
+PACKAGES: 769
 PROFILE: default/linux/ppc/17.0/desktop/gnome/systemd/merged-usr
-TIMESTAMP: 1677698778
+TIMESTAMP: 1678010119
 URI: https://github.com/spreequalle/gentoo-binhost/releases/download/powerpc-74xx-linux-gnu
 USE: X a52 aac ada_target_gnat_2021 alsa altivec apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_alias apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_default apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_default apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_disk_cache apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mem_cache apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdio cdr cli collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog colord cpu_flags_ppc_altivec crypt dbus dri dts dvd dvdr eds elibc_glibc encode evo exif flac fortran gdbm gif gnome-keyring gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_nmea gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oldstyle gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_timing gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gpsd_protocols_ubx gtk gui iconv icu input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_cfontz633 lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_ncurses lcd_devices_text lcms libglvnd libnotify libreoffice_extensions_presenter-console libreoffice_extensions_presenter-minimizer libsecret llvm_targets_AMDGPU llvm_targets_BPF lua_single_target_lua5-1 lua_targets_lua5-1 lz4 lzma mad mng mp3 mp4 mpeg nautilus ncurses networkmanager nptl office_implementation_libreoffice ogg opengl pam pango pcre pdf php_targets_php7-4 php_targets_php8-0 png policykit postgres_targets_postgres12 postgres_targets_postgres13 ppc ppds python_single_target_python3_10 python_targets_python3_10 readline ruby_targets_ruby25 samba sdl seccomp slang sound spell ssl startup-notification svg systemd test-rust tiff tracker truetype udev udisks unicode upower usb userland_GNU video_cards_nouveau video_cards_r100 video_cards_r200 video_cards_r300 video_cards_radeon vorbis wayland wxwidgets x264 xattr xcb xft xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipset xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_rawnat xtables_addons_steal xtables_addons_sysrq xtables_addons_tarpit xtables_addons_tee xv xvid zlib zstd
 USERLAND: GNU
@@ -5117,7 +5117,7 @@ USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
 MTIME: 1673993977
 REPO: gentoo
 
-BDEPEND: >=dev-python/setuptools_scm-3.4.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.4:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.3.0[python_targets_python3_10(-)] dev-python/wheel[python_targets_python3_10(-)]
+BDEPEND: >=dev-python/setuptools-scm-3.4.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.4:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.3.0[python_targets_python3_10(-)] dev-python/wheel[python_targets_python3_10(-)]
 BUILD_TIME: 1665394388
 CPV: dev-python/inflect-6.0.0
 DEFINED_PHASES: compile configure install prepare test
@@ -5125,17 +5125,17 @@ EAPI: 8
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos
 LICENSE: MIT
-MD5: 87f81bf0907aa9ca463fae18b9130493
+MD5: febf00ffb99ee3fcd9c1ca6773bf563a
 PATH: dev-python/inflect-6.0.0.tbz2
 RDEPEND: dev-python/pydantic[python_targets_python3_10(-)] >=dev-lang/python-3.10.4:3.10
 RESTRICT: test
-SHA1: dacd3f4be0325a2bb66bdc7e7a611dd747887cda
-SIZE: 111941
+SHA1: cdd353c376f5bb9e6453a1c07e4dba3c7d417a64
+SIZE: 111940
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1665394403
+MTIME: 1678009589
 REPO: gentoo
 
-BDEPEND: >=dev-python/setuptools_scm-3.4.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] >=dev-python/wheel-0.38.4[python_targets_python3_10(-)]
+BDEPEND: >=dev-python/setuptools-scm-3.4.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] >=dev-python/wheel-0.38.4[python_targets_python3_10(-)]
 BUILD_TIME: 1674000923
 CPV: dev-python/inflect-6.0.2
 DEFINED_PHASES: compile configure install prepare test
@@ -5143,14 +5143,14 @@ EAPI: 8
 IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-macos
 LICENSE: MIT
-MD5: 973ab4ca742cc3e8b55d5097869b1d13
+MD5: 126a1cf9e1e2dec7aba33a274ab2367d
 PATH: dev-python/inflect-6.0.2.tbz2
 RDEPEND: >=dev-python/pydantic-1.9.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10
 RESTRICT: test
-SHA1: 94b2bc2b8369c19b0158a0c9f9f53b4cd76f2d49
-SIZE: 112291
+SHA1: ceecfbf93e3483df878b87a8fcc33a0ef76525a5
+SIZE: 112290
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1674000937
+MTIME: 1678009592
 REPO: gentoo
 
 BDEPEND: app-arch/unzip >=dev-lang/python-3.10.4:3.10
@@ -5831,15 +5831,15 @@ EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~arm64-macos ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: c8c24d08cdd5d324342bbd702d67391e
+MD5: 0c6ab131e4ee4e1edfbbfdcb4d3fdb38
 PATH: dev-python/setuptools-65.5.1.tbz2
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools_scm[python_targets_python3_10(-)]
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools-scm[python_targets_python3_10(-)]
 RDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.4:3.10[xml(+)]
 RESTRICT: test
-SHA1: d418c90d087f6e8ce5bfec34f6790aedf4d95ed4
-SIZE: 1345320
+SHA1: 71bf1dd1c0dc2401397fc07d35d6db4d07c7f64f
+SIZE: 1345319
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1667647032
+MTIME: 1678009595
 REPO: gentoo
 
 BDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-python/wheel-0.37.1-r1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10[xml(+)] >=dev-python/gpep517-9[python_targets_python3_10(-)]
@@ -5850,15 +5850,15 @@ EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_8 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~arm64-macos ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: fa933c1bb3b0d0c772a4b572f723ad25
+MD5: 7f02781c4eb4a9956f75001e7a6626f7
 PATH: dev-python/setuptools-65.6.3.tbz2
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools_scm[python_targets_python3_10(-)]
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools-scm[python_targets_python3_10(-)]
 RDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10[xml(+)]
 RESTRICT: test
-SHA1: 44a535bce31fa90bd2eb6bcad59f51d4a4111ab1
-SIZE: 1343751
+SHA1: a16f656139f71077e06fd1fb24cefd10afc88556
+SIZE: 1343750
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1672637220
+MTIME: 1678009598
 REPO: gentoo
 
 BDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] <dev-python/packaging-22[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-python/wheel-0.37.1-r1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10[xml(+)] >=dev-python/gpep517-9[python_targets_python3_10(-)]
@@ -5869,15 +5869,15 @@ EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~arm64-macos ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: 5a7a21764bb6d0c3250fdd9c6b74cc48
+MD5: e588d22d4383e3189e2c486eeaeec7ae
 PATH: dev-python/setuptools-65.6.3-r1.tbz2
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools_scm[python_targets_python3_10(-)]
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools-scm[python_targets_python3_10(-)]
 RDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] <dev-python/packaging-22[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10[xml(+)]
 RESTRICT: test
-SHA1: 56a872e585fd82ceb59dd12d61d1a4273ff247ee
-SIZE: 1344506
+SHA1: afe2a596ee6418dd439aad55a02f93f95b27c9f0
+SIZE: 1344505
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1673982219
+MTIME: 1678009601
 REPO: gentoo
 
 BDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] <dev-python/packaging-22[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-python/wheel-0.37.1-r1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9-r1:3.10[xml(+)] >=dev-python/gpep517-13[python_targets_python3_10(-)]
@@ -5888,15 +5888,15 @@ EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~arm64-macos ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: 1a0edadb0bf2d6354f86a2d7d01a1392
+MD5: ffbea126cd55215e1447eb7ff8104af2
 PATH: dev-python/setuptools-65.7.0.tbz2
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools_scm[python_targets_python3_10(-)]
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools-scm[python_targets_python3_10(-)]
 RDEPEND: >=dev-python/appdirs-1.4.4-r2[python_targets_python3_10(-)] >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] <dev-python/packaging-22[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9-r1:3.10[xml(+)]
 RESTRICT: test
-SHA1: f36eb1b965739718156282f76d9a60ef9eee816e
-SIZE: 1344240
+SHA1: 89abd0faf561d49d5690245f4287ffe23b6cdcac
+SIZE: 1344239
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1676639238
+MTIME: 1678009605
 REPO: gentoo
 
 BDEPEND: >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/platformdirs-2.6.2-r1[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-python/wheel-0.37.1-r1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9-r1:3.10[xml(+)] >=dev-python/gpep517-13[python_targets_python3_10(-)]
@@ -5907,15 +5907,51 @@ EAPI: 7
 IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
 KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~arm64-macos ~x64-macos ~x64-solaris
 LICENSE: MIT
-MD5: 70b8ee1ef65161da6ddf712d46547e17
+MD5: 2e919f7b4ddc3b812584afff11b5d65d
 PATH: dev-python/setuptools-67.2.0-r1.tbz2
-PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools_scm[python_targets_python3_10(-)]
+PDEPEND: >=dev-python/certifi-2016.9.26[python_targets_python3_10(-)] dev-python/setuptools-scm[python_targets_python3_10(-)]
 RDEPEND: >=dev-python/jaraco-text-3.7.0-r1[python_targets_python3_10(-)] >=dev-python/more-itertools-8.12.0-r1[python_targets_python3_10(-)] >=dev-python/nspektr-0.3.0[python_targets_python3_10(-)] >=dev-python/ordered-set-4.0.2-r1[python_targets_python3_10(-)] >=dev-python/packaging-21.3-r2[python_targets_python3_10(-)] >=dev-python/platformdirs-2.6.2-r1[python_targets_python3_10(-)] >=dev-python/tomli-2.0.1[python_targets_python3_10(-)] >=dev-lang/python-3.10.9-r1:3.10[xml(+)]
 RESTRICT: test
-SHA1: 6a1ffc6a55b025bb98302c094f597dde58be5308
-SIZE: 1341043
+SHA1: 06eafe3970bb245dfa421aaf6da543db533359d6
+SIZE: 1341042
 USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
-MTIME: 1677309069
+MTIME: 1678009608
+REPO: gentoo
+
+BDEPEND: >=dev-lang/python-3.10.9:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] >=dev-python/wheel-0.38.4[python_targets_python3_10(-)]
+BUILD_TIME: 1673997526
+CPV: dev-python/setuptools-scm-7.0.5
+DEFINED_PHASES: compile configure install prepare test
+EAPI: 7
+IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE: MIT
+MD5: e8deb31d0df8a055dc587413ddc2f3c5
+PATH: dev-python/setuptools-scm-7.0.5.tbz2
+RDEPEND: dev-python/packaging[python_targets_python3_10(-)] dev-python/setuptools[python_targets_python3_10(-)] dev-python/tomli[python_targets_python3_10(-)] dev-python/typing-extensions[python_targets_python3_10(-)] >=dev-lang/python-3.10.9:3.10
+RESTRICT: test
+SHA1: 3d6b00536cfb59962eec639550a0f3a14af6d32b
+SIZE: 112479
+USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
+MTIME: 1678009578
+REPO: gentoo
+
+BDEPEND: >=dev-lang/python-3.10.9-r1:3.10 >=dev-python/gpep517-13[python_targets_python3_10(-)] || ( >=dev-python/setuptools-67.2.0[python_targets_python3_10(-)] <dev-python/setuptools-65.7.1[python_targets_python3_10(-)] ) >=dev-python/wheel-0.38.4[python_targets_python3_10(-)]
+BUILD_TIME: 1677246845
+CPV: dev-python/setuptools-scm-7.1.0
+DEFINED_PHASES: compile configure install prepare test
+EAPI: 7
+IUSE: test python_targets_pypy3 python_targets_python3_9 python_targets_python3_10 python_targets_python3_11
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris
+LICENSE: MIT
+MD5: 2a720bfc33292100624b3b6316ee02db
+PATH: dev-python/setuptools-scm-7.1.0.tbz2
+RDEPEND: dev-python/packaging[python_targets_python3_10(-)] dev-python/setuptools[python_targets_python3_10(-)] dev-python/tomli[python_targets_python3_10(-)] dev-python/typing-extensions[python_targets_python3_10(-)] >=dev-lang/python-3.10.9-r1:3.10
+RESTRICT: test
+SHA1: 77746a6737cfaa99851a48849714707f7177db56
+SIZE: 114100
+USE: elibc_glibc kernel_linux ppc python_targets_python3_10 userland_GNU
+MTIME: 1678009582
 REPO: gentoo
 
 BDEPEND: >=dev-lang/python-3.10.9:3.10 >=dev-python/gpep517-9[python_targets_python3_10(-)] >=dev-python/setuptools-65.5.1[python_targets_python3_10(-)] >=dev-python/wheel-0.38.4[python_targets_python3_10(-)]
@@ -9251,6 +9287,22 @@ SHA1: 1e2454c3babd03f6c7ce4654c829c01f6281e3f1
 SIZE: 100212
 USE: elibc_glibc kernel_linux ppc userland_GNU
 MTIME: 1670760036
+REPO: gentoo
+
+BUILD_TIME: 1678010099
+CPV: sys-apps/baselayout-2.13-r1
+DEFINED_PHASES: install postinst preinst prepare setup
+EAPI: 7
+IUSE: build +split-usr
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x64-cygwin ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~sparc-solaris ~sparc64-solaris ~x64-solaris ~x86-solaris ~x86-winnt
+LICENSE: GPL-2
+MD5: 960bd9ccd89dd6f225eefa2c456205c4
+PATH: sys-apps/baselayout-2.13-r1.tbz2
+RDEPEND: !sys-apps/baselayout-prefix
+SHA1: dc1b644a547822f6190b8c152eee1f7c12a32921
+SIZE: 55793
+USE: elibc_glibc kernel_linux ppc userland_GNU
+MTIME: 1678010116
 REPO: gentoo
 
 BUILD_TIME: 1653801754
